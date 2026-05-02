@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Attico Panoramico - Casa vacanze a Milazzo con vista panoramica. FAQ, mappe e informazioni utili per il soggiorno.">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="theme-color" content="#2c3e50">
+ <title>Attico Panoramico - La tua oasi a Milazzo!</title>
+ <link rel="icon" href="images/Attico.jpg" type="image/jpeg">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+<!-- ======================== HEADER ======================== -->
+<header class="site-header" role="banner">
+ <div class="header-top">
+ <a href="#home" class="logo" aria-label="Attico Panoramico - Torna alla home">
+ <img src="images/Attico.jpg" alt="Logo Attico Panoramico" class="logo__img" width="48" height="48">
+ <div class="logo__text">
+ <h1 class="logo__title">Attico Panoramico</h1>
+ <span class="logo__tagline" data-i18n="tagline">La tua oasi a Milazzo!</span>
+ </div>
+ </a>
+ <div class="header-actions">
+ <div class="lang-dropdown" id="langDropdown">
+ <button class="lang-toggle" id="langToggle" aria-label="Cambia lingua" aria-expanded="false">
+ <span class="lang-toggle__flag" id="langFlag"></span>
+ <span class="lang-toggle__label" id="langLabel">IT</span>
+ <span class="lang-arrow">▾</span>
+ </button>
+ <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Seleziona lingua">
+ <li role="option" data-lang="it" class="lang-option active"> Italiano</li>
+ <li role="option" data-lang="en" class="lang-option"> English</li>
+ <li role="option" data-lang="de" class="lang-option"> Deutsch</li>
+ <li role="option" data-lang="fr" class="lang-option"> Français</li>
+ <li role="option" data-lang="es" class="lang-option"> Español</li>
+ </ul>
+ </div>
+ <button class="menu-toggle" id="menuToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="mainNav">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+ <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
+ <ul class="nav-list">
+ <li><a href="#home" data-i18n="nav_home"> Home</a></li>
+ <li><a href="#faq" data-i18n="nav_faq"> FAQ</a></li>
+ <li><a href="#dintorni" data-i18n="nav_nearby"> Mappe</a></li>
+ <li><a href="#posizione" data-i18n="nav_position"> La nostra posizione</a></li>
+ <li class="has-submenu">
+ <a href="#" aria-expanded="false" aria-haspopup="true" data-i18n="nav_things"> Cose da Fare &#9662;</a>
+ <ul class="submenu" role="menu">
+ <li role="menuitem"><a href="https://www.airbnb.it/metropolitan-city-of-messina-italy/things-to-do" target="_blank" rel="noopener" data-i18n="nav_experiences"> Esperienze</a></li>
+ <li role="menuitem"><a href="https://www.inshare.it/noleggio/" target="_blank" rel="noopener" data-i18n="nav_bikes"> Noleggio Biciclette</a></li>
+ <li role="menuitem"><a href="https://www.minicrociere.tarnav.it/minicrociere/" target="_blank" rel="noopener" data-i18n="nav_tarnav"> Minicrociere - Tarnav</a></li>
+ <li role="menuitem"><a href="https://navisal.com/" target="_blank" rel="noopener" data-i18n="nav_navisal"> Minicrociere - Navisal</a></li>
+ <li role="menuitem"><a href="https://clarissaviaggi.com/" target="_blank" rel="noopener"> Clarissa Viaggi</a></li>
+ <li role="menuitem"><a href="https://viamarmilazzo.it/" target="_blank" rel="noopener" data-i18n="nav_boat"> Giro in Barca Isole Eolie</a></li>
+ <li role="menuitem"><a href="https://www.tripadvisor.it/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html" target="_blank" rel="noopener" data-i18n="nav_tripadvisor"> Su Tripadvisor</a></li>
+ </ul>
+ </li>
+ <li><a href="https://www.sicilianticamilazzo.it/" target="_blank" rel="noopener"> Sicilia Antica Milazzo</a></li>
+ <li><a href="#numeri" data-i18n="nav_numbers"> Numeri Utili</a></li>
+ <li><a href="#recensioni" data-i18n="nav_reviews"> Recensioni</a></li>
+ <li><a href="https://www.innovame.it/castellomilazzo/" target="_blank" rel="noopener" data-i18n="nav_vtour"> Tour virtuale Castello</a></li>
+ </ul>
+ </nav>
+</header>
+
+<!-- ======================== HOME ======================== -->
+<main id="main-content">
+<section class="page active" id="page-home">
+
+ <!-- Intestazione elegante -->
+ <div class="home-banner">
+ <p class="home-banner__diamonds">◆◆◆◆</p>
+ <div class="home-banner__deco" aria-hidden="true"></div>
+ <p class="home-banner__location">Milazzo &mdash; Sicilia</p>
+ <h2 class="home-banner__title" data-i18n="welcome_title">Attico Panoramico</h2>
+ <div class="home-banner__divider" aria-hidden="true"><span></span><span class="home-banner__diamond">◆</span><span></span></div>
+ <p class="home-banner__subtitle" data-i18n="tagline">La tua oasi a Milazzo</p>
+ </div>
+
+ <!-- Benvenuto -->
+ <div class="content-section welcome-section">
+ <article class="welcome-card">
+ <p data-i18n="welcome_1">Gentili ospiti, Benvenuti nella nostra casa vacanze a Milazzo! Siamo qui per garantirvi un soggiorno indimenticabile, curando ogni dettaglio per farvi sentire come a casa vostra.</p>
+ <p data-i18n="welcome_2">La casa &egrave; pensata per offrirvi comfort e relax, con una cucina attrezzata, spazi living accoglienti e camere da letto confortevoli.</p>
+ <p data-i18n="welcome_3">Milazzo vi attende con la sua storia, cultura e bellezze naturali. Siamo felici di condividere con voi i migliori consigli per rendere la vostra esperienza ancora pi&ugrave; piacevole.</p>
+ <p data-i18n="welcome_4">Restiamo a vostra disposizione per qualsiasi necessit&agrave;.</p>
+ <p class="welcome-card__enjoy" data-i18n="welcome_enjoy">Buon Soggiorno!</p>
+ <p class="welcome-card__signature">Grazia</p>
+ </article>
+ </div>
+
+ <!-- Contatti rapidi -->
+ <div class="content-section contact-strip">
+ <h3 data-i18n="contacts">Contatti</h3>
+ <div class="contact-buttons">
+ <a href="tel:+393880775449" class="contact-btn contact-btn--phone" aria-label="Chiama +39 388 077 5449">
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+ +39 388 077 5449
+ </a>
+ <a href="https://wa.me/393880775449" target="_blank" rel="noopener" class="contact-btn contact-btn--whatsapp" aria-label="Contattaci su WhatsApp">
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ WhatsApp
+ </a>
+ </div>
+ </div>
+</section>
+
+<!-- ======================== FAQ ======================== -->
+<section class="page" id="page-faq">
+ <div class="content-section">
+ <h2 class="section-title" data-i18n="faq_title">Domande Poste Frequentemente</h2>
+ <p class="section-subtitle" data-i18n="faq_subtitle">Tutto quello che dovete sapere per il vostro soggiorno</p>
+
+ <div class="faq-grid" role="list">
+
+ <!-- Categoria: Accesso e Arrivo -->
+ <h3 class="category-title" data-i18n="faq_cat_access">Accesso e Arrivo</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_wifi">WiFi e Contatti</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content faq-content--narrow">
+ <div class="card-table">
+ <div class="card-table__row card-table__row--alt card-table__row--gold-border">
+ <div class="gold-label" data-i18n="faq_wifi_net"> Reti WiFi</div>
+ <div class="mono-value">atticopanoramico_5g &amp; _2.4g</div>
+ </div>
+ <div class="card-table__row">
+ <div class="gold-label" data-i18n="faq_wifi_pass"> Password WiFi</div>
+ <div class="mono-value">pizzapizza</div>
+ </div>
+ <div class="card-table__row card-table__row--alt card-table__row--gold-border">
+ <div class="gold-label" data-i18n="faq_wifi_notebook"> Notebook</div>
+ <div class="mono-value">atticopanoramico</div>
+ </div>
+ <div class="card-table__row card-table__row--last">
+ <div class="gold-label" data-i18n="faq_wifi_phone"> Telefono</div>
+ <a href="tel:+393880775449" class="mono-value link-plain">+39 388 077 5449</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_keys">Chiavi</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content faq-content--narrow">
+ <div class="info-rows info-rows--spaced">
+ <div class="info-row info-row--flex">
+ <img src="images/Telecomanto.png" alt="Telecomando cancello" class="img-thumbnail">
+ <span data-i18n="faq_keys_1">Telecomando apertura cancello garage</span>
+ </div>
+ <div class="info-row info-row--alt info-row--flex">
+ <span class="key-dot key-dot--nero"></span>
+ <span data-i18n="faq_keys_2">Nero &ndash; Porta ingresso appartamento</span>
+ </div>
+ <div class="info-row info-row--flex">
+ <span class="key-dot key-dot--ciano"></span>
+ <span data-i18n="faq_keys_3">Azzurro &ndash; Avamporta ingresso casa</span>
+ </div>
+ <div class="info-row info-row--alt info-row--flex">
+ <span class="key-dot key-dot--blu"></span>
+ <span data-i18n="faq_keys_4">Blu &ndash; Porta ingresso fabbricato</span>
+ </div>
+ <div class="info-row info-row--flex">
+ <span class="key-dot key-dot--verde"></span>
+ <span data-i18n="faq_keys_5">Verde &ndash; Porta garage all&rsquo;ascensore</span>
+ </div>
+ <div class="info-row info-row--alt info-row--flex">
+ <span class="key-dot key-dot--rosso"></span>
+ <span data-i18n="faq_keys_6">Rosso &ndash; Apertura basculante Garage</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_tax">Imposta di Soggiorno</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Imposta-di-soggiorno.jpg" alt="Informazioni imposta di soggiorno" class="faq-img">
+ <div class="faq-content mt-lg">
+ <div class="tax-box">
+ <p class="text-body" data-i18n="faq_tax_1">
+ L'imposta di soggiorno è pari a <strong>&euro; 1 al giorno per ciascun ospite</strong> ed è applicata per un massimo di <strong>5 giorni consecutivi</strong>.
+ </p>
+ <p class="info-row info-row--accent text-body" data-i18n="faq_tax_2">
+ I bambini di età inferiore ai <strong>13 anni</strong> sono esenti dal pagamento.
+ </p>
+ <p class="text-body" data-i18n="faq_tax_3">
+ Prima della vostra partenza vi sarà rilasciata <strong>regolare ricevuta</strong> dell'importo versato.
+ </p>
+ <p class="text-note" data-i18n="faq_tax_4">
+ Vi ringraziamo per la collaborazione e vi auguriamo un piacevole soggiorno.
+ </p>
+ </div>
+ <div class="ref-note" data-i18n="faq_tax_ref">Regolamento: Atto N. 62 datato 26 Giugno 2023</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_parking">Parcheggio a Pagamento</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Parcheggio.jpg" alt="Parcometro per strisce blu" class="faq-img">
+ <div class="faq-content">
+ <p class="text-body" data-i18n="faq_parking_1">Le strisce blu sono a pagamento tramite parcometro, accettando monete e pagamenti contactless (VISA, Mastercard, Apple Pay, Google Pay, Samsung Pay).</p>
+ <div class="card-table mb-lg">
+ <div class="card-table__header">
+ <div class="gold-label">Orari sosta</div>
+ </div>
+ <div class="card-table__row" data-i18n="faq_parking_hours_paid"><strong>A pagamento:</strong> 8:30 - 13:30 e 15:30 - 20:30 tutti i giorni</div>
+ <div class="card-table__row card-table__row--alt" data-i18n="faq_parking_hours_free"><strong>Gratuita:</strong> 13:30 - 15:30 e dalle 20:30 alle 8:30 del giorno successivo</div>
+ </div>
+ <p class="text-note" data-i18n="faq_parking_2">Per pagare, inserire la targa nel display e scegliere il metodo: monete nella fessura o carta/contactless sul simbolo blu a onde.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_ev_charging">Ricarica Auto Elettriche</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Stazione1.webp" alt="Stazione di ricarica Enel X" class="img-responsive">
+ <div class="faq-content info-row info-row--accent mb-lg">
+ <p data-i18n="faq_ev_charging_desc">Stazione di ricarica Enel X pi&ugrave; vicina, in Via XX Settembre a circa 200 metri dall'appartamento.</p>
+ </div>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d931.8483991839144!2d15.240260441942665!3d38.22494054969726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ed9f28d5df%3A0xc346e8c3725f6bbb!2sEnel%20X%20Charging%20Station%2C%20Via%20XX%20Settembre%2C%2098057%20Milazzo%20ME!3m2!1d38.2250161!2d15.2396324!5e0!3m2!1sit!2sit!4v1771501574678!5m2!1sit!2sit" title="Mappa percorso verso stazione Enel X" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Clima e Comfort -->
+ <h3 class="category-title" data-i18n="faq_cat_climate">Clima e Comfort</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_thermo">Termostato Riscaldamento</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <p class="text-intro" data-i18n="faq_thermo_loc"> Ubicazione: a destra della porta d'ingresso della cucina.</p>
+ <div class="mt-md text-center">
+ <a href="termostato.html" class="btn-gold" data-i18n="faq_thermo_sim"> Apri Simulatore Interattivo</a>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_ac">Climatizzatori</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <p class="text-intro mb-lg" data-i18n="faq_ac_0">Gentili ospiti, vi ricordiamo alcune raccomandazioni importanti sull'uso dei climatizzatori:</p>
+ <div class="info-rows info-rows--spaced">
+ <div class="info-row info-row--accent" data-i18n="faq_ac_1">Regolate la temperatura sui <strong>24–26°C</strong> per un comfort ottimale. Temperature più basse possono essere dannose per la salute e aumentare il consumo di energia.</div>
+ <div class="info-row info-row--alt border-left-thick" data-i18n="faq_ac_2">Tenete <strong>porte e finestre chiuse</strong> durante l'uso. Spegneteli quando siete assenti.</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_shutters">Infissi Esterni</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Infissi-1.jpg" alt="Pulsanti avvolgibili e porta scorrevole" class="faq-img">
+ <div class="faq-content info-rows info-rows--spaced">
+ <div class="info-row" data-i18n="faq_shutters_1">Gli avvolgibili si abbassano/alzano premendo i pulsanti indicati.</div>
+ <div class="info-row info-row--alt" data-i18n="faq_shutters_2">Porta vetri: scorre col maniglione verso il basso; blocca alla chiusura col maniglione verso l'alto.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_curtain">Tenda Oscurante Cameretta</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/IMG_20221209_113612.jpg" alt="Tenda oscurante con telecomando" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <p data-i18n="faq_curtain_desc">Prima camera a sinistra. La tenda oscurante si aziona col <strong>telecomando bianco</strong>.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_hotwater">Se l'Acqua Non Riscalda</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Interruttore-Acqua-calda.jpg" alt="Interruttore acqua calda nel bagno" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <p data-i18n="faq_hotwater_desc">Pu&ograve; succedere che, per una disattenzione, si prema involontariamente l'interruttore dell'acqua calda. Basta riaccendere l'interruttore nel <strong>bagno di sinistra</strong>.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Cucina -->
+ <h3 class="category-title" data-i18n="faq_cat_kitchen">Cucina</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_stove">ON/OFF Piano Cottura - Forno</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Forno-1.jpg" alt="Interruttore piano cottura e forno" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <p data-i18n="faq_stove_desc">L'interruttore serve per accendere e spegnere l'alimentazione elettrica del <strong>forno</strong> e del <strong>piano di cottura</strong>.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_oven">Forno Elettrico</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <div class="gold-label mb-md" data-i18n="faq_oven_proc">Procedura</div>
+ <div class="info-rows mb-lg">
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_oven_1"><span class="step-num">1.</span> Premi tasto ON</div>
+ <div class="info-row info-row--alt info-row--flex-baseline" data-i18n="faq_oven_2"><span class="step-num">2.</span> Usa area programmi, scegli simbolo desiderato</div>
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_oven_3"><span class="step-num">3.</span> Regola temperatura nell'area impostazioni</div>
+ <div class="info-row info-row--alt info-row--flex-baseline" data-i18n="faq_oven_4"><span class="step-num">4.</span> Verifica spia programma accesa, premi Start</div>
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_oven_5"><span class="step-num">5.</span> Fine: riporta selettore su 0 o premi ON</div>
+ </div>
+ <div class="dark-panel" data-i18n="faq_oven_warn"> <strong>Sicurezza:</strong> <span class="muted">solo teglie idonee, vietate plastica/carta, il forno diventa molto caldo.</span></div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_dishwasher">Lavastoviglie</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <p class="text-intro" data-i18n="faq_dishwasher_model">Electrolux ESL5205LO &mdash; pannello comandi sul bordo superiore della porta.</p>
+ <div class="gold-label mb-md" data-i18n="faq_dishwasher_how">Come avviare un lavaggio</div>
+ <div class="info-rows mb-lg">
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_dishwasher_s1"><span class="step-num">1.</span> Aprire la porta e caricare le stoviglie</div>
+ <div class="info-row info-row--alt info-row--flex-baseline" data-i18n="faq_dishwasher_s2"><span class="step-num">2.</span> Aggiungere la pastiglia di detersivo nell&rsquo;apposito vano sullo sportello interno</div>
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_dishwasher_s3"><span class="step-num">3.</span> Chiudere la porta</div>
+ <div class="info-row info-row--alt info-row--flex-baseline" data-i18n="faq_dishwasher_s4"><span class="step-num">4.</span> Premere il tasto <strong>ON/OFF</strong> (a sinistra)</div>
+ <div class="info-row info-row--flex-baseline" data-i18n="faq_dishwasher_s5"><span class="step-num">5.</span> Premere il tasto <strong>Program</strong> pi&ugrave; volte per scegliere il programma (la spia corrispondente si accende)</div>
+ <div class="info-row info-row--alt info-row--flex-baseline" data-i18n="faq_dishwasher_s6"><span class="step-num">6.</span> Il lavaggio parte automaticamente dopo pochi secondi</div>
+ </div>
+ <div class="gold-label mb-md" data-i18n="faq_dishwasher_prog">Programmi consigliati</div>
+ <div class="card-table mb-lg">
+ <div class="card-table__header">
+ <div class="gold-label">Program</div>
+ </div>
+ <div class="card-table__row"><span><strong>ECO 50&deg;</strong></span><span data-i18n="faq_dishwasher_eco">Uso quotidiano, risparmio energia</span></div>
+ <div class="card-table__row card-table__row--alt"><span><strong>Normal 65&deg;</strong></span><span data-i18n="faq_dishwasher_normal">Sporco normale</span></div>
+ <div class="card-table__row"><span><strong>Intensive 70&deg;</strong></span><span data-i18n="faq_dishwasher_intensive">Pentole e sporco ostinato</span></div>
+ <div class="card-table__row card-table__row--alt"><span><strong>Quick Plus 60&deg;</strong></span><span data-i18n="faq_dishwasher_quick">Lavaggio rapido ~30 min</span></div>
+ <div class="card-table__row card-table__row--last"><span><strong>Rinse &amp; Hold</strong></span><span data-i18n="faq_dishwasher_rinse">Solo risciacquo, senza detersivo</span></div>
+ </div>
+ <div class="info-rows info-rows--spaced">
+ <div class="info-row" data-i18n="faq_dishwasher_tip1"> <strong>Consiglio:</strong> per l&rsquo;uso di tutti i giorni, <strong>ECO 50&deg;</strong> &egrave; il programma ideale.</div>
+ <div class="info-row info-row--alt" data-i18n="faq_dishwasher_tip2"> <strong>Partenza ritardata:</strong> premere <strong>3h Delay</strong> per avviare il lavaggio dopo 3 ore.</div>
+ <div class="dark-panel" data-i18n="faq_dishwasher_reset"> <strong>Reset:</strong> <span class="muted">tenere premuto il tasto Program per 3 secondi.</span></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Elettricita e Tecnologia -->
+ <h3 class="category-title" data-i18n="faq_cat_electric">Elettricit&agrave; e Tecnologia</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_power">ON/OFF Energia Elettrica</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/ContatoreLuce.jpg" alt="Contatore elettrico con freccia indicatrice" class="faq-img">
+ <div class="faq-content info-rows info-rows--spaced">
+ <div class="info-row" data-i18n="faq_power_1">In caso di interruzione: recarsi al <strong>piano terra</strong>, a destra dell'ascensore, aprire sportello scorrevole destro dell'armadio, effettuare riattivazione.</div>
+ <div class="info-row info-row--alt" data-i18n="faq_power_2">Contatore indicato dalla freccia su cui &egrave; scritto <strong>"Russo"</strong>.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_veranda_light">Luce Balcone-Veranda</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Luci-Veranda2.jpg" alt="Interruttore luce veranda in cucina" class="faq-img">
+ <img src="images/Luce-Veranda1.jpg" alt="Interruttore luce veranda in bagno" class="faq-img">
+ <div class="faq-content info-rows info-rows--spaced">
+ <div class="info-row"> <strong>Cucina</strong> — accanto al frigorifero</div>
+ <div class="info-row info-row--alt" data-i18n="faq_veranda_light_desc"> <strong>Bagno sinistra</strong> — accanto all'interruttore acqua calda</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_usb">Stazione Ricarica USB</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Stazione-di-ricarica.jpg" alt="Stazione di ricarica USB a 6 porte" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <p data-i18n="faq_usb_desc">Sul mobile del salone — <strong>6 porte USB 3.0</strong> per ricarica veloce e contemporanea di 6 dispositivi.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_projector">Videoproiettore</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/IMG_20230113_084239-1.jpg" alt="Videoproiettore a soffitto" class="faq-img">
+ <img src="images/Telecomandi.jpg" alt="Telecomandi videoproiettore" class="faq-img">
+ <div class="faq-content">
+ <p class="text-intro mb-md" data-i18n="faq_projector_loc"> Interruttore: a sinistra della porta d'ingresso della sala.</p>
+ <div class="info-rows info-rows--spaced">
+ <div class="info-row" data-i18n="faq_projector_r1"><strong>Telecomando 1</strong> &ndash; spostamento nello schermo</div>
+ <div class="info-row info-row--alt" data-i18n="faq_projector_r2"><strong>Telecomando 2</strong> &ndash; accensione/spegnimento (premere tasto rosso)</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Pulizie e Casa -->
+ <h3 class="category-title" data-i18n="faq_cat_cleaning">Pulizie e Casa</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_linen">Pulizie e Cambio Biancheria</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Cambio-Biancheria-1.png" alt="Istruzioni cambio biancheria" class="faq-img">
+ <img src="images/Cassetto.jpg" alt="Cassetto biancheria con freccia indicatrice" class="faq-img">
+ <div class="faq-content">
+ <div class="dark-panel mb-xs" data-i18n="faq_linen_1">La biancheria pulita si trova nel cassetto centrale, indicato con una freccia.</div>
+ <div class="info-rows info-rows--spaced mb-md">
+ <div class="info-row">
+ <span class="gold-label mb-xs" data-i18n="faq_linen_2">Soggiorni &gt; 1 settimana</span>
+ <span data-i18n="faq_linen_spare">I ricambi sono disponibili nello stesso cassetto.</span>
+ </div>
+ <div class="info-row info-row--alt" data-i18n="faq_linen_used">La biancheria usata va riposta in un sacco e lasciata davanti alla porta entro le <strong>ore 8:00</strong>, avvisandoci per il ritiro.</div>
+ </div>
+ <div class="info-row info-row--accent" data-i18n="faq_linen_clean">Servizio pulizia professionale: <strong>&euro; 60 a intervento</strong>, con giorno e orario concordati.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_clothesline">Stendibiancheria</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="video-responsive">
+ <iframe src="https://www.youtube.com/embed/T43_-8SmuWs" title="Video istruzioni Stendibiancheria Gulliver - Foppapedretti" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_waste">Raccolta Differenziata Rifiuti</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Cassonetti.jpg" alt="Contenitori raccolta differenziata" class="faq-img">
+ <div class="faq-content">
+ <p class="text-intro" data-i18n="faq_waste_loc"> Contenitori dentro l'appartamento in veranda.</p>
+ <div class="card-table mb-lg">
+ <div class="card-table__header">
+ <div class="gold-label">Calendario raccolta</div>
+ </div>
+ <div class="card-table__row"><span data-i18n="monday"><strong>Lunedì</strong></span><span data-i18n="organic">Organico</span></div>
+ <div class="card-table__row card-table__row--alt"><span data-i18n="tuesday"><strong>Martedì</strong></span><span data-i18n="unsorted">Indifferenziato</span></div>
+ <div class="card-table__row"><span data-i18n="wednesday"><strong>Mercoledì</strong></span><span data-i18n="paper">Carta e Cartone</span></div>
+ <div class="card-table__row card-table__row--alt"><span data-i18n="thursday"><strong>Giovedì</strong></span><span data-i18n="organic2">Organico</span></div>
+ <div class="card-table__row"><span data-i18n="friday"><strong>Venerdì</strong></span><span data-i18n="plastic">Plastica e Lattine</span></div>
+ <div class="card-table__row card-table__row--alt"><span data-i18n="saturday"><strong>Sabato</strong></span><span data-i18n="organic_glass">Organico e Vetro</span></div>
+ <div class="card-table__row card-table__row--last card-table__row--muted"><span data-i18n="sunday"><strong>Domenica</strong></span><em data-i18n="no_collection">Nessuna raccolta</em></div>
+ </div>
+ <div class="info-row mb-sm" data-i18n="faq_waste_deposit">
+ Depositare i rifiuti <strong>ogni giorno</strong> a partire dalle <strong>ore 20:00 del giorno precedente</strong>, nel cassonetto <strong>a destra del portone d'ingresso</strong>.
+ </div>
+ <div class="dark-panel" data-i18n="faq_waste_note"> <strong>IMPORTANTE:</strong> <span class="muted">differenziare correttamente i rifiuti per evitare sanzioni.</span></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Veranda e Esterni -->
+ <h3 class="category-title" data-i18n="faq_cat_veranda">Veranda e Esterni</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_rain">Pioggia</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content dark-panel emergency-panel">
+ <strong class="accent">Attenzione:</strong> <span data-i18n="faq_rain_warn">chiudere le finestre della veranda quando siete assenti o in caso di forti piogge/temporali. La mancata chiusura comporta rischio di allagamento.</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_plants">Irrigazione Piante</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content info-rows info-rows--spaced">
+ <div class="info-row" data-i18n="faq_plants_0">La maggior parte delle piante è dotata di <strong>sistema idroponico automatico</strong> e non richiede alcuna cura.</div>
+ <div class="info-row info-row--alt" data-i18n="faq_plants_1">Solo <strong>due grandi piante rotonde</strong> necessitano di essere annaffiate almeno 2 volte alla settimana durante l'estate.</div>
+ <div class="info-row" data-i18n="faq_plants_2">Un annaffiatoio nel vaso più piccolo, due in quello più grande. Annaffiatoio verde in veranda.</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Sicurezza -->
+ <h3 class="category-title" data-i18n="faq_cat_safety">Sicurezza</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_extinguisher">Estintore</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Estintore.jpg" alt="Estintore in veranda" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <span data-i18n="faq_extinguisher_loc">Si trova nel <strong>balcone-veranda</strong>.</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_firstaid">Kit Pronto Soccorso</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <img src="images/Medicine.jpeg" alt="Armadietto pronto soccorso in veranda" class="faq-img">
+ <div class="faq-content info-row info-row--accent">
+ <span data-i18n="faq_firstaid_loc">L'armadietto si trova nel <strong>balcone-veranda</strong>.</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_devices">Dispositivi di Sicurezza</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <p class="text-intro" data-i18n="faq_devices_intro">Per garantire la massima sicurezza, l'appartamento è dotato dei seguenti dispositivi:</p>
+ <div class="info-rows mb-md">
+ <div class="info-row info-row--flex" data-i18n="faq_devices_smoke"> Rilevatore di fumo</div>
+ <div class="info-row info-row--alt info-row--flex" data-i18n="faq_devices_co"> Rilevatore di monossido di carbonio</div>
+ <div class="info-row info-row--flex" data-i18n="faq_devices_gas"> Rilevatore di gas combustibili</div>
+ <div class="info-row info-row--alt info-row--flex" data-i18n="faq_devices_valve"> Elettrovalvola automatica di sicurezza gas</div>
+ </div>
+ <div class="info-row mb-xs" data-i18n="faq_devices_check">Tutti i dispositivi sono <strong>regolarmente controllati</strong>.</div>
+ <div class="dark-panel">
+ <strong data-i18n="faq_devices_alert">In caso di segnalazione acustica, avvisateci immediatamente.</strong>
+ <div class="sub" data-i18n="faq_devices_priority">La vostra sicurezza è per noi una priorità.</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Categoria: Regole di Convivenza -->
+ <h3 class="category-title" data-i18n="faq_cat_rules">Regole di Convivenza</h3>
+
+ <div class="faq-card" role="listitem" aria-expanded="false">
+ <div class="faq-header">
+ <h4 data-i18n="faq_quiet">Ore Riposo</h4>
+ <span class="faq-toggle" aria-hidden="true">+</span>
+ </div>
+ <div class="faq-body">
+ <div class="faq-content">
+ <p class="text-body mb-xl text-center" data-i18n="faq_quiet_intro">Per rispettare il riposo di tutti, ospiti e vicini, vi chiediamo di mantenere il silenzio nelle seguenti fasce orarie:</p>
+ <!-- Timeline 24h SVG — asse da 8:00 a 8:00 (giorno dopo) per continuità notturna -->
+ <div class="mb-xl">
+ <svg width="100%" viewBox="0 0 500 120" aria-hidden="true" class="quiet-svg">
+ <!-- Barra sfondo 24h -->
+ <rect x="30" y="35" width="440" height="28" rx="6" fill="#f5f0e8" stroke="#2c2c2c" stroke-width="1.5"/>
+ <!-- Fascia 14:00-16:00: offset 6h-8h → x=140, w=36.67 -->
+ <rect x="140" y="35" width="36.67" height="28" rx="4" fill="#c0392b" opacity="0.28"/>
+ <!-- Fascia 22:00-8:00: offset 14h-24h → x=286.67, w=183.33 — blocco unico continuo -->
+ <rect x="286.67" y="35" width="183.33" height="28" rx="0" fill="#c0392b" opacity="0.28"/>
+ <!-- Arrotondamento destro -->
+ <rect x="463" y="35" width="7" height="28" rx="6" fill="#c0392b" opacity="0.28"/>
+ <!-- Icone nelle fasce -->
+ <text x="158" y="54" text-anchor="middle" font-size="14"></text>
+ <text x="378" y="54" text-anchor="middle" font-size="14"></text>
+ <!-- Etichette orarie: 8,10,12,14,16,18,20,22,0,2,4,6,8 -->
+ <text x="30" y="82" text-anchor="middle" font-size="9" fill="#c0392b" font-family="Georgia,serif" font-weight="700">8</text>
+ <text x="66.67" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">10</text>
+ <text x="103.33" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">12</text>
+ <text x="140" y="82" text-anchor="middle" font-size="9" fill="#c0392b" font-family="Georgia,serif" font-weight="700">14</text>
+ <text x="176.67" y="82" text-anchor="middle" font-size="9" fill="#c0392b" font-family="Georgia,serif" font-weight="700">16</text>
+ <text x="213.33" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">18</text>
+ <text x="250" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">20</text>
+ <text x="286.67" y="82" text-anchor="middle" font-size="9" fill="#c0392b" font-family="Georgia,serif" font-weight="700">22</text>
+ <text x="323.33" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">0</text>
+ <text x="360" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">2</text>
+ <text x="396.67" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">4</text>
+ <text x="433.33" y="82" text-anchor="middle" font-size="9" fill="#2c2c2c" font-family="Georgia,serif">6</text>
+ <text x="470" y="82" text-anchor="middle" font-size="9" fill="#c0392b" font-family="Georgia,serif" font-weight="700">8</text>
+ <!-- Tacche verticali -->
+ <line x1="30" y1="63" x2="30" y2="72" stroke="#c0392b" stroke-width="1.5"/>
+ <line x1="66.67" y1="63" x2="66.67" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="103.33" y1="63" x2="103.33" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="140" y1="63" x2="140" y2="72" stroke="#c0392b" stroke-width="1.5"/>
+ <line x1="176.67" y1="63" x2="176.67" y2="72" stroke="#c0392b" stroke-width="1.5"/>
+ <line x1="213.33" y1="63" x2="213.33" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="250" y1="63" x2="250" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="286.67" y1="63" x2="286.67" y2="72" stroke="#c0392b" stroke-width="1.5"/>
+ <line x1="323.33" y1="63" x2="323.33" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="360" y1="63" x2="360" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="396.67" y1="63" x2="396.67" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="433.33" y1="63" x2="433.33" y2="72" stroke="#2c2c2c" stroke-width="1"/>
+ <line x1="470" y1="63" x2="470" y2="72" stroke="#c0392b" stroke-width="1.5"/>
+ <!-- Legenda -->
+ <rect x="150" y="96" width="14" height="10" rx="2" fill="#c0392b" opacity="0.28"/>
+ <text x="170" y="105" font-size="9" fill="#555" font-family="Georgia,serif" font-style="italic" data-i18n="faq_quiet_legend">= Silenzio</text>
+ </svg>
+ </div>
+ <!-- Riepilogo fasce -->
+ <div class="card-table mb-lg">
+ <div class="card-table__header">
+ <div class="gold-label" data-i18n="faq_quiet_schedule">Fasce di silenzio</div>
+ </div>
+ <div class="card-table__row info-row--flex">
+ <span style="font-size:1.1rem;"></span>
+ <span data-i18n="faq_quiet_band1"><strong>22:00 &ndash; 8:00</strong> &mdash; Riposo notturno</span>
+ </div>
+ <div class="card-table__row card-table__row--alt card-table__row--last info-row--flex">
+ <span style="font-size:1.1rem;"></span>
+ <span data-i18n="faq_quiet_band2"><strong>14:00 &ndash; 16:00</strong> &mdash; Riposo pomeridiano</span>
+ </div>
+ </div>
+ <div class="info-row info-row--accent text-center" data-i18n="faq_quiet_thanks">Grazie per la vostra collaborazione.</div>
+ </div>
+ </div>
+ </div>
+
+ </div><!-- /faq-grid -->
+ </div>
+</section>
+
+<!-- ======================== MAPPE / NEI DINTORNI ======================== -->
+<section class="page" id="page-dintorni">
+ <div class="content-section">
+ <h2 class="section-title" data-i18n="nearby_title">Mappe</h2>
+ <p class="section-subtitle" data-i18n="nearby_subtitle">Percorsi a piedi dall'Attico Panoramico</p>
+
+ <div class="dintorni-accordion">
+
+ <!-- Ristoranti e Bar -->
+ <h3 class="category-title" id="ristoranti" data-i18n="cat_restaurants">Ristoranti e Bar</h3>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false"> Ristorante-Pizzeria La Campagnola <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p><a href="tel:+393476651893">+39 347 665 1893</a> | <a href="tel:+390909284944">+39 090 928 4944</a></p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.385452332707!2d15.24224609999999!3d38.224162150000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ed2d115df7%3A0x2652c1ab9ed48ec9!2sTrattoria%20La%20Campagnola%2C%20Via%20Riccardo%20D&#39;amico%2C%2016%2C%2098057%20Milazzo%20ME!3m2!1d38.2237046!2d15.2422404!5e0!3m2!1sit!2sit!4v1771163884215!5m2!1sit!2sit" title="Mappa percorso verso La Campagnola" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false"> Ristorante Adagio-Adagio <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p>Silvia: <a href="tel:+393881670166">+39 388 1670166</a> | Salvo: <a href="tel:+393889886437">+39 388 9886437</a></p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.385452332707!2d15.24224609999999!3d38.224162150000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ed2d115df7%3A0x2652c1ab9ed48ec9!2sTrattoria%20La%20Campagnola%2C%20Via%20Riccardo%20D&#39;amico%2C%2016%2C%2098057%20Milazzo%20ME!3m2!1d38.2237046!2d15.2422404!5e0!3m2!1sit!2sit!4v1771163884215!5m2!1sit!2sit" title="Mappa percorso verso Adagio-Adagio" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false"> Ristorante Macchianera <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p><a href="tel:+393407099053">+39 340 7099053</a> | <a href="tel:+390909223249">+39 090 9223249</a></p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.273604332791!2d15.241432160513034!3d38.226757985879985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x1314318cf71b3741%3A0xcca61e9e198a4ed6!2sMacchianera%20Ristorante%2C%2098057%2C%20Via%20Marina%20Garibaldi%2C%20275%2C%2098057%20Milazzo%20ME!3m2!1d38.2288407!2d15.245763199999999!5e0!3m2!1sit!2sit!4v1771164340265!5m2!1sit!2sit" title="Mappa percorso verso Macchianera" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="supermarket"> Supermercato Conad <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <img src="images/Immagine-supermercato-Conad.jpg" alt="Interno supermercato Conad" class="accordion-body__img">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.350423515677!2d15.238281060513046!3d38.22497513598374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431e6cddeef37%3A0x750a7bbfbb79795c!2sCONAD%2C%20Via%20XX%20Settembre%2C%20184%2C%2098057%20Milazzo%20ME!3m2!1d38.224354999999996!2d15.239758!5e0!3m2!1sit!2sit!4v1771164405431!5m2!1sit!2sit" title="Mappa percorso verso Conad" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="chantilly"> Chantilly - Bar Pasticceria <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.3969827750047!2d15.239315110512884!3d38.22389453604653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ecdc93ce8b%3A0x88bbc0cb09a42ef5!2sChantilly%20Caf%C3%A9%20-%20Bar%20Pasticceria%2C%20Via%20Cumbo%20Borgia%2C%2059%2C%2098057%20Milazzo%20ME!3m2!1d38.2227944!2d15.2416194!5e0!3m2!1sit!2sit!4v1771164520850!5m2!1sit!2sit" title="Mappa percorso verso Chantilly" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false"> Bar English <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.3531573841747!2d15.238746360512943!3d38.224911685987394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ed0ce338e5%3A0x5ae6e03ddb4d5e9f!2sEnglish%20Bar%20di%20Milazzo%2C%20Via%20Umberto%20I%C2%B0%2C%20243%2C%2098057%20Milazzo%20ME!3m2!1d38.224679099999996!2d15.2405168!5e0!3m2!1sit!2sit!4v1771164590595!5m2!1sit!2sit" title="Mappa percorso verso Bar English" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Servizi -->
+ <h3 class="category-title" id="servizi" data-i18n="cat_services">Servizi</h3>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="medical_guard"> Guardia Medica <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="faq-content mb-xl">
+ <div class="card-table">
+ <div class="card-table__header">
+ <div class="gold-label">Guardia Medica — Milazzo</div>
+ </div>
+ <div class="card-table__row info-row--flex">
+ <span></span><span>Via Impallomeni 45</span>
+ </div>
+ <div class="card-table__row card-table__row--alt info-row--flex">
+ <span></span><a href="tel:0909281158" class="link-plain">090 928 1158</a>
+ </div>
+ <div class="card-table__row card-table__row--detail">
+ <div class="gold-label"> Feriali</div>
+ Dalle <strong>20:00</strong> alle <strong>08:00</strong>
+ </div>
+ <div class="card-table__row card-table__row--alt card-table__row--detail card-table__row--last">
+ <div class="gold-label"> Festivi / Prefestivi</div>
+ Dalle <strong>10:00 del prefestivo</strong> alle <strong>08:00 del primo giorno feriale</strong> successivo
+ </div>
+ </div>
+ </div>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.3131378190815!2d15.238860610513033!3d38.22584048593344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431003a05dda9%3A0x4409fd22c8f221b3!2sGuardia%20Medica%2C%2098057%20Milazzo%20ME!3m2!1d38.2267527!2d15.241142499999999!5e0!3m2!1sit!2sit!4v1771164650312!5m2!1sit!2sit" title="Mappa percorso verso Guardia Medica" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="pharmacy"> Farmacia Alioto <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="faq-content mb-xl text-center">
+ <a href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" class="btn-gold btn-gold--inline">
+ Farmacie di turno a Milazzo
+ </a>
+ </div>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.432159999015!2d15.239552610512895!3d38.22307808609405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431eca3ac7429%3A0xce52436b33bd9853!2sAntica%20Farmacia%20Alioto%2C%20Piano%20Baele%2C%205%2F6%2C%2098057%20Milazzo%20ME!3m2!1d38.221274199999996!2d15.2414543!5e0!3m2!1sit!2sit!4v1771164755129!5m2!1sit!2sit" title="Mappa percorso verso Farmacia Alioto" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="pedestrian"> Isola Pedonale <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3134.4121554410126!2d15.239950510512967!3d38.22354238606707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ecbcbb7251%3A0x2a6d67de5ba4cf82!2sVia%20Giacomo%20Medici%2C%2098057%20Milazzo%20ME!3m2!1d38.222246!2d15.242651599999999!5e0!3m2!1sit!2sit!4v1771164863692!5m2!1sit!2sit" title="Mappa percorso verso Isola Pedonale" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="ev_charging"> Ricarica Auto Elettriche <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p data-i18n="ev_charging_desc">Stazione di ricarica Enel X - Via XX Settembre</p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d931.8483991839144!2d15.240260441942665!3d38.22494054969726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ed9f28d5df%3A0xc346e8c3725f6bbb!2sEnel%20X%20Charging%20Station%2C%20Via%20XX%20Settembre%2C%2098057%20Milazzo%20ME!3m2!1d38.2250161!2d15.2396324!5e0!3m2!1sit!2sit!4v1771501574678!5m2!1sit!2sit" title="Mappa percorso verso stazione ricarica Enel X" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Spiagge e Mare -->
+ <h3 class="category-title" id="spiagge" data-i18n="cat_beaches">Spiagge e Mare</h3>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false"> Lido La Fenice <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p data-i18n="fenice_desc">Stabilimento balneare moderno sul lungomare di ponente. Ombrelloni, lettini, bar e ristorante.</p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6268.935217788217!2d15.232764212196411!3d38.22225531581532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431e8f3e6542d%3A0x7da28e0ddd95dc3c!2sLido%20La%20Fenice%2C%20Via%20Spiaggia%20di%20Ponente%2C%202%2C%2098057%20Milazzo%20ME!3m2!1d38.2197856!2d15.232949099999999!5e0!3m2!1sit!2sit!4v1771164941720!5m2!1sit!2sit" title="Mappa percorso verso Lido La Fenice" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="ponente_beach"> Spiaggia di Ponente <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3134.319030840459!2d15.23655002082493!3d38.225703718082656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m3!3m2!1d38.226531699999995!2d15.2362766!5e0!3m2!1sit!2sit!4v1771165043745!5m2!1sit!2sit" title="Mappa percorso verso Spiaggia di Ponente" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="croce_beach"> Spiaggia Croce di Mare <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6268.4204198622!2d15.240303112197854!3d38.228229215117615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431ace86c6d0d%3A0xcfa48ac22fb0de3a!2sSpiaggia%20Croce%20di%20Mare%2C%20Via%20Croce%20a%20Mare%2C%20Milazzo%20ME!3m2!1d38.2309134!2d15.2487663!5e0!3m2!1sit!2sit!4v1771165144394!5m2!1sit!2sit" title="Mappa percorso verso Spiaggia Croce di Mare" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Isole Eolie -->
+ <h3 class="category-title" id="eolie" data-i18n="cat_eolie">Isole Eolie</h3>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="eolie_port"> Imbarco Isole Eolie <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <p data-i18n="eolie_depart">Partenze dal porto di Milazzo</p>
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d12538.555483556382!2d15.233292989075087!3d38.21828010669034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!3m2!1d38.2248203!2d15.242160499999999!4m5!1s0x131431d154d027d9%3A0x362772e68bbe66a7!2sTerminal%20traghetti%20isole%20eolie%2C%20Via%20Tindaro%20La%20Rosa%2C%2090%2C%2098057%20Milazzo%20ME!3m2!1d38.2112301!2d15.248166099999999!5e0!3m2!1sit!2sit!4v1771165284329!5m2!1sit!2sit" title="Mappa percorso verso terminal traghetti Eolie" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Attrazioni -->
+ <h3 class="category-title" id="attrazioni" data-i18n="cat_attractions">Attrazioni</h3>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="cat_castle"> Castello di Milazzo <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6268.488480093209!2d15.236640812197553!3d38.22743946520965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x131431ed48a7b0a7%3A0x4d2371fadd0a7b12!2sAttico%20Panoramico%20Casa%20vacanze%2C%20Via%20Cristoforo%20Colombo%2C%20Milazzo%2C%20ME!3m2!1d38.2248117!2d15.2421625!4m5!1s0x131431f34cafc0db%3A0x5a68df90816033a5!2sSalita%20Castello%2C%2098057%20Milazzo%20ME!3m2!1d38.2299432!2d15.242892399999999!5e0!3m2!1sit!2sit!4v1771167306634!5m2!1sit!2sit" title="Mappa percorso verso Castello di Milazzo" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <div class="accordion-item">
+ <button class="accordion-header" aria-expanded="false" data-i18n="cat_venus"> Piscina di Venere <span class="accordion-icon" aria-hidden="true">+</span></button>
+ <div class="accordion-body">
+ <div class="map-iframe-wrap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d50134.05165801466!2d15.197678759444045!3d38.24753302675188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x131431ed48a7b0a7%3A0x4d2371fadd0a7b12!2sAttico%20Panoramico%20Casa%20vacanze%2C%20Via%20Cristoforo%20Colombo%2C%20Milazzo%2C%20ME!3m2!1d38.2248117!2d15.2421625!4m5!1s0x1314327750ac786b%3A0x97d8e9a635ecd7a1!2sPiscina%20di%20Venere%20AMP%20Capo%20Milazzo%2C%20Via%20Sant&#39;Antonio%2C%2098057%20Milazzo%20ME!3m2!1d38.2691768!2d15.2246913!5e0!3m2!1sit!2sit!4v1771167550802!5m2!1sit!2sit" title="Mappa percorso verso Piscina di Venere" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+
+ <!-- Mappe Geografiche -->
+ <h3 class="category-title" data-i18n="cat_geomaps">Mappe Geografiche</h3>
+
+ <a class="accordion-header accordion-link" href="https://www.sicilia.info/mappa-sicilia/" target="_blank" rel="noopener" data-i18n="nav_mapsicily"> Mappa Sicilia <span class="accordion-icon" aria-hidden="true">&#8599;</span></a>
+ <a class="accordion-header accordion-link" href="https://dotsonmaps.com/italy" target="_blank" rel="noopener" data-i18n="nav_mapitaly"> Mappa Italia <span class="accordion-icon" aria-hidden="true">&#8599;</span></a>
+
+ </div><!-- /dintorni-accordion -->
+ </div>
+</section>
+
+<!-- ======================== POSIZIONE ======================== -->
+<section class="page" id="page-posizione">
+ <div class="content-section">
+ <h2 class="section-title" data-i18n="pos_title">La nostra posizione</h2>
+ <p class="section-subtitle" data-i18n="pos_subtitle">Ecco dove trovarci a Milazzo</p>
+ <div class="map-container">
+ <div class="map-iframe-wrap map-iframe-wrap--centered">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3134.35!2d15.240!3d38.2248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1314314b70950aef%3A0x52afa4debfc76b45!2sAttico%20Panoramico%20Casa%20Vacanze%2C%20Via%20Cristoforo%20Colombo%2C%207%2C%2098057%20Milazzo%20ME!5e0!3m2!1sit!2sit!4v1771102290163!5m2!1sit!2sit" title="Posizione Attico Panoramico su Google Maps" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ </div>
+ </div>
+</section>
+
+
+<!-- ======================== RECENSIONI ======================== -->
+<section class="page" id="page-recensioni">
+ <div class="content-section">
+ <div class="reviews-header">
+ <p class="reviews-header__label">◆◆◆◆</p>
+ <h2 class="reviews-header__title" data-i18n="reviews_title">Cosa dicono i nostri ospiti</h2>
+ <div class="reviews-header__rating">
+ <span class="reviews-header__stars"></span>
+ <span class="reviews-header__score">5.0</span>
+ </div>
+ </div>
+
+ <div class="reviews-grid">
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">L</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Lauren</span>
+ <span class="review-card__date">ottobre 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">The apartment is truly beautiful. The view from the balcony is gorgeous. It was very clean and stocked with everything necessary to live there for a week+ and more. The hosts are so responsive and accommodating. Their lists and instructions were incredibly helpful. Highly recommend!</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">S</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Sarah</span>
+ <span class="review-card__date">settembre 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">The central location of this well appointed apartment was ideal for our stay in Milazzo. The apartment was clean and well equipped. Having a garage was very useful. Enjoyed the views of the citadel and the sea.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">M</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Marina</span>
+ <span class="review-card__date">luglio 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Probably the best Airbnb I've stayed at. Extremely well thought out and they go above and beyond to make sure you are comfortable. Great location as well.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">K</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Kim &mdash; Huntington Beach, CA</span>
+ <span class="review-card__date">giugno 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">The place was beautifully decorated and had amazing views! I wish we had booked for a longer stay. So conveniently located to everything and would love to come back someday.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">M</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Michael &mdash; Jacksonville Beach, FL</span>
+ <span class="review-card__date">maggio 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Graziella and Filippo's unit was impeccable. Fully equipped and above expectations. The view from the living room and bedrooms of the Castello di Milazzo was beautiful and I will never forget it. The balcony is very large and we enjoyed having our breakfast and dinner while taking in the view. The condo is located in a prime location, nearby shopping, bakeries, restaurants, the pier, the beach and the port.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">A</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Arron</span>
+ <span class="review-card__date">aprile 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">We stayed at the apartment for 3 nights as a group of four adults and two children. The apartment was well furnished, with large bedrooms and tall ceilings. The view from the dining area and balcony is stunning, looking over the castle, churches and harbour. Near the apartment are bakeries, restaurants, ice cream shops and more. We enjoyed our stay very much and would return.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">B</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Bertille</span>
+ <span class="review-card__date">agosto 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Nous avons passé une excellente semaine en famille dans cet appartement très agréable, spacieux, très bien équipé et idéalement placé dans Milazzo. La place pour la voiture est aussi très pratique. L'hôte est particulièrement accueillant et parle français ! Nous recommandons cette location.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">O</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Olivier</span>
+ <span class="review-card__date">agosto 2025</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Très grand appartement super bien placé. Logement très très propre et très bien équipé. Emplacement idéal, tout se fait à pied. Hôte très sympathique et très réactif. Je recommande fortement ce logement.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">J</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Julia &mdash; Hillsdale, NJ</span>
+ <span class="review-card__date">novembre 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">I can't say enough about Graziella's home! This was one of my favorite stays, if not my favorite! The apartment is huge and pristine clean. There is a huge patio with beautiful views. The neighborhood is perfect — quiet at night yet many delicious bars, bakeries, restaurants. The walkway along the water is just outside. The hosts were so accommodating, extremely responsive and so nice!</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">D</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Daniele &mdash; Koppigen, Svizzera</span>
+ <span class="review-card__date">ottobre 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">«Nonno» Filippo é stato gentilissimo dal primo momento. Ci siamo trovati molto bene e Filippo ha pensato a tutto. L'appartamento ha tutto quello che uno desidera. Il posto é perfetto. Puoi andare a qualsiasi posto senza che ti serve la macchina.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">M</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Maria &mdash; Cherryville, Canada</span>
+ <span class="review-card__date">ottobre 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Our host was outstanding. He arranged to have us picked up from Catania airport. The place was very big and clean. The balcony was so big, we spent all our time out there and it was always in the shade. We walked everywhere and the beach was a short distance from us. Would definitely recommend it.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">J</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Julia</span>
+ <span class="review-card__date">giugno 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Our stay was a wonderful experience and we wish we spent more time there. The apartment was spotless, extremely comfortable and spacious with a great balcony for us to enjoy evening dinners looking at the wonderful view. Filippo was a wonderful host, friendly and responsive. Every detail was thought of for guests to have the best experience.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">G</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Georg</span>
+ <span class="review-card__date">febbraio 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Appartamento stupendo, spazioso, molto ben attrezzato e in modo straordinario curato! Accoglienza gentilissima, davvero un AIRBNB molto buono!</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">M</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Matthew</span>
+ <span class="review-card__date">aprile 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Beautiful, clean and spacious apartment with all the home comforts. There has been a lot of attention to detail to make sure you have a great stay. We were warmly welcomed by the hosts. Great location in the city and close to the boats leaving for the Aeolian Islands. Highly recommend.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">R</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Rhonda</span>
+ <span class="review-card__date">marzo 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">The apartment was very well equipped and just as described. The website provided at check in gave all the necessary information for the unit — very helpful and very detailed. Large unit worked great for 3 couples. Loved the location, very convenient to lots of restaurants and bars. Would highly recommend to others.</p>
+ </article>
+
+ <article class="review-card">
+ <div class="review-card__top">
+ <div class="review-card__avatar">R</div>
+ <div class="review-card__meta">
+ <span class="review-card__name">Rosamund</span>
+ <span class="review-card__date">luglio 2024</span>
+ </div>
+ <div class="review-card__stars"></div>
+ </div>
+ <p class="review-card__text">Filippo was very helpful and responsive. The apartment was spacious and super well stocked. The terrace is very large and a wonderful bonus to be able to sit outside.</p>
+ </article>
+
+ </div>
+ </div>
+</section>
+
+<!-- ======================== NUMERI UTILI ======================== -->
+<section class="page" id="page-numeri">
+ <div class="content-section">
+ <h2 class="section-title" data-i18n="num_title">Numeri Utili</h2>
+ <p class="section-subtitle" data-i18n="num_subtitle">Numeri di emergenza e servizi a Milazzo</p>
+
+ <div class="numbers-section">
+ <h3 class="numbers-category" data-i18n="num_public">Uffici Pubblici</h3>
+ <div class="numbers-grid">
+ <div class="number-card"><h4 data-i18n="num_municipality">Comune di Milazzo</h4><a href="tel:0909231111">090 923 1111</a></div>
+ <div class="number-card"><h4>U.R.P. Comune</h4><a href="tel:0909232017">090 923 2017</a></div>
+ <div class="number-card"><h4 data-i18n="num_social">Servizi Sociali</h4><a href="tel:0909231054">090 923 1054</a></div>
+ <div class="number-card"><h4 data-i18n="num_harbor">Capitaneria di Porto</h4><a href="tel:0909281110">090 928 1110</a></div>
+ <div class="number-card"><h4 data-i18n="num_customs">Agenzia delle Dogane</h4><a href="tel:0909282010">090 928 2010</a></div>
+ <div class="number-card"><h4 data-i18n="num_localpolice">Vigili Urbani</h4><a href="tel:0909224530">090 922 4530</a></div>
+ <div class="number-card"><h4>INAIL</h4><a href="tel:0909230211">090 923 0211</a></div>
+ <div class="number-card"><h4>INPS</h4><a href="tel:0909230611">090 923 0611</a></div>
+ <div class="number-card"><h4 data-i18n="num_employment">Ufficio di Collocamento</h4><a href="tel:0909296191">090 929 6191</a></div>
+ </div>
+ </div>
+
+ <div class="numbers-section">
+ <h3 class="numbers-category numbers-category--emergency" data-i18n="num_health">Salute</h3>
+ <div class="numbers-grid">
+ <div class="number-card number-card--emergency"><h4 data-i18n="num_er">Pronto Soccorso</h4><a href="tel:118" class="emergency-number">118</a></div>
+ <div class="number-card"><h4 data-i18n="num_medguard">Guardia Medica</h4><a href="tel:0909281158">090 928 1158</a></div>
+ <div class="number-card"><h4 data-i18n="num_hospital">Ospedale</h4><a href="tel:0909290111">090 929 0111</a></div>
+ <div class="number-card"><h4 data-i18n="num_cup">Ospedale - CUP</h4><a href="tel:800332277">800 33 22 77</a></div>
+ </div>
+ </div>
+
+ <div class="numbers-section">
+ <h3 class="numbers-category numbers-category--emergency" data-i18n="num_security">Sicurezza</h3>
+ <div class="numbers-grid">
+ <div class="number-card number-card--emergency"><h4 data-i18n="num_carabinieri">Carabinieri</h4><a href="tel:112" class="emergency-number">112</a><span class="alt-number"><a href="tel:0909281720">090 928 1720</a></span></div>
+ <div class="number-card number-card--emergency"><h4 data-i18n="num_police">Polizia</h4><a href="tel:113" class="emergency-number">113</a><span class="alt-number"><a href="tel:0909230311">090 923 0311</a></span></div>
+ <div class="number-card number-card--emergency"><h4 data-i18n="num_fire">Vigili del Fuoco</h4><a href="tel:115" class="emergency-number">115</a><span class="alt-number"><a href="tel:0909282437">090 928 2437</a></span></div>
+ <div class="number-card"><h4 data-i18n="num_finance">Guardia di Finanza</h4><a href="tel:117">117</a><span class="alt-number"><a href="tel:0909281508">090 928 1508</a></span></div>
+ <div class="number-card"><h4 data-i18n="num_coastguard">Guardia Costiera</h4><a href="tel:1530">1530</a></div>
+ <div class="number-card"><h4 data-i18n="num_aci">Soccorso ACI</h4><a href="tel:803116">803 116</a></div>
+ <div class="number-card"><h4 data-i18n="num_highway">Polizia Stradale</h4><a href="tel:090717417">090 717417</a></div>
+ <div class="number-card"><h4 data-i18n="num_forest">Forestale</h4><a href="tel:090360979">090 360979</a></div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ======================== CALENDARIO ======================== -->
+<section class="page" id="page-calendario">
+ <div class="content-section">
+ <h2 class="section-title" data-i18n="cal_title">Disponibilit&agrave;</h2>
+ <p class="section-subtitle" data-i18n="cal_subtitle">Verifica la disponibilit&agrave; dell'appartamento</p>
+ <div class="calendar-container">
+ <div class="calendar-legend">
+ <span class="legend-item"><span class="dot dot--available"></span> <span data-i18n="cal_available">Disponibile</span></span>
+ <span class="legend-item"><span class="dot dot--unavailable"></span> <span data-i18n="cal_unavailable">Non disponibile</span></span>
+ </div>
+ <div class="calendar-embed">
+ <iframe src="https://www.atticopanoramico.it/calendario/" title="Calendario disponibilit&agrave; appartamento" loading="lazy"></iframe>
+ </div>
+ <p class="calendar-note" data-i18n="cal_note">Per prenotazioni e informazioni contattaci direttamente:</p>
+ <div class="contact-buttons contact-buttons--centered">
+ <a href="tel:+393880775449" class="contact-btn contact-btn--phone" aria-label="Chiama per prenotare">
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+ +39 388 077 5449
+ </a>
+ <a href="https://wa.me/393880775449" target="_blank" rel="noopener" class="contact-btn contact-btn--whatsapp" aria-label="Prenota su WhatsApp">
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ WhatsApp
+ </a>
+ </div>
+ </div>
+ </div>
+</section>
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="site-footer" role="contentinfo">
+ <div class="footer-content">
+ <div class="footer-logo">
+ <img src="images/Attico.jpg" alt="" width="50" height="50" aria-hidden="true">
+ <span>Attico Panoramico</span>
+ </div>
+ <div class="footer-contacts">
+ <a href="tel:+393880775449">+39 388 077 5449</a>
+ <a href="https://wa.me/393880775449" target="_blank" rel="noopener">WhatsApp</a>
+ </div>
+ <p class="footer-codes">CIR: 19083049C206347 · CIN: IT083049C2FNPHRA9D</p>
+ <p class="footer-copy" data-i18n="footer_copy">&copy; Attico Panoramico - La tua oasi a Milazzo!</p>
+ </div>
+</footer>
+
+<!-- Pulsante WhatsApp flottante -->
+<a href="https://wa.me/393880775449" target="_blank" rel="noopener" class="whatsapp-fab" title="Contattaci su WhatsApp" aria-label="Contattaci su WhatsApp">
+ <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Pulsante torna in alto -->
+<button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">&#9650;</button>
+
+<script src="app.js"></script>
+</body>
+</html>
