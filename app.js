@@ -349,7 +349,7 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Waste Sorting & Recycling",
- faq_waste_loc:"Bins are inside the apartment on the veranda.",
+ faq_waste_loc:"The waste bins are to the left of the Garage entrance.",
  day:"Day",
  waste_type:"Waste Type",
  monday:"Monday",
@@ -366,8 +366,8 @@ var traduzioni = {
  plastic:"Plastic & Cans",
  organic_glass:"Organic & Glass",
  no_collection:"No collection",
- faq_waste_deposit:"Please deposit waste <strong>every day</strong>, starting from <strong>8:00 PM the day before</strong>, in the appropriate bin located <strong>to the right of the entrance gate</strong>, across from gate no. 17.",
- faq_waste_note:"We kindly ask you to <strong style=\"color:#c62828;\">SORT WASTE CORRECTLY</strong> to avoid any fines.",
+ faq_waste_deposit:"Please deposit waste <strong>every day</strong>, starting from <strong>8:00 PM the day before</strong>, in the bin located <strong>to the left of the Garage entrance</strong>.",
+ faq_waste_note:"<strong>IMPORTANT:</strong> If at the time of check-out there is waste scheduled for collection on subsequent days, you may leave it inside the apartment — we will take care of proper disposal. However, we kindly ask you to pay close attention to waste sorting, as the Municipal Police conducts periodic checks and may impose fines for incorrect disposal.",
 
  // FAQ - Piante e Veranda
  faq_plants:"Plant Watering",
@@ -620,7 +620,7 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"M\u00fclltrennung & Recycling",
- faq_waste_loc:"Die M\u00fclleimer befinden sich in der Wohnung auf der Veranda.",
+ faq_waste_loc:"Die M\u00fclltonnen befinden sich links vom Garageneingang.",
  day:"Tag",
  waste_type:"Abfallart",
  monday:"Montag",
@@ -637,8 +637,8 @@ var traduzioni = {
  plastic:"Kunststoff & Dosen",
  organic_glass:"Biom\u00fcll & Glas",
  no_collection:"Keine Abholung",
- faq_waste_deposit:"Bitte entsorgen Sie den M\u00fcll <strong>jeden Tag</strong> ab <strong>20:00 Uhr des Vortages</strong> in der entsprechenden Tonne <strong>rechts neben dem Eingangstor</strong>, gegen\u00fcber Tor Nr. 17.",
- faq_waste_note:"Wir bitten Sie, den <strong style=\"color:#c62828;\">M\u00dcLL KORREKT ZU TRENNEN</strong>, um Bu\u00dfgelder zu vermeiden.",
+ faq_waste_deposit:"Bitte entsorgen Sie den M\u00fcll <strong>jeden Tag</strong> ab <strong>20:00 Uhr des Vortages</strong> in der Tonne <strong>links neben dem Garageneingang</strong>.",
+ faq_waste_note:"<strong>WICHTIG:</strong> Falls beim Check-out noch Abf\u00e4lle vorhanden sind, die f\u00fcr die Abholung an den folgenden Tagen bestimmt sind, k\u00f6nnen Sie diese in der Wohnung lassen \u2013 wir k\u00fcmmern uns um die ordnungsgem\u00e4\u00dfe Entsorgung. Wir bitten Sie jedoch, bei der M\u00fclltrennung besonders sorgf\u00e4ltig vorzugehen, da die Stadtpolizei regelm\u00e4\u00dfige Kontrollen durchf\u00fchrt und bei falscher Entsorgung Bu\u00dfgelder verh\u00e4ngen kann.",
 
  // FAQ - Piante e Veranda
  faq_plants:"Pflanzenbew\u00e4sserung",
@@ -891,7 +891,7 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Tri des d\u00e9chets & Recyclage",
- faq_waste_loc:"Les poubelles se trouvent dans l'appartement sur la v\u00e9randa.",
+ faq_waste_loc:"Les poubelles se trouvent \u00e0 gauche de l'entr\u00e9e du Garage.",
  day:"Jour",
  waste_type:"Type de d\u00e9chet",
  monday:"Lundi",
@@ -908,8 +908,8 @@ var traduzioni = {
  plastic:"Plastique & Conserves",
  organic_glass:"Organique & Verre",
  no_collection:"Pas de collecte",
- faq_waste_deposit:"Veuillez d\u00e9poser les d\u00e9chets <strong>chaque jour</strong> \u00e0 partir de <strong>20h00 la veille</strong>, dans la poubelle appropri\u00e9e situ\u00e9e <strong>\u00e0 droite du portail d'entr\u00e9e</strong>, en face du portail n\u00b0 17.",
- faq_waste_note:"Nous vous prions de <strong style=\"color:#c62828;\">TRIER CORRECTEMENT LES D\u00c9CHETS</strong> afin d'\u00e9viter toute amende.",
+ faq_waste_deposit:"Veuillez d\u00e9poser les d\u00e9chets <strong>chaque jour</strong> \u00e0 partir de <strong>20h00 la veille</strong>, dans la poubelle situ\u00e9e <strong>\u00e0 gauche de l'entr\u00e9e du Garage</strong>.",
+ faq_waste_note:"<strong>IMPORTANT :</strong> Si au moment du check-out il reste des d\u00e9chets destin\u00e9s \u00e0 la collecte des jours suivants, vous pouvez les laisser dans l'appartement : nous nous chargerons de les \u00e9liminer correctement. Nous vous demandons toutefois de porter une attention particuli\u00e8re au tri des d\u00e9chets, car la Police Municipale effectue des contr\u00f4les p\u00e9riodiques et peut imposer des amendes en cas de mauvais tri.",
 
  // FAQ - Piante e Veranda
  faq_plants:"Arrosage des plantes",
@@ -1162,7 +1162,7 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Separaci\u00f3n de residuos y reciclaje",
- faq_waste_loc:"Los cubos est\u00e1n dentro del apartamento en la terraza.",
+ faq_waste_loc:"Los contenedores de basura est\u00e1n a la izquierda de la entrada del Garaje.",
  day:"D\u00eda",
  waste_type:"Tipo de residuo",
  monday:"Lunes",
@@ -1179,8 +1179,8 @@ var traduzioni = {
  plastic:"Pl\u00e1stico y latas",
  organic_glass:"Org\u00e1nico y vidrio",
  no_collection:"Sin recogida",
- faq_waste_deposit:"Por favor, deposite los residuos <strong>todos los d\u00edas</strong> a partir de las <strong>20:00 del d\u00eda anterior</strong>, en el contenedor correspondiente situado <strong>a la derecha de la puerta de entrada</strong>, frente al portal n.\u00ba 17.",
- faq_waste_note:"Les rogamos que <strong style=\"color:#c62828;\">SEPAREN CORRECTAMENTE LOS RESIDUOS</strong> para evitar multas.",
+ faq_waste_deposit:"Por favor, deposite los residuos <strong>todos los d\u00edas</strong> a partir de las <strong>20:00 del d\u00eda anterior</strong>, en el contenedor situado <strong>a la izquierda de la entrada del Garaje</strong>.",
+ faq_waste_note:"<strong>IMPORTANTE:</strong> Si en el momento del check-out quedan residuos destinados a la recogida de los d\u00edas siguientes, puede dejarlos dentro del apartamento: nos encargaremos de su correcta eliminaci\u00f3n. Sin embargo, le pedimos que preste la m\u00e1xima atenci\u00f3n a la separaci\u00f3n de residuos, ya que la Polic\u00eda Municipal realiza controles peri\u00f3dicos y puede imponer sanciones en caso de separaci\u00f3n incorrecta.",
 
  // FAQ - Piante e Veranda
  faq_plants:"Riego de plantas",
