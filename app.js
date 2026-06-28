@@ -1411,6 +1411,7 @@ function leggiTesto(btn) {
 
  window.speechSynthesis.speak(utterance);
 }
+window.leggiTesto = leggiTesto;
 
 /* =============================================================================
  7. INIZIALIZZAZIONE
