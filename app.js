@@ -372,7 +372,7 @@ var traduzioni = {
  // FAQ - Piante e Veranda
  faq_plants:"Plant Watering",
  faq_plants_0:"Most plants have an automatic hydroponic system and require no care.",
- faq_plants_1:"Only two large round plants need to be watered at least twice a week during summer.",
+ faq_plants_1:"Only two large round plants need to be watered at least every two days during summer.",
  faq_plants_2:"Pour one watering can in the smaller pot and two in the larger one. Green watering can on the veranda.",
  faq_rain:"Rain",
  faq_rain_warn:"Close the veranda windows when you are away or in case of heavy rain/storms. Failure to close them may cause flooding of the veranda.",
@@ -643,7 +643,7 @@ var traduzioni = {
  // FAQ - Piante e Veranda
  faq_plants:"Pflanzenbew\u00e4sserung",
  faq_plants_0:"Die meisten Pflanzen haben ein automatisches Hydroponiksystem und ben\u00f6tigen keine Pflege.",
- faq_plants_1:"Nur zwei gro\u00dfe runde Pflanzen m\u00fcssen im Sommer mindestens zweimal pro Woche gegossen werden.",
+ faq_plants_1:"Nur zwei gro\u00dfe runde Pflanzen m\u00fcssen im Sommer mindestens alle zwei Tage gegossen werden.",
  faq_plants_2:"Gie\u00dfen Sie eine Gie\u00dfkanne in den kleineren Topf und zwei in den gr\u00f6\u00dferen. Gr\u00fcne Gie\u00dfkanne auf der Veranda.",
  faq_rain:"Regen",
  faq_rain_warn:"Schlie\u00dfen Sie die Verandafenster, wenn Sie abwesend sind oder bei starkem Regen/Sturm. Wenn sie nicht geschlossen werden, kann die Veranda \u00fcberflutet werden.",
@@ -914,7 +914,7 @@ var traduzioni = {
  // FAQ - Piante e Veranda
  faq_plants:"Arrosage des plantes",
  faq_plants_0:"La plupart des plantes disposent d'un syst\u00e8me hydroponique automatique et ne n\u00e9cessitent aucun entretien.",
- faq_plants_1:"Seules deux grandes plantes rondes doivent \u00eatre arros\u00e9es au moins deux fois par semaine en \u00e9t\u00e9.",
+ faq_plants_1:"Seules deux grandes plantes rondes doivent \u00eatre arros\u00e9es au moins tous les deux jours en \u00e9t\u00e9.",
  faq_plants_2:"Versez un arrosoir dans le petit pot et deux dans le grand. Arrosoir vert sur la v\u00e9randa.",
  faq_rain:"Pluie",
  faq_rain_warn:"Fermez les fen\u00eatres de la v\u00e9randa lorsque vous \u00eates absent ou en cas de forte pluie/temp\u00eate. Ne pas les fermer peut provoquer une inondation de la v\u00e9randa.",
@@ -1185,7 +1185,7 @@ var traduzioni = {
  // FAQ - Piante e Veranda
  faq_plants:"Riego de plantas",
  faq_plants_0:"La mayor\u00eda de las plantas tienen un sistema hidrop\u00f3nico autom\u00e1tico y no necesitan cuidados.",
- faq_plants_1:"Solo dos plantas grandes y redondas necesitan regarse al menos dos veces por semana en verano.",
+ faq_plants_1:"Solo dos plantas grandes y redondas necesitan regarse al menos cada dos días en verano.",
  faq_plants_2:"Vierta una regadera en la maceta peque\u00f1a y dos en la grande. Regadera verde en la terraza.",
  faq_rain:"Lluvia",
  faq_rain_warn:"Cierre las ventanas de la terraza cuando se ausente o en caso de lluvia intensa/tormenta. No cerrarlas puede provocar la inundaci\u00f3n de la terraza.",
