@@ -1378,6 +1378,41 @@ function chiudiDropdownLingua() {
 }
 
 /* =============================================================================
+ 6b. LETTURA VOCALE (Text-to-Speech)
+ ============================================================================= */
+var langVoce = { it:'it-IT', en:'en-GB', de:'de-DE', fr:'fr-FR', es:'es-ES' };
+
+function leggiTesto(btn) {
+ if (!window.speechSynthesis) return;
+
+ // Se sta già leggendo questa FAQ, interrompi
+ if (btn.classList.contains('speaking')) {
+   window.speechSynthesis.cancel();
+   btn.classList.remove('speaking');
+   return;
+ }
+
+ // Interrompi qualsiasi lettura precedente
+ window.speechSynthesis.cancel();
+ document.querySelectorAll('.faq-tts-btn.speaking').forEach(function(b) {
+   b.classList.remove('speaking');
+ });
+
+ var faqBody = btn.closest('.faq-card').querySelector('.faq-body');
+ var testo = faqBody.innerText || faqBody.textContent;
+
+ var utterance = new SpeechSynthesisUtterance(testo);
+ utterance.lang = langVoce[linguaCorrente] || 'it-IT';
+ utterance.rate = 0.92;
+
+ btn.classList.add('speaking');
+ utterance.onend = function() { btn.classList.remove('speaking'); };
+ utterance.onerror = function() { btn.classList.remove('speaking'); };
+
+ window.speechSynthesis.speak(utterance);
+}
+
+/* =============================================================================
  7. INIZIALIZZAZIONE
  Avvia tutti i moduli e collega gli eventi quando il DOM e' pronto.
  ============================================================================= */

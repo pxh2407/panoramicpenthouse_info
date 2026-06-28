@@ -680,6 +680,31 @@ a:hover {
     transform: rotate(45deg);
 }
 
+.faq-tts-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 4px 8px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    opacity: 0.75;
+    transition: opacity 0.2s, transform 0.2s;
+    line-height: 1;
+}
+.faq-tts-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.faq-tts-btn.speaking {
+    opacity: 1;
+    animation: tts-pulse 0.8s ease-in-out infinite alternate;
+}
+@keyframes tts-pulse {
+    from { transform: scale(1); }
+    to   { transform: scale(1.3); }
+}
+
 .faq-body {
     max-height: 0;
     overflow: hidden;
