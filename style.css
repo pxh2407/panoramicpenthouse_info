@@ -680,6 +680,12 @@ a:hover {
     transform: rotate(45deg);
 }
 
+.faq-pin {
+    font-size: 1rem;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
 .faq-tts-btn {
     background: none;
     border: none;
