@@ -231,7 +231,7 @@ var traduzioni = {
  // Header e Navigazione
  tagline:"Your oasis in Milazzo!",
  nav_home:"Home",
- nav_faq:"FAQ",
+ nav_faq:"Frequent Questions",
  nav_nearby:"Maps",
  nav_position:"Our location",
  nav_things:"Things to Do \u25BE",
@@ -502,7 +502,7 @@ var traduzioni = {
  // Header e Navigazione
  tagline:"Ihre Oase in Milazzo!",
  nav_home:"Startseite",
- nav_faq:"FAQ",
+ nav_faq:"Häufige Fragen",
  nav_nearby:"Karten",
  nav_position:"Unsere Lage",
  nav_things:"Aktivit\u00e4ten \u25BE",
@@ -773,7 +773,7 @@ var traduzioni = {
  // Header e Navigazione
  tagline:"Votre oasis \u00e0 Milazzo !",
  nav_home:"Accueil",
- nav_faq:"FAQ",
+ nav_faq:"Questions fréquentes",
  nav_nearby:"Cartes",
  nav_position:"Notre position",
  nav_things:"Activit\u00e9s \u25BE",
@@ -1044,7 +1044,7 @@ var traduzioni = {
  // Header e Navigazione
  tagline:"\u00a1Tu oasis en Milazzo!",
  nav_home:"Inicio",
- nav_faq:"FAQ",
+ nav_faq:"Preguntas frecuentes",
  nav_nearby:"Mapas",
  nav_position:"Nuestra ubicaci\u00f3n",
  nav_things:"Qu\u00e9 hacer \u25BE",
