@@ -344,7 +344,7 @@ var traduzioni = {
  faq_linen_2:"For stays longer than one week:",
  faq_linen_spare:"Spare linen is available in the same drawer.",
  faq_linen_used:"Used linen should be placed in a bag and left outside the door by 8:00 AM, after notifying us for pickup.",
- faq_linen_clean:"Professional cleaning service: <strong>\u20AC 60 per session</strong>, with agreed day and time.",
+ faq_linen_clean:"Professional cleaning service: <strong>\u20AC 70 per session</strong>, with agreed day and time.",
  faq_clothesline:"Drying Rack",
 
  // FAQ - Rifiuti
@@ -615,7 +615,7 @@ var traduzioni = {
  faq_linen_2:"F\u00fcr Aufenthalte l\u00e4nger als eine Woche:",
  faq_linen_spare:"Ersatzbettw\u00e4sche ist in derselben Schublade verf\u00fcgbar.",
  faq_linen_used:"Gebrauchte Bettw\u00e4sche bitte in einen Beutel legen und bis 8:00 Uhr morgens vor die T\u00fcr stellen, nachdem Sie uns f\u00fcr die Abholung benachrichtigt haben.",
- faq_linen_clean:"Professioneller Reinigungsservice: <strong>\u20AC 60 pro Einsatz</strong>, an einem vereinbarten Tag und Uhrzeit.",
+ faq_linen_clean:"Professioneller Reinigungsservice: <strong>\u20AC 70 pro Einsatz</strong>, an einem vereinbarten Tag und Uhrzeit.",
  faq_clothesline:"W\u00e4schest\u00e4nder",
 
  // FAQ - Rifiuti
@@ -886,7 +886,7 @@ var traduzioni = {
  faq_linen_2:"Pour les s\u00e9jours de plus d'une semaine :",
  faq_linen_spare:"Du linge de rechange est disponible dans le m\u00eame tiroir.",
  faq_linen_used:"Le linge utilis\u00e9 doit \u00eatre plac\u00e9 dans un sac et laiss\u00e9 devant la porte avant 8h00, apr\u00e8s nous avoir pr\u00e9venus pour la collecte.",
- faq_linen_clean:"Service de nettoyage professionnel : <strong>\u20AC 60 par s\u00e9ance</strong>, avec jour et heure convenus.",
+ faq_linen_clean:"Service de nettoyage professionnel : <strong>\u20AC 70 par s\u00e9ance</strong>, avec jour et heure convenus.",
  faq_clothesline:"S\u00e9choir \u00e0 linge",
 
  // FAQ - Rifiuti
@@ -1157,7 +1157,7 @@ var traduzioni = {
  faq_linen_2:"Para estancias de m\u00e1s de una semana:",
  faq_linen_spare:"Hay ropa de cama de repuesto disponible en el mismo caj\u00f3n.",
  faq_linen_used:"La ropa de cama usada debe colocarse en una bolsa y dejarse fuera de la puerta antes de las 8:00, tras avisarnos para la recogida.",
- faq_linen_clean:"Servicio de limpieza profesional: <strong>\u20AC 60 por sesi\u00f3n</strong>, en d\u00eda y hora acordados.",
+ faq_linen_clean:"Servicio de limpieza profesional: <strong>\u20AC 70 por sesi\u00f3n</strong>, en d\u00eda y hora acordados.",
  faq_clothesline:"Tendedero",
 
  // FAQ - Rifiuti
