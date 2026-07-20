@@ -17,9 +17,9 @@ App web statica con le informazioni per gli ospiti dell'Attico Panoramico di Mil
 
 ## Icone e condivisione link
 
-- Favicon: `images/icon-192.png` + `images/apple-touch-icon.png` (generate dal logo `images/Attico.jpg` il 2026-07-20)
-- Meta tag Open Graph nell'head di `index.html`: l'anteprima del link (WhatsApp ecc.) mostra il logo ATTICO
-- Sito online: https://pxh2407.github.io/panoramicpenthouse_info/
+- Favicon: `images/icon-192.png` + `images/apple-touch-icon.png` — logo rotondo con bordo oro #c0963c come nell'header (generate da `images/Attico.jpg` il 2026-07-20)
+- Anteprima link SENZA immagine per scelta dell'utente (2026-07-20): og:image rimosso, restano solo og:title/og:description. Non riaggiungerlo senza richiesta.
+- Sito online: https://pxh2407.github.io/panoramicpenthouse_info/ (il link è stampato sui QR code nella casa vacanze: NON cambiare l'URL)
 
 ## Dati aggiornati
 
