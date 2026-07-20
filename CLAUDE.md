@@ -15,6 +15,12 @@ App web statica con le informazioni per gli ospiti dell'Attico Panoramico di Mil
 - In `app.js` i caratteri speciali sono in escape `\uXXXX` (es. `€` per €)
 - Stile: elegante blu/oro, testo grande, alta leggibilità
 
+## Icone e condivisione link
+
+- Favicon: `images/icon-192.png` + `images/apple-touch-icon.png` (generate dal logo `images/Attico.jpg` il 2026-07-20)
+- Meta tag Open Graph nell'head di `index.html`: l'anteprima del link (WhatsApp ecc.) mostra il logo ATTICO
+- Sito online: https://pxh2407.github.io/panoramicpenthouse_info/
+
 ## Dati aggiornati
 
 - Servizio pulizia professionale: **€ 70 a intervento** (aggiornato il 2026-07-18)
