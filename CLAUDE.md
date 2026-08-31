@@ -7,6 +7,7 @@ App web statica con le informazioni per gli ospiti dell'Attico Panoramico di Mil
 - `index.html` — pagina unica con tutti i contenuti in italiano; le FAQ sono card a comparsa organizzate per categorie (menu "Domande frequenti")
 - `app.js` — traduzioni complete in 4 lingue tramite attributi `data-i18n`: inglese (~riga 350), tedesco (~riga 620), francese (~riga 890), spagnolo (~riga 1160)
 - `images/` — foto dell'appartamento, dintorni, servizi
+- `fete-saint-etienne.html` — pagina a sé (in francese) sul programma della Festa di Saint-Étienne a Milazzo 2026 (concerti + processioni, 4-7 settembre); link: https://pxh2407.github.io/panoramicpenthouse_info/fete-saint-etienne.html — non collegata al menu di index.html, si condivide direttamente
 - Non usa cache busting (`?v=`): le modifiche sono visibili al semplice ricaricamento
 
 ## Regole per le modifiche
