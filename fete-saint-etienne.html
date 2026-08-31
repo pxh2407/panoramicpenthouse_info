@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fête de Saint-Étienne — Milazzo 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#1b2a2f;
+    --sea:#0f5d63;
+    --sea-deep:#0a3d41;
+    --sun:#e0a43b;
+    --paper:#faf6ee;
+    --line:#d9cfbe;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:680px;
+    margin:0 auto;
+    background:var(--paper);
+    min-height:100vh;
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--sea-deep);
+    color:var(--paper);
+    padding:56px 48px 48px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:6px;
+    background:var(--sun);
+  }
+  .kicker{
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--sun);
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:3.4rem;
+    line-height:1.02;
+    letter-spacing:-.01em;
+  }
+  h1 span{display:block;font-size:1.5rem;font-weight:400;color:#bcd6d3;margin-top:14px;letter-spacing:0}
+  .dates{
+    margin-top:26px;
+    font-size:1.02rem;
+    color:#dfeae8;
+    border-top:1px solid rgba(255,255,255,.18);
+    padding-top:18px;
+  }
+
+  /* Intro */
+  .intro{
+    padding:36px 48px 8px;
+    font-size:1.02rem;
+    color:#3a4a4e;
+  }
+  .intro strong{color:var(--sea)}
+
+  /* Programme */
+  .programme{padding:24px 48px 40px}
+  .day{
+    display:grid;
+    grid-template-columns:92px 1fr;
+    gap:22px;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .day:last-child{border-bottom:1px solid var(--line)}
+  .date-box .num{
+    font-family:'Fraunces',serif;
+    font-size:2.5rem;
+    line-height:1;
+    color:var(--sea);
+    display:block;
+  }
+  .date-box .mon{
+    font-size:.74rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#8a8375;
+    margin-top:4px;
+  }
+  .date-box .dow{
+    font-size:.82rem;
+    color:#6b7a7d;
+    margin-top:2px;
+  }
+  .event .title{
+    font-family:'Fraunces',serif;
+    font-size:1.32rem;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .event .sub{
+    font-size:.92rem;
+    color:#5c6a6d;
+    margin-top:4px;
+  }
+  .tag{
+    display:inline-block;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:3px 9px;
+    border-radius:100px;
+    margin-top:10px;
+  }
+  .tag.music{background:rgba(224,164,59,.16);color:#a8741a}
+  .tag.rite{background:rgba(15,93,99,.12);color:var(--sea)}
+  .tag.free{background:rgba(15,93,99,.08);color:#5c6a6d;margin-left:6px}
+
+  /* Stay */
+  .stay{
+    padding:32px 48px;
+    background:var(--sea);
+    color:var(--paper);
+  }
+  .stay .eyebrow{
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--sun);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  .stay h2{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:1.7rem;
+    line-height:1.15;
+    margin-bottom:14px;
+  }
+  .stay p{
+    font-size:.98rem;
+    color:#e2efed;
+    margin-bottom:12px;
+  }
+  .stay p:last-child{margin-bottom:0}
+  .stay .addr{
+    font-weight:600;
+    color:var(--paper);
+  }
+
+  /* Note */
+  .note{
+    padding:22px 48px;
+    background:#f2ece0;
+    font-size:.9rem;
+    color:#5c5647;
+    border-top:1px solid var(--line);
+  }
+  .note b{color:var(--sea-deep)}
+
+  /* Footer */
+  .foot{
+    padding:30px 48px 44px;
+    background:var(--sea-deep);
+    color:#cfe0de;
+    font-size:.86rem;
+  }
+  .foot .place{
+    font-family:'Fraunces',serif;
+    color:var(--paper);
+    font-size:1.15rem;
+    margin-bottom:8px;
+  }
+  .foot a{color:var(--sun);text-decoration:none}
+
+  @media(max-width:520px){
+    .hero{padding:44px 26px 40px}
+    h1{font-size:2.5rem}
+    .intro,.programme,.note,.foot{padding-left:26px;padding-right:26px}
+    .day{grid-template-columns:70px 1fr;gap:16px}
+    .date-box .num{font-size:2rem}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="kicker">Milazzo · Sicile</div>
+    <h1>Fête de Saint-Étienne<span>Fêtes patronales 2026 — Saint patron de la ville</span></h1>
+    <div class="dates">Du vendredi 4 au dimanche 7 septembre 2026 · Bord de mer Garibaldi</div>
+  </header>
+
+  <section class="intro">
+    Chaque année, Milazzo célèbre son saint patron, <strong>Saint-Étienne Protomartyr</strong>, entre ferveur religieuse, traditions et grands concerts en plein air. Voici les rendez-vous à ne pas manquer pendant votre séjour.
+  </section>
+
+  <section class="programme">
+
+    <div class="day">
+      <div class="date-box">
+        <span class="num">04</span>
+        <div class="mon">Septembre</div>
+        <div class="dow">Vendredi</div>
+      </div>
+      <div class="event">
+        <div class="title">Concert d'Ermal Meta</div>
+        <div class="sub">L'un des auteurs-compositeurs les plus appréciés de la scène italienne. Scène du bord de mer Garibaldi, face à la grande roue.</div>
+        <span class="tag music">Concert</span><span class="tag free">Entrée libre</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="date-box">
+        <span class="num">05</span>
+        <div class="mon">Septembre</div>
+        <div class="dow">Samedi</div>
+      </div>
+      <div class="event">
+        <div class="title">Concert de Rocco Hunt</div>
+        <div class="sub">Figure de la scène urban et pop italienne. Une soirée d'énergie sur le bord de mer Garibaldi.</div>
+        <span class="tag music">Concert</span><span class="tag free">Entrée libre</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="date-box">
+        <span class="num">06</span>
+        <div class="mon">Septembre</div>
+        <div class="dow">Samedi</div>
+      </div>
+      <div class="event">
+        <div class="title">Première procession solennelle</div>
+        <div class="sub">Le simulacre de Saint-Étienne est porté en procession depuis l'église San Giacomo à travers le centre historique. Un moment de tradition et de dévotion populaire.</div>
+        <span class="tag rite">Rite religieux</span>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="date-box">
+        <span class="num">07</span>
+        <div class="mon">Septembre</div>
+        <div class="dow">Dimanche</div>
+      </div>
+      <div class="event">
+        <div class="title">Jour de la fête · Grande procession</div>
+        <div class="sub">Messe solennelle le matin, procession du saint patron dans les rues de la ville et remise symbolique des clés de Milazzo. Le cœur de la célébration.</div>
+        <span class="tag rite">Rite religieux</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="stay">
+    <div class="eyebrow">Votre séjour</div>
+    <h2>Aux premières loges de la fête</h2>
+    <p><span class="addr">Attico Panoramico</span> — Via Cristoforo Colombo 7, à quelques mètres seulement du lieu des concerts. Vous rejoignez la scène du bord de mer Garibaldi à pied, en un instant.</p>
+    <p>Vous préférez une soirée au calme ? Pas de souci : l'appartement est équipé de menuiseries à rupture de pont thermique qui atténuent les bruits de la musique venant de la scène, pour un repos paisible même les soirs de concert.</p>
+  </section>
+
+  <div class="note">
+    <b>Bon à savoir —</b> Les dates et les concerts sont confirmés ; les horaires précis des messes et des processions sont publiés par la paroisse et la mairie dans les jours précédant la fête. Renseignez-vous sur place pour le programme définitif.
+  </div>
+
+  <footer class="foot">
+    <div class="place">Où ?</div>
+    Concerts : bord de mer Garibaldi (Lungomare Garibaldi).<br>
+    Rites : Cathédrale (Duomo) et centre historique.<br><br>
+    Ville de Milazzo · <a href="https://www.comune.milazzo.me.it">comune.milazzo.me.it</a>
+  </footer>
+
+</div>
+</body>
+</html>
