@@ -367,7 +367,7 @@ var traduzioni = {
  plastic:"Plastic",
  organic3:"Organic waste & Glass",
  no_collection:"No collection",
- faq_waste_deposit:"Please deposit waste <strong>every day</strong>, starting from <strong>8:00 PM the day before</strong>, in the bin located <strong>to the left of the Garage entrance</strong>.",
+ faq_waste_deposit:"Please deposit waste <strong>every day</strong>, starting from <strong>8:00 PM on the same day</strong>, in the bin located <strong>to the left of the Garage entrance</strong>.",
  faq_waste_note:"<strong>IMPORTANT:</strong> If at the time of check-out there is waste scheduled for collection on subsequent days, you may leave it inside the apartment — we will take care of proper disposal. However, we kindly ask you to pay close attention to waste sorting, as the Municipal Police conducts periodic checks and may impose fines for incorrect disposal.",
 
  // FAQ - Piante e Veranda
@@ -639,7 +639,7 @@ var traduzioni = {
  plastic:"Kunststoff",
  organic3:"Biom\u00fcll & Glas",
  no_collection:"Keine Abholung",
- faq_waste_deposit:"Bitte entsorgen Sie den M\u00fcll <strong>jeden Tag</strong> ab <strong>20:00 Uhr des Vortages</strong> in der Tonne <strong>links neben dem Garageneingang</strong>.",
+ faq_waste_deposit:"Bitte entsorgen Sie den M\u00fcll <strong>jeden Tag</strong> ab <strong>20:00 Uhr desselben Tages</strong> in der Tonne <strong>links neben dem Garageneingang</strong>.",
  faq_waste_note:"<strong>WICHTIG:</strong> Falls beim Check-out noch Abf\u00e4lle vorhanden sind, die f\u00fcr die Abholung an den folgenden Tagen bestimmt sind, k\u00f6nnen Sie diese in der Wohnung lassen \u2013 wir k\u00fcmmern uns um die ordnungsgem\u00e4\u00dfe Entsorgung. Wir bitten Sie jedoch, bei der M\u00fclltrennung besonders sorgf\u00e4ltig vorzugehen, da die Stadtpolizei regelm\u00e4\u00dfige Kontrollen durchf\u00fchrt und bei falscher Entsorgung Bu\u00dfgelder verh\u00e4ngen kann.",
 
  // FAQ - Piante e Veranda
@@ -911,7 +911,7 @@ var traduzioni = {
  plastic:"Plastique",
  organic3:"D\u00e9chets organiques & Verre",
  no_collection:"Pas de collecte",
- faq_waste_deposit:"Veuillez d\u00e9poser les d\u00e9chets <strong>chaque jour</strong> \u00e0 partir de <strong>20h00 la veille</strong>, dans la poubelle situ\u00e9e <strong>\u00e0 gauche de l'entr\u00e9e du Garage</strong>.",
+ faq_waste_deposit:"Veuillez d\u00e9poser les d\u00e9chets <strong>chaque jour</strong> \u00e0 partir de <strong>20h00 le jour m\u00eame</strong>, dans la poubelle situ\u00e9e <strong>\u00e0 gauche de l'entr\u00e9e du Garage</strong>.",
  faq_waste_note:"<strong>IMPORTANT :</strong> Si au moment du check-out il reste des d\u00e9chets destin\u00e9s \u00e0 la collecte des jours suivants, vous pouvez les laisser dans l'appartement : nous nous chargerons de les \u00e9liminer correctement. Nous vous demandons toutefois de porter une attention particuli\u00e8re au tri des d\u00e9chets, car la Police Municipale effectue des contr\u00f4les p\u00e9riodiques et peut imposer des amendes en cas de mauvais tri.",
 
  // FAQ - Piante e Veranda
@@ -1183,7 +1183,7 @@ var traduzioni = {
  plastic:"Pl\u00e1stico",
  organic3:"Residuos org\u00e1nicos y vidrio",
  no_collection:"Sin recogida",
- faq_waste_deposit:"Por favor, deposite los residuos <strong>todos los d\u00edas</strong> a partir de las <strong>20:00 del d\u00eda anterior</strong>, en el contenedor situado <strong>a la izquierda de la entrada del Garaje</strong>.",
+ faq_waste_deposit:"Por favor, deposite los residuos <strong>todos los d\u00edas</strong> a partir de las <strong>20:00 del mismo d\u00eda</strong>, en el contenedor situado <strong>a la izquierda de la entrada del Garaje</strong>.",
  faq_waste_note:"<strong>IMPORTANTE:</strong> Si en el momento del check-out quedan residuos destinados a la recogida de los d\u00edas siguientes, puede dejarlos dentro del apartamento: nos encargaremos de su correcta eliminaci\u00f3n. Sin embargo, le pedimos que preste la m\u00e1xima atenci\u00f3n a la separaci\u00f3n de residuos, ya que la Polic\u00eda Municipal realiza controles peri\u00f3dicos y puede imponer sanciones en caso de separaci\u00f3n incorrecta.",
 
  // FAQ - Piante e Veranda

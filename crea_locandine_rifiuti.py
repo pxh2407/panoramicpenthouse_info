@@ -46,7 +46,7 @@ TESTI = {
         "tabella": "CALENDARIO DEPOSITO RIFIUTI",
         "deposito": [
             ("Depositare i rifiuti ", 0), ("ogni giorno", 1),
-            (" a partire dalle ", 0), ("ore 20:00 del giorno precedente", 1), (",", 0)],
+            (" a partire dalle ", 0), ("ore 20:00 dello stesso giorno", 1), (",", 0)],
         "deposito2": [("nel cassonetto ", 0), ("a sinistra dell'ingresso del Garage", 1), (".", 0)],
         "importante_tit": "IMPORTANTE:",
         "importante": "Se al momento del check-out dovessero rimanere rifiuti destinati alla "
@@ -65,7 +65,7 @@ TESTI = {
         "tabella": "WASTE DISPOSAL CALENDAR",
         "deposito": [
             ("Please deposit waste ", 0), ("every day", 1),
-            (", starting from ", 0), ("8:00 PM the day before", 1), (", in the bin", 0)],
+            (", starting from ", 0), ("8:00 PM on the same day", 1), (", in the bin", 0)],
         "deposito2": [("located ", 0), ("to the left of the Garage entrance", 1), (".", 0)],
         "importante_tit": "IMPORTANT:",
         "importante": "If at the time of check-out there is waste scheduled for collection on "
