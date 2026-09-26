@@ -54,7 +54,7 @@ TESTI = {
                       "provvederemo noi al corretto conferimento. Vi chiediamo tuttavia di prestare la massima "
                       "attenzione nella differenziazione dei rifiuti, poiché la Polizia Municipale effettua "
                       "controlli periodici e può applicare sanzioni in caso di errato conferimento.",
-        "dida1": "I contenitori per la differenziata",
+        "dida1": "Le pattumiere nel balcone-veranda dell'appartamento",
         "dida2": "Il cassonetto all'ingresso del Garage",
         "giorno_idx": 0, "testo_idx": 2,
     },
@@ -72,7 +72,7 @@ TESTI = {
                       "subsequent days, you may leave it inside the apartment — we will take care of proper "
                       "disposal. However, we kindly ask you to pay close attention to waste sorting, as the "
                       "Municipal Police conducts periodic checks and may impose fines for incorrect disposal.",
-        "dida1": "The recycling bins",
+        "dida1": "The sorting bins on the balcony-veranda, inside the apartment",
         "dida2": "The bin at the Garage entrance",
         "giorno_idx": 1, "testo_idx": 3,
     },

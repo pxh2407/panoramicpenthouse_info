@@ -349,7 +349,8 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Waste Sorting & Recycling",
- faq_waste_loc:"The waste bins are to the left of the Garage entrance.",
+ faq_waste_loc_in:"The sorting bins are on the <strong>balcony-veranda</strong>, inside the apartment.",
+ faq_waste_loc:"The bins where waste is to be deposited are to the left of the Garage entrance.",
  day:"Day",
  waste_type:"Waste Type",
  monday:"Monday",
@@ -621,7 +622,8 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"M\u00fclltrennung & Recycling",
- faq_waste_loc:"Die M\u00fclltonnen befinden sich links vom Garageneingang.",
+ faq_waste_loc_in:"Die M\u00fclleimer f\u00fcr die M\u00fclltrennung befinden sich auf der <strong>Balkon-Veranda</strong>, in der Wohnung.",
+ faq_waste_loc:"Die Tonnen f\u00fcr die Entsorgung befinden sich links vom Garageneingang.",
  day:"Tag",
  waste_type:"Abfallart",
  monday:"Montag",
@@ -893,7 +895,8 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Tri des d\u00e9chets & Recyclage",
- faq_waste_loc:"Les poubelles se trouvent \u00e0 gauche de l'entr\u00e9e du Garage.",
+ faq_waste_loc_in:"Les poubelles de tri se trouvent sur le <strong>balcon-v\u00e9randa</strong>, \u00e0 l'int\u00e9rieur de l'appartement.",
+ faq_waste_loc:"Les bacs pour le d\u00e9p\u00f4t des d\u00e9chets se trouvent \u00e0 gauche de l'entr\u00e9e du Garage.",
  day:"Jour",
  waste_type:"Type de d\u00e9chet",
  monday:"Lundi",
@@ -1165,7 +1168,8 @@ var traduzioni = {
 
  // FAQ - Rifiuti
  faq_waste:"Separaci\u00f3n de residuos y reciclaje",
- faq_waste_loc:"Los contenedores de basura est\u00e1n a la izquierda de la entrada del Garaje.",
+ faq_waste_loc_in:"Los cubos para la separaci\u00f3n est\u00e1n en el <strong>balc\u00f3n-veranda</strong>, dentro del apartamento.",
+ faq_waste_loc:"Los contenedores para depositar los residuos est\u00e1n a la izquierda de la entrada del Garaje.",
  day:"D\u00eda",
  waste_type:"Tipo de residuo",
  monday:"Lunes",
