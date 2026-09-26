@@ -35,8 +35,11 @@ print("Foto dei contenitori:")
 lavora("Cassonetti.jpg", ritaglio=(0.01, 0.02, 0.045, 0.13),
        luce=1.10, contrasto=1.16, colore=1.10, nitidezza=0.55)
 
-# 2) il cassonetto al garage: foto notturna, scura e mossa
-lavora("Rifiuti Garage.jpg", ritaglio=(0.02, 0.03, 0.06, 0.06),
-       luce=1.38, contrasto=1.26, colore=0.72, nitidezza=0.70, sfocatura=0.6)
+# 2) il cassonetto al garage: dal 2026-09-26 c'è una foto nuova, già nitida
+#    e ben illuminata — non va schiarita, basta un filo di nitidezza.
+#    (La vecchia foto notturna è archiviata come "... - vecchia notturna.jpg";
+#     per quella servivano luce=1.38, contrasto=1.26, colore=0.72.)
+lavora("Rifiuti Garage.jpg", ritaglio=(0, 0, 0, 0),
+       luce=1.0, contrasto=1.02, colore=1.0, nitidezza=0.20)
 
 print("Fatto.")
