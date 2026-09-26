@@ -25,7 +25,8 @@ App web statica con le informazioni per gli ospiti dell'Attico Panoramico di Mil
 ## Dati aggiornati
 
 - Servizio pulizia professionale: **€ 70 a intervento** (aggiornato il 2026-07-18)
-- Raccolta differenziata: calendario in FAQ "Raccolta Differenziata Rifiuti"; locandine A4 stampabili `Locandina Raccolta Differenziata IT.pdf` / `EN.pdf` (generate il 2026-07-18)
+- Raccolta differenziata: calendario in FAQ "Raccolta Differenziata Rifiuti", titolo **"Calendario deposito rifiuti"**. Aggiornato il **2026-09-26**: Domenica umido organico · Lunedì indifferenziato · Martedì carta e cartone · Mercoledì umido organico · Giovedì plastica · Venerdì **umido organico e vetro** · Sabato nessuna raccolta. Chiavi i18n: `waste_cal_title`, `organic`/`organic2`/`organic3` (i tre giorni di umido, il terzo è quello col vetro), `unsorted`, `paper`, `plastic`, `no_collection`.
+- Locandine A4 stampabili `Locandina Raccolta Differenziata IT.pdf` / `EN.pdf`: **si rigenerano con `python crea_locandine_rifiuti.py`** (reportlab + Pillow). Il calendario sta nella lista `GIORNI` in cima allo script: si corregge lì e si rifanno tutte e due le lingue. ⚠️ **Se cambia il calendario, aggiornare SIA le pagine SIA le locandine**: prima le locandine erano state dimenticate.
 
 ## Git / GitHub
 
