@@ -42,7 +42,7 @@ TESTI = {
     "it": {
         "file": "Locandina Raccolta Differenziata IT.pdf",
         "titolo": "RACCOLTA DIFFERENZIATA RIFIUTI",
-        "sottotitolo": "I bidoni dei rifiuti sono a sinistra dell'ingresso del Garage",
+        "sottotitolo": "",
         "tabella": "CALENDARIO DEPOSITO RIFIUTI",
         "deposito": [
             ("Depositare i rifiuti ", 0), ("ogni giorno", 1),
@@ -61,7 +61,7 @@ TESTI = {
     "en": {
         "file": "Locandina Raccolta Differenziata EN.pdf",
         "titolo": "WASTE SORTING & RECYCLING",
-        "sottotitolo": "The waste bins are to the left of the Garage entrance",
+        "sottotitolo": "",
         "tabella": "WASTE DISPOSAL CALENDAR",
         "deposito": [
             ("Please deposit waste ", 0), ("every day", 1),
@@ -130,11 +130,15 @@ def locandina(lingua):
     c.drawCentredString(W / 2, y - 11.6 * mm, t["titolo"])
     y -= 24 * mm
 
-    # ---- sottotitolo ----
-    c.setFillColorRGB(0.25, 0.28, 0.32)
-    c.setFont("Helvetica-Oblique", 11.5)
-    c.drawCentredString(W / 2, y, t["sottotitolo"])
-    y -= 10 * mm
+    # ---- sottotitolo (se c'è: tolto il 2026-09-26, la posizione dei bidoni
+    #      è già scritta nel riquadro giallo più in basso) ----
+    if t.get("sottotitolo"):
+        c.setFillColorRGB(0.25, 0.28, 0.32)
+        c.setFont("Helvetica-Oblique", 11.5)
+        c.drawCentredString(W / 2, y, t["sottotitolo"])
+        y -= 10 * mm
+    else:
+        y += 4 * mm
 
     # ---- tabella ----
     c.setFillColorRGB(*NAVY)
