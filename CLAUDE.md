@@ -28,6 +28,8 @@ App web statica con le informazioni per gli ospiti dell'Attico Panoramico di Mil
 - Raccolta differenziata: calendario in FAQ "Raccolta Differenziata Rifiuti", titolo **"Calendario deposito rifiuti"**. Aggiornato il **2026-09-26**: Domenica umido organico · Lunedì indifferenziato · Martedì carta e cartone · Mercoledì umido organico · Giovedì plastica · Venerdì **umido organico e vetro** · Sabato nessuna raccolta. Chiavi i18n: `waste_cal_title`, `organic`/`organic2`/`organic3` (i tre giorni di umido, il terzo è quello col vetro), `unsorted`, `paper`, `plastic`, `no_collection`.
 - Locandine A4 stampabili `Locandina Raccolta Differenziata IT.pdf` / `EN.pdf`: **si rigenerano con `python crea_locandine_rifiuti.py`** (reportlab + Pillow). Il calendario sta nella lista `GIORNI` in cima allo script: si corregge lì e si rifanno tutte e due le lingue. ⚠️ **Se cambia il calendario, aggiornare SIA le pagine SIA le locandine**: prima le locandine erano state dimenticate.
 
+- Chiavi: foto `images/Chiavi.jpg` (6 chiavi numerate 1-6, fornita dall'utente il 2026-10-05) in cima alla FAQ; tolta la miniatura `Telecomanto.png` (file ancora nella cartella). Stessa foto nella nuova app `CLAUDE\ATTICO OSPITI NUOVA APP`.
+
 ## Git / GitHub
 
 - Repo: https://github.com/pxh2407/panoramicpenthouse_info
