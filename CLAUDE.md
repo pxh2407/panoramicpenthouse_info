@@ -44,7 +44,8 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Chiavi: `images/Chiavi.jpg` con numeri 1-6 in tondi blu grandi; nell'elenco numeri in tondi blu.
 
 ## Tolto su richiesta (non rimettere)
-- Recensioni, lettera di benvenuto, sezione "Tornate a trovarci / Disponibilità" (2026-10-05). Anteprima link senza immagine (niente og:image).
+- Recensioni, lettera di benvenuto, sezione "Tornate a trovarci / Disponibilità" (2026-10-05).
+- Numeri utili: gruppo "Uffici pubblici" (Comune, URP, INPS, ecc.) tolto il 2026-10-06. Restano Emergenze, Salute, Sicurezza e strada. Anteprima link senza immagine (niente og:image).
 
 ## Anteprima e pubblicazione
 - Anteprima locale: configurazione `attico-per-interno` in `CLAUDE\.claude\launch.json`.

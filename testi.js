@@ -582,16 +582,5 @@ const NUMERI = [
       { n: "090717417", it: "Polizia stradale", en: "Traffic police", de: "Verkehrspolizei", fr: "Police de la route", es: "Policía de tráfico" },
       { n: "0909224530", it: "Vigili urbani", en: "Municipal police", de: "Stadtpolizei", fr: "Police municipale", es: "Policía municipal" },
       { n: "090360979", it: "Corpo forestale", en: "Forestry police", de: "Forstpolizei", fr: "Garde forestière", es: "Guardia forestal" }
-    ] },
-  { gruppo: { it: "Uffici pubblici", en: "Public offices", de: "Behörden", fr: "Services publics", es: "Oficinas públicas" },
-    voci: [
-      { n: "0909231111", it: "Comune di Milazzo", en: "Milazzo Town Hall", de: "Rathaus Milazzo", fr: "Mairie de Milazzo", es: "Ayuntamiento de Milazzo" },
-      { n: "0909232017", it: "U.R.P. del Comune", en: "Town Hall information office", de: "Bürgerbüro der Stadt", fr: "Bureau d'information de la mairie", es: "Oficina de atención ciudadana" },
-      { n: "0909231054", it: "Servizi sociali", en: "Social services", de: "Sozialamt", fr: "Services sociaux", es: "Servicios sociales" },
-      { n: "0909281110", it: "Capitaneria di porto", en: "Harbour master", de: "Hafenbehörde", fr: "Capitainerie", es: "Capitanía marítima" },
-      { n: "0909282010", it: "Agenzia delle Dogane", en: "Customs office", de: "Zollamt", fr: "Douanes", es: "Aduanas" },
-      { n: "0909230211", it: "INAIL", en: "INAIL", de: "INAIL", fr: "INAIL", es: "INAIL" },
-      { n: "0909230611", it: "INPS", en: "INPS", de: "INPS", fr: "INPS", es: "INPS" },
-      { n: "0909296191", it: "Ufficio di collocamento", en: "Employment office", de: "Arbeitsamt", fr: "Bureau de l'emploi", es: "Oficina de empleo" }
     ] }
 ];
