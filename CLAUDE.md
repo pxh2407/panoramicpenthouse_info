@@ -44,9 +44,17 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Luce veranda: `Luce-Veranda1.jpg` = cucina ("VERANDA LIGHT SWITCH"), `Luci-Veranda2.jpg` = bagno (accanto a "ACQUA CALDA").
 - Chiavi: `images/Chiavi.jpg` con numeri 1-6 in tondi blu grandi; nell'elenco numeri in tondi blu.
 
+## Copertina del link (2026-10-06)
+- Su richiesta dell'utente il link ha di nuovo un'anteprima con immagine: `images/copertina.jpg` 1200×630 (Castello + logo + "Panoramic Penthouse" + "Regole della casa e informazioni utili per gli ospiti" IT/EN). Si rifà con `python crea_copertina.py`. Meta `og:*` in testa a index.html.
+- WhatsApp conserva a lungo le vecchie anteprime: per vedere quella nuova può servire incollare il link in una chat nuova.
+
+## Icone (2026-10-06)
+- Niente emoji: i disegni sono in `icone.js` (`ico(nome)` = disegno a linee, `tessera(nome, colore)` = disegno bianco in riquadro colorato). In testi.js `icona:` contiene il NOME del disegno; ogni categoria della guida ha un `colore`. In index.html i segnaposto `<span data-ico="nome">` vengono riempiti all'avvio. Uniche emoji rimaste: bandierine delle lingue.
+- Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima delle icone 2026-10-06` + tag `prima-delle-icone-2026-10-06`.
+
 ## Tolto su richiesta (non rimettere)
 - Recensioni, lettera di benvenuto, sezione "Tornate a trovarci / Disponibilità" (2026-10-05).
-- Numeri utili: gruppo "Uffici pubblici" (Comune, URP, INPS, ecc.) tolto il 2026-10-06. Restano Emergenze, Salute, Sicurezza e strada. Anteprima link senza immagine (niente og:image).
+- Numeri utili: gruppo "Uffici pubblici" (Comune, URP, INPS, ecc.) tolto il 2026-10-06. Restano Emergenze, Salute, Sicurezza e strada.
 
 ## Anteprima e pubblicazione
 - Anteprima locale: configurazione `attico-per-interno` in `CLAUDE\.claude\launch.json`.
