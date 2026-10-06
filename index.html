@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="style.css?v=19">
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <span>Attico Panoramico</span>
   </a>
   <button class="lang-btn" id="langBtn" aria-label="Lingua">
-    <span id="langFlag">🇮🇹</span><span id="langCode">IT</span>
+    <span id="langFlag"><span data-ico="globo"></span></span><span id="langCode">IT</span>
   </button>
 </header>
 
@@ -52,12 +52,12 @@
       <article class="card oggi">
         <p class="oggi__data" id="oggiData"></p>
         <button class="oggi__riga" data-apri="rifiuti">
-          <span class="oggi__icona" id="rifIcona">♻️</span>
+          <span class="oggi__icona" id="rifIcona"></span>
           <span class="oggi__testo"><small data-t="rifiuti_stasera" id="rifEtichetta"></small><strong id="rifTipo"></strong></span>
           <span class="freccia" aria-hidden="true">›</span>
         </button>
         <button class="oggi__riga" data-apri="silenzio">
-          <span class="oggi__icona">🌙</span>
+          <span class="oggi__icona"><span class="it" data-ico="luna" style="--c:#14233c"></span></span>
           <span class="oggi__testo"><small id="silEtichetta"></small><strong id="silOra"></strong></span>
           <span class="freccia" aria-hidden="true">›</span>
         </button>
@@ -66,22 +66,22 @@
       <!-- Rapidi -->
       <h2 class="titolo-sez" data-t="rapidi">A portata di mano</h2>
       <div class="rapidi">
-        <button class="rapido" data-apri="wifi"><span>📶</span><b data-t="q_wifi">WiFi</b></button>
-        <button class="rapido" data-apri="chiavi"><span>🔑</span><b data-t="q_chiavi">Chiavi</b></button>
-        <button class="rapido" data-apri="rifiuti"><span>♻️</span><b data-t="q_rifiuti">Rifiuti</b></button>
-        <button class="rapido" data-apri="clima"><span>❄️</span><b data-t="q_clima">Clima</b></button>
-        <button class="rapido" id="btnMangiare"><span>🍝</span><b data-t="q_mangiare">Mangiare</b></button>
-        <button class="rapido rapido--sos" data-vai="aiuto"><span>🆘</span><b data-t="q_sos">Emergenze</b></button>
+        <button class="rapido" data-apri="wifi"><span class="it" data-ico="wifi" style="--c:#3a6db0"></span><b data-t="q_wifi">WiFi</b></button>
+        <button class="rapido" data-apri="chiavi"><span class="it" data-ico="chiave" style="--c:#c79a1e"></span><b data-t="q_chiavi">Chiavi</b></button>
+        <button class="rapido" data-apri="rifiuti"><span class="it" data-ico="bidone" style="--c:#6b5bb5"></span><b data-t="q_rifiuti">Rifiuti</b></button>
+        <button class="rapido" data-apri="clima"><span class="it" data-ico="fiocco" style="--c:#1f8a9e"></span><b data-t="q_clima">Clima</b></button>
+        <button class="rapido" id="btnMangiare"><span class="it" data-ico="posate" style="--c:#b8893a"></span><b data-t="q_mangiare">Mangiare</b></button>
+        <button class="rapido rapido--sos" data-vai="aiuto"><span class="it" data-ico="salvagente" style="--c:#b3382c"></span><b data-t="q_sos">Emergenze</b></button>
       </div>
 
       <!-- Regole -->
       <article class="card regole">
         <h2 class="titolo-card" data-t="regole_titolo">Regole della casa</h2>
         <p class="sotto" data-t="regole_sotto"></p>
-        <button class="regola" data-apri="silenzio"><span>🌙</span><p data-t="r_silenzio"></p></button>
-        <button class="regola" data-apri="rifiuti"><span>♻️</span><p data-t="r_rifiuti"></p></button>
-        <button class="regola" data-apri="pioggia"><span>🌧️</span><p data-t="r_pioggia"></p></button>
-        <button class="regola" data-apri="clima"><span>❄️</span><p data-t="r_clima"></p></button>
+        <button class="regola" data-apri="silenzio"><span class="it" data-ico="luna" style="--c:#14233c"></span><p data-t="r_silenzio"></p></button>
+        <button class="regola" data-apri="rifiuti"><span class="it" data-ico="bidone" style="--c:#6b5bb5"></span><p data-t="r_rifiuti"></p></button>
+        <button class="regola" data-apri="pioggia"><span class="it" data-ico="pioggia" style="--c:#3f8f4f"></span><p data-t="r_pioggia"></p></button>
+        <button class="regola" data-apri="clima"><span class="it" data-ico="fiocco" style="--c:#1f8a9e"></span><p data-t="r_clima"></p></button>
       </article>
 
       <!-- Host -->
@@ -95,7 +95,7 @@
         </div>
         <p data-t="host_testo"></p>
         <div class="bottoni">
-          <a class="btn btn--wa" id="hostWa" target="_blank" rel="noopener"><span>💬</span><b data-t="whatsapp">WhatsApp</b></a>
+          <a class="btn btn--wa" id="hostWa" target="_blank" rel="noopener"><span data-ico="whatsapp"></span><b data-t="whatsapp">WhatsApp</b></a>
         </div>
       </article>
 
@@ -113,7 +113,7 @@
       <h1 class="titolo-pag" data-t="guida_titolo">La casa</h1>
       <p class="sotto-pag" data-t="guida_sotto"></p>
       <label class="cerca">
-        <span aria-hidden="true">🔍</span>
+        <span data-ico="cerca"></span>
         <input type="search" id="cerca" autocomplete="off">
       </label>
       <nav class="chips" id="chips"></nav>
@@ -150,7 +150,7 @@
           <div><h2 class="titolo-card" data-t="host_breve">I vostri host</h2><p class="sotto" data-t="scrivici"></p></div>
         </div>
         <div class="bottoni">
-          <a class="btn btn--wa" id="hostWa2" target="_blank" rel="noopener"><span>💬</span><b data-t="whatsapp">WhatsApp</b></a>
+          <a class="btn btn--wa" id="hostWa2" target="_blank" rel="noopener"><span data-ico="whatsapp"></span><b data-t="whatsapp">WhatsApp</b></a>
         </div>
       </article>
       <div id="numeri"></div>
@@ -185,7 +185,7 @@
   <header class="scheda__testa">
     <span class="scheda__icona" id="schedaIcona"></span>
     <h2 id="schedaTitolo"></h2>
-    <button class="tondo" id="schedaAscolta" aria-label="Ascolta">🔊</button>
+    <button class="tondo" id="schedaAscolta" aria-label="Ascolta"></button>
     <button class="tondo" id="schedaChiudi" aria-label="Chiudi">✕</button>
   </header>
   <div class="scheda__corpo" id="schedaCorpo"></div>
@@ -194,7 +194,8 @@
 <div class="avviso-copia" id="toast" hidden></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="testi.js?v=19"></script>
-<script src="app.js?v=19"></script>
+<script src="icone.js?v=20"></script>
+<script src="testi.js?v=20"></script>
+<script src="app.js?v=20"></script>
 </body>
 </html>

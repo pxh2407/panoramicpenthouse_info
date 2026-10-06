@@ -77,7 +77,7 @@ strong, b { font-weight: 600; }
 .oggi__data { margin: 0 0 6px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--oro); font-weight: 700; }
 .oggi__riga { width: 100%; display: flex; align-items: center; gap: 14px; padding: 12px 0; border-top: 1px solid var(--linea); }
 .oggi__riga:first-of-type { border-top: 0; }
-.oggi__icona { width: 46px; height: 46px; flex: none; border-radius: 14px; display: grid; place-items: center; font-size: 22px; background: var(--crema); }
+.oggi__icona { width: 46px; height: 46px; flex: none; display: grid; place-items: center; }
 .oggi__testo { flex: 1; display: flex; flex-direction: column; }
 .oggi__testo small { color: var(--tenue); font-size: 14px; }
 .oggi__testo strong { font-size: 18px; color: var(--blu); }
@@ -142,7 +142,6 @@ strong, b { font-weight: 600; }
 .luogo__desc { font-size: 14.5px; color: var(--tenue); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .luogo__azione { margin-top: auto; font-size: 14px; color: var(--blu-2); font-weight: 600; }
 .luogo__foto--icona { background: linear-gradient(145deg, var(--c), color-mix(in srgb, var(--c) 62%, #14233c)); }
-.luogo__foto--icona span { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,.95); display: grid; place-items: center; font-size: 28px; box-shadow: 0 4px 12px rgba(0,0,0,.18); }
 /* Mappe */
 .mappa-grande { height: min(58vh, 420px); border-radius: var(--r); overflow: hidden; box-shadow: var(--ombra); margin: 6px 0 4px; background: #e9eef2; z-index: 0; }
 .mini-mappa { height: 250px; border-radius: 14px; overflow: hidden; margin: 2px 0 8px; background: #e9eef2; border: 1px solid var(--linea); z-index: 0; }
@@ -161,7 +160,8 @@ strong, b { font-weight: 600; }
 
 .esperienze { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .esperienza { background: var(--carta); border-radius: 14px; box-shadow: var(--ombra); padding: 14px; text-decoration: none; color: var(--testo); display: flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 500; line-height: 1.3; }
-.esperienza span { font-size: 22px; }
+.esperienza { justify-content: space-between; }
+.esperienza .ico { color: var(--oro); width: 18px; height: 18px; }
 
 /* ---------- Aiuto ---------- */
 .sos { display: flex; align-items: center; gap: 16px; background: var(--rosso); color: #fff; text-decoration: none; border-radius: var(--r); padding: 18px 20px; box-shadow: 0 10px 24px rgba(179,56,44,.28); margin-bottom: 18px; }
@@ -272,3 +272,35 @@ strong, b { font-weight: 600; }
   .scheda.on { transform: translateY(50%); opacity: 1; }
   .scheda__maniglia { display: none; }
 }
+
+/* ===== Icone disegnate (icone.js) al posto delle emoji ===== */
+.ico { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.22em; }
+.ico--pieno { stroke: none; }
+.ico--mini { width: 17px; height: 17px; margin-right: 5px; vertical-align: -3px; }
+.it { --c: #3a6db0; width: 42px; height: 42px; flex: none; border-radius: 12px; display: grid; place-items: center; color: #fff;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--c) 72%, #fff), var(--c) 55%, color-mix(in srgb, var(--c) 80%, #000));
+  box-shadow: 0 2px 6px rgba(20,35,60,.18), inset 0 1px 0 rgba(255,255,255,.25); }
+.it .ico { width: 24px; height: 24px; }
+.rapido .it { width: 54px; height: 54px; border-radius: 16px; }
+.rapido .it .ico { width: 30px; height: 30px; }
+.oggi__icona .it { width: 46px; height: 46px; border-radius: 14px; }
+.oggi__icona .it .ico { width: 26px; height: 26px; }
+.regola .it { width: 36px; height: 36px; border-radius: 10px; font-size: inherit; text-align: initial; }
+.regola .it .ico { width: 20px; height: 20px; }
+.scheda__icona .it { width: 40px; height: 40px; }
+.meteo .ico--meteo { width: 20px; height: 20px; }
+.btn .ico { width: 21px; height: 21px; }
+.btn--wa .ico { width: 22px; height: 22px; }
+.numero__tel .ico { width: 19px; height: 19px; vertical-align: -4px; }
+.luogo__foto--icona { color: #fff; }
+.luogo__foto--icona .ico { width: 46px; height: 46px; stroke-width: 1.7; filter: drop-shadow(0 2px 4px rgba(0,0,0,.2)); }
+.pin > span { display: grid; place-items: center; color: #fff; }
+.pin .ico { width: 19px; height: 19px; stroke-width: 2.2; }
+.pin--casa .ico { width: 21px; height: 21px; }
+.chiave i.tele { color: var(--blu); }
+.chiave i.tele .ico { width: 18px; height: 18px; }
+.cerca .ico { width: 21px; height: 21px; color: var(--tenue); }
+.lang-btn .ico { width: 19px; height: 19px; }
+.tondo .ico { width: 21px; height: 21px; color: var(--blu); }
+.tondo.on .ico { color: #fff; }
+.categoria h2 .pallino { width: 12px; height: 12px; border-radius: 50%; background: var(--c); flex: none; }

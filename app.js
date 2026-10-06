@@ -21,7 +21,7 @@
 
   /* ---------- Indice delle voci della guida ---------- */
   const VOCI = {};
-  GUIDA.forEach(c => c.voci.forEach(v => { VOCI[v.id] = v; }));
+  GUIDA.forEach(c => c.voci.forEach(v => { v._cat = c; VOCI[v.id] = v; }));
   const LUOGHI = {};
   DINTORNI.forEach(c => c.luoghi.forEach((l, i) => { l._id = l.id || (c.id + i); l._cat = c; LUOGHI[l._id] = l; }));
 
@@ -30,11 +30,13 @@
     document.documentElement.lang = L;
     $$("[data-t]").forEach(el => { el.textContent = u(el.dataset.t); });
     $("#cerca").placeholder = u("cerca");
-    $("#langFlag").textContent = "🌐";
     $("#langCode").textContent = L.toUpperCase();
     $("#schedaAscolta").setAttribute("aria-label", u("ascolta"));
     $("#schedaChiudi").setAttribute("aria-label", u("chiudi"));
   }
+
+  // Riempie i segnaposto <span data-ico> di index.html con i disegni di icone.js
+  function riempiIcone() { $$("[data-ico]").forEach(el => { el.innerHTML = ico(el.dataset.ico); }); }
 
   /* ---------- Contatti ---------- */
   function contatti() {
@@ -65,11 +67,11 @@
     if (tipo) {
       $("#rifEtichetta").textContent = u("rifiuti_stasera");
       $("#rifTipo").textContent = tr(RIFIUTI_TIPI[tipo]);
-      $("#rifIcona").textContent = RIFIUTI_TIPI[tipo].icona.slice(0, 2);
+      $("#rifIcona").innerHTML = tessera(RIFIUTI_TIPI[tipo].icona, RIFIUTI_TIPI[tipo].colore);
     } else {
       $("#rifEtichetta").textContent = u("q_rifiuti");
       $("#rifTipo").textContent = u("nessuna_raccolta");
-      $("#rifIcona").textContent = "♻️";
+      $("#rifIcona").innerHTML = tessera("bidone", "#9aa1ab");
     }
     const s = statoSilenzio(now);
     $("#silEtichetta").textContent = s.ora ? u("silenzio_ora") : u("silenzio_prossimo");
@@ -77,14 +79,14 @@
   }
 
   /* ---------- Meteo (Open-Meteo, senza chiave) ---------- */
-  const METEO_ICONE = [[0, "☀️"], [2, "🌤️"], [3, "☁️"], [48, "🌫️"], [57, "🌦️"], [67, "🌧️"], [77, "🌨️"], [82, "🌧️"], [86, "🌨️"], [99, "⛈️"]];
+  const METEO_ICONE = [[0, "sole"], [2, "solenuvola"], [3, "nuvola"], [48, "nebbia"], [67, "pioggia"], [77, "neve"], [82, "pioggia"], [86, "neve"], [99, "temporale"]];
   let meteoDati = null;
   function mostraMeteo() {
     if (!meteoDati) return;
     const c = meteoDati.weather_code;
-    const ic = (METEO_ICONE.find(([max]) => c <= max) || [0, "🌡️"])[1];
+    const ic = (METEO_ICONE.find(([max]) => c <= max) || [0, "nuvola"])[1];
     const el = $("#meteo");
-    el.textContent = ic + "  " + Math.round(meteoDati.temperature_2m) + "°C · " + u("meteo");
+    el.innerHTML = ico(ic, "ico--meteo") + "<span>" + Math.round(meteoDati.temperature_2m) + "°C · " + esc(u("meteo")) + "</span>";
     el.hidden = false;
   }
   function caricaMeteo() {
@@ -96,11 +98,11 @@
 
   /* ---------- Guida ---------- */
   function guida() {
-    $("#chips").innerHTML = GUIDA.map(c => '<button class="chip" data-cat="' + c.id + '">' + c.icona + " " + esc(tr(c.titolo)) + "</button>").join("");
+    $("#chips").innerHTML = GUIDA.map(c => '<button class="chip" data-cat="' + c.id + '">' + esc(tr(c.titolo)) + "</button>").join("");
     $("#guida").innerHTML = GUIDA.map(c =>
-      '<section class="categoria" id="cat-' + c.id + '"><h2><span>' + c.icona + "</span>" + esc(tr(c.titolo)) + '</h2><div class="lista-voci">' +
-      c.voci.map(v => '<button class="voce" data-apri="' + v.id + '" data-cerca="' + esc(testoRicerca(v, c)) + '"><span class="voce__icona">' + v.icona +
-        '</span><span class="voce__titolo">' + esc(tr(v.titolo)) + "</span>" + (v.importante ? '<span class="voce__pin">★</span>' : "") +
+      '<section class="categoria" id="cat-' + c.id + '"><h2>' + esc(tr(c.titolo)) + '</h2><div class="lista-voci">' +
+      c.voci.map(v => '<button class="voce" data-apri="' + v.id + '" data-cerca="' + esc(testoRicerca(v, c)) + '">' + tessera(v.icona, c.colore, "it--voce") +
+        '<span class="voce__titolo">' + esc(tr(v.titolo)) + "</span>" + (v.importante ? '<span class="voce__pin">★</span>' : "") +
         '<span class="freccia" aria-hidden="true">›</span></button>').join("") +
       "</div></section>").join("");
     filtra();
@@ -134,26 +136,27 @@
   function distanza(l) {
     const m = metri(CASA, l.pos) * 1.3;
     const loc = infoLingua().voce;
-    if (l.auto) return "🚗 " + u("circa") + " " + Math.round(m / 1000) + " km";
+    if (l.auto) return u("circa") + " " + Math.round(m / 1000) + " km";
     const min = Math.max(2, Math.round(m / 75));
     const dist = m < 1000 ? Math.round(m / 10) * 10 + " m" : (m / 1000).toLocaleString(loc, { maximumFractionDigits: 1 }) + " km";
-    return "🚶 " + min + " min · " + dist;
+    return min + " min · " + dist;
   }
-  function tessera(l) {
+  function distHTML(l) { return ico(l.auto ? "auto" : "piedi", "ico--mini") + esc(distanza(l)); }
+  function tesseraLuogo(l) {
     return l.foto
       ? '<span class="luogo__foto" style="background-image:url(\'images/' + encodeURI(l.foto) + '\')"></span>'
-      : '<span class="luogo__foto luogo__foto--icona" style="--c:' + l._cat.colore + '"><span>' + (l.icona || l._cat.icona) + "</span></span>";
+      : '<span class="luogo__foto luogo__foto--icona" style="--c:' + l._cat.colore + '">' + ico(l.icona || l._cat.icona) + "</span>";
   }
   function schedeLuoghi(c) {
     return '<div class="luoghi">' +
-      c.luoghi.map(l => '<button class="luogo" data-luogo="' + esc(l._id) + '">' + tessera(l) +
+      c.luoghi.map(l => '<button class="luogo" data-luogo="' + esc(l._id) + '">' + tesseraLuogo(l) +
         '<span class="luogo__info"><span class="luogo__nome">' + esc(tr(l.nome)) + '</span><span class="luogo__desc">' + esc(tr(l.desc)) +
-        '</span><span class="luogo__azione">' + esc(distanza(l)) + "</span></span></button>").join("") +
+        '</span><span class="luogo__azione">' + distHTML(l) + "</span></span></button>").join("") +
       "</div>";
   }
-  function iconaPin(emoji, colore, casa) {
+  function iconaPin(nome, colore, casa) {
     return LF.divIcon({ className: "", iconSize: [38, 46], iconAnchor: [19, 44],
-      html: '<span class="pin' + (casa ? " pin--casa" : "") + '" style="--c:' + colore + '"><span>' + emoji + "</span></span>" });
+      html: '<span class="pin' + (casa ? " pin--casa" : "") + '" style="--c:' + colore + '"><span>' + ico(nome) + "</span></span>" });
   }
   // Sul telefono la mappa grande non "cattura" il dito: si sposta con due dita, così la pagina scorre normalmente
   function nuovaMappa(el, trascinabile) {
@@ -163,7 +166,7 @@
       maxZoom: 19, className: "tessere-mappa",
       attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
     }).addTo(m);
-    LF.marker(CASA, { icon: iconaPin("🏠", "#14233c", true), zIndexOffset: 1000, title: u("appartamento") }).addTo(m);
+    LF.marker(CASA, { icon: iconaPin("casa", "#14233c", true), zIndexOffset: 1000, title: u("appartamento") }).addTo(m);
     return m;
   }
   // Mappa generale della pagina Dintorni, con i filtri per categoria
@@ -197,18 +200,18 @@
     adatta(); setTimeout(adatta, 380);
   }
   function bloccoLuogo(l) {
-    return '<div class="mini-mappa" id="miniMappa"></div><p class="mini-mappa__nota"><span>🏠 ' + esc(u("appartamento")) + " → 📍</span><b>" + esc(distanza(l)) + "</b></p>" +
-      '<div class="bottoni"><a class="btn btn--oro" href="' + urlPercorso(l) + '" target="_blank" rel="noopener"><span>🧭</span><b>' + esc(u("indicazioni")) + " · " + esc(l.auto ? u("in_auto") : u("a_piedi")) + "</b></a></div>";
+    return '<div class="mini-mappa" id="miniMappa"></div><p class="mini-mappa__nota"><span>' + ico("casa", "ico--mini") + esc(u("appartamento")) + "</span><b>" + distHTML(l) + "</b></p>" +
+      '<div class="bottoni"><a class="btn btn--oro" href="' + urlPercorso(l) + '" target="_blank" rel="noopener">' + ico("navigazione") + '<b>' + esc(u("indicazioni")) + " · " + esc(l.auto ? u("in_auto") : u("a_piedi")) + "</b></a></div>";
   }
   // Pulsante "Mangiare": solo la prima categoria (ristoranti e bar)
   function apriMangiare() {
     const c = DINTORNI[0];
-    apriScheda(c.icona, tr(c.cat), schedeLuoghi(c));
+    apriScheda(tessera(c.icona, c.colore), tr(c.cat), schedeLuoghi(c));
   }
   function dintorni() {
     $("#dintorni").innerHTML = DINTORNI.map(c =>
-      '<section class="categoria"><h2><span>' + c.icona + "</span>" + esc(tr(c.cat)) + "</h2>" + schedeLuoghi(c) + "</section>").join("");
-    $("#esperienze").innerHTML = ESPERIENZE.map(e => '<a class="esperienza" href="' + e.url + '" target="_blank" rel="noopener"><span>' + e.icona + "</span>" + esc(tr(e)) + "</a>").join("");
+      '<section class="categoria"><h2><i class="pallino" style="--c:' + c.colore + '"></i>' + esc(tr(c.cat)) + "</h2>" + schedeLuoghi(c) + "</section>").join("");
+    $("#esperienze").innerHTML = ESPERIENZE.map(e => '<a class="esperienza" href="' + e.url + '" target="_blank" rel="noopener"><span>' + esc(tr(e)) + "</span>" + ico("esterno", "ico--mini") + "</a>").join("");
     filtriMappa();
   }
 
@@ -218,7 +221,7 @@
     $("#numeri").innerHTML = NUMERI.map(g =>
       '<section class="gruppo' + (g.urgente ? " gruppo--urgente" : "") + '"><h2>' + esc(tr(g.gruppo)) + '</h2><div class="lista-voci">' +
       g.voci.map(v => '<a class="numero" href="tel:' + v.n + '"><span class="numero__nome">' + esc(tr(v)) +
-        (v.alt ? '<span class="numero__alt">' + fmtNum(v.alt) + "</span>" : "") + '</span><span class="numero__num"><span class="numero__tel" aria-hidden="true">📞</span>' + fmtNum(v.n) + "</span></a>").join("") +
+        (v.alt ? '<span class="numero__alt">' + fmtNum(v.alt) + "</span>" : "") + '</span><span class="numero__num"><span class="numero__tel">' + ico("telefono") + '</span>' + fmtNum(v.n) + "</span></a>").join("") +
       "</div></section>").join("");
   }
 
@@ -231,10 +234,10 @@
   function speciale(v) {
     if (v.tipo === "wifi") {
       return campo(u("rete"), CONTATTI.wifiReti) + campo(u("password"), CONTATTI.wifiPassword, true) + campo(u("notebook"), CONTATTI.notebook) +
-        '<div class="bottoni"><a class="btn btn--wa" href="' + CONTATTI.whatsapp + '" target="_blank" rel="noopener"><span>💬</span><b>' + esc(u("scrivici")) + "</b></a></div>";
+        '<div class="bottoni"><a class="btn btn--wa" href="' + CONTATTI.whatsapp + '" target="_blank" rel="noopener">' + ico("whatsapp") + '<b>' + esc(u("scrivici")) + "</b></a></div>";
     }
     if (v.tipo === "chiavi") {
-      return CHIAVI.map((k, i) => '<div class="chiave"><em>' + (i + 1) + "</em>" + (k.colore ? '<i style="background:' + k.colore + '"></i>' : '<i class="tele">📡</i>') + "<span>" + esc(tr(k)) + "</span></div>").join("");
+      return CHIAVI.map((k, i) => '<div class="chiave"><em>' + (i + 1) + "</em>" + (k.colore ? '<i style="background:' + k.colore + '"></i>' : '<i class="tele">' + ico("telecomando") + '</i>') + "<span>" + esc(tr(k)) + "</span></div>").join("");
     }
     if (v.tipo === "rifiuti") {
       const oggi = new Date();
@@ -244,7 +247,7 @@
         const t = RIFIUTI_CALENDARIO[d.getDay()];
         const nome = d.toLocaleDateString(infoLingua().voce, { weekday: "long" });
         h += '<div class="giorno' + (i === 0 ? " oggi-g" : "") + (t ? "" : " vuoto-g") + '"><b>' + esc(i === 0 ? u("oggi") : nome) + "</b><span>" +
-          (t ? RIFIUTI_TIPI[t].icona + " " + esc(tr(RIFIUTI_TIPI[t])) : esc(u("nessuna"))) + "</span>" +
+          (t ? esc(tr(RIFIUTI_TIPI[t])) : esc(u("nessuna"))) + "</span>" +
           (t ? '<i style="background:' + RIFIUTI_TIPI[t].colore + '"></i>' : "") + "</div>";
       }
       return h + "</div>";
@@ -275,7 +278,7 @@
     [0, 6, 12, 18].forEach(h => { const [x, y] = pt(h, 44); s += '<text x="' + x + '" y="' + (y + 5) + '" text-anchor="middle" font-size="14" font-weight="700" fill="#14233c" font-family="Inter,sans-serif">' + h + "</text>"; });
     const now = new Date(), hh = now.getHours() + now.getMinutes() / 60, [nx, ny] = pt(hh, 92);
     s += '<line x1="110" y1="110" x2="' + nx + '" y2="' + ny + '" stroke="#b8893a" stroke-width="3" stroke-linecap="round"/><circle cx="110" cy="110" r="6" fill="#b8893a"/><circle cx="' + nx + '" cy="' + ny + '" r="6" fill="#b8893a" stroke="#fff" stroke-width="2"/>';
-    s += '<text x="110" y="140" text-anchor="middle" font-size="22" >🌙</text></svg>';
+    s += "</svg>";
     return s;
   }
 
@@ -284,7 +287,7 @@
   let schedaAperta = false;
   function apriScheda(icona, titolo, html) {
     fermaVoce(); chiudiMappaPiccola();
-    $("#schedaIcona").textContent = icona;
+    $("#schedaIcona").innerHTML = icona;
     $("#schedaTitolo").textContent = titolo;
     const corpo = $("#schedaCorpo");
     corpo.innerHTML = html; corpo.scrollTop = 0;
@@ -311,10 +314,10 @@
     else h = fotoHTML(v.foto) + speciale(v) + tr(v.corpo);
     if (v.video) h += '<div class="video"><iframe src="' + v.video + '" title="' + esc(tr(v.titolo)) + '" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';
     // il simulatore esiste in italiano e in inglese
-    if (v.simulatore) h += '<div class="bottoni"><a class="btn btn--oro" href="termostato.html' + (L === "it" ? "" : "?lang=en") + '"><span>🎛️</span><b>' + esc(u("apri_simulatore")) + "</b></a></div>";
+    if (v.simulatore) h += '<div class="bottoni"><a class="btn btn--oro" href="termostato.html' + (L === "it" ? "" : "?lang=en") + '">' + ico("termometro") + '<b>' + esc(u("apri_simulatore")) + "</b></a></div>";
     const lv = v.luogo && LUOGHI[v.luogo];
     if (lv) h += bloccoLuogo(lv);
-    apriScheda(v.icona, tr(v.titolo), h);
+    apriScheda(tessera(v.icona, v._cat.colore), tr(v.titolo), h);
     if (lv) mappaPiccola(lv);
   }
   function urlPercorso(l) {
@@ -325,14 +328,14 @@
     const l = LUOGHI[id]; if (!l) return;
     let h = l.foto ? fotoHTML([l.foto]) : "";
     h += "<p>" + esc(tr(l.desc)) + "</p>" + bloccoLuogo(l);
-    if (l.tel) h += '<div class="bottoni">' + l.tel.map((t, i) => '<a class="btn btn--chiaro" href="tel:' + t + '"><span>📞</span><b>' + (l.telNomi ? esc(l.telNomi[i]) + " · " : "") + fmtNum(t.replace(/^\+39/, "")) + "</b></a>").join("") + "</div>";
-    if (l.turni) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" rel="noopener"><span>💊</span><b>' + esc(u("farmacie_turno")) + "</b></a></div>";
-    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://www.innovame.it/castellomilazzo/" target="_blank" rel="noopener"><span>🏰</span><b>' + esc(u("tour_virtuale")) + "</b></a></div>";
-    apriScheda(l.icona || l._cat.icona, tr(l.nome), h);
+    if (l.tel) h += '<div class="bottoni">' + l.tel.map((t, i) => '<a class="btn btn--chiaro" href="tel:' + t + '">' + ico("telefono") + '<b>' + (l.telNomi ? esc(l.telNomi[i]) + " · " : "") + fmtNum(t.replace(/^\+39/, "")) + "</b></a>").join("") + "</div>";
+    if (l.turni) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" rel="noopener">' + ico("farmacia") + '<b>' + esc(u("farmacie_turno")) + "</b></a></div>";
+    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://www.innovame.it/castellomilazzo/" target="_blank" rel="noopener">' + ico("castello") + '<b>' + esc(u("tour_virtuale")) + "</b></a></div>";
+    apriScheda(tessera(l.icona || l._cat.icona, l._cat.colore), tr(l.nome), h);
     mappaPiccola(l);
   }
   function apriLingue() {
-    apriScheda("🌐", u("lingua"), '<div class="lingue">' + LINGUE.map(l =>
+    apriScheda(tessera("globo", "#14233c"), u("lingua"), '<div class="lingue">' + LINGUE.map(l =>
       '<button class="lingua' + (l.cod === L ? " attiva" : "") + '" data-lingua="' + l.cod + '"><span>' + l.bandiera + "</span>" + l.nome + "</button>").join("") +
       '</div><p class="piccolo" style="margin-top:16px">' + esc(u("installa")) + "</p>");
   }
@@ -347,7 +350,7 @@
   function fermaVoce() {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
     $("#schedaAscolta").classList.remove("on");
-    $("#schedaAscolta").textContent = "🔊";
+    $("#schedaAscolta").innerHTML = ico("altoparlante");
   }
   function leggi() {
     if (!("speechSynthesis" in window)) return;
@@ -357,7 +360,7 @@
     ut.lang = infoLingua().voce; ut.rate = 0.95;
     ut.onend = fermaVoce;
     $("#schedaAscolta").classList.add("on");
-    $("#schedaAscolta").textContent = "⏹";
+    $("#schedaAscolta").innerHTML = ico("stop");
     speechSynthesis.speak(ut);
   }
 
@@ -413,6 +416,8 @@
   $(".scheda__testa").addEventListener("touchend", e => { if (y0 != null && e.changedTouches[0].clientY - y0 > 70) chiudiScheda(); y0 = null; });
 
   /* ---------- Avvio ---------- */
+  riempiIcone();
+  $("#schedaAscolta").innerHTML = ico("altoparlante");
   contatti();
   disegnaTutto();
   vai(location.hash.slice(1) || "home", false);

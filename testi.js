@@ -182,11 +182,11 @@ const UI = {
    Indice = giorno della settimana (0 domenica … 6 sabato).
    Aggiornato al calendario del 2026-09-26. */
 const RIFIUTI_TIPI = {
-  organico: { icona: "🍂", colore: "#8a6d3b", it: "Umido organico", en: "Organic waste", de: "Biomüll", fr: "Déchets organiques", es: "Orgánico" },
-  indiff:   { icona: "🗑️", colore: "#5b6470", it: "Indifferenziato", en: "General waste", de: "Restmüll", fr: "Ordures ménagères", es: "Resto (no reciclable)" },
-  carta:    { icona: "📦", colore: "#2f6fae", it: "Carta e cartone", en: "Paper and cardboard", de: "Papier und Karton", fr: "Papier et carton", es: "Papel y cartón" },
-  plastica: { icona: "🧴", colore: "#c79a1e", it: "Plastica", en: "Plastic", de: "Kunststoff", fr: "Plastique", es: "Plástico" },
-  organicoVetro: { icona: "🍂🍾", colore: "#2f7d55", it: "Umido organico e vetro", en: "Organic waste and glass", de: "Biomüll und Glas", fr: "Déchets organiques et verre", es: "Orgánico y vidrio" }
+  organico: { icona: "foglia", colore: "#8a6d3b", it: "Umido organico", en: "Organic waste", de: "Biomüll", fr: "Déchets organiques", es: "Orgánico" },
+  indiff:   { icona: "bidone", colore: "#5b6470", it: "Indifferenziato", en: "General waste", de: "Restmüll", fr: "Ordures ménagères", es: "Resto (no reciclable)" },
+  carta:    { icona: "scatola", colore: "#2f6fae", it: "Carta e cartone", en: "Paper and cardboard", de: "Papier und Karton", fr: "Papier et carton", es: "Papel y cartón" },
+  plastica: { icona: "bottiglia", colore: "#c79a1e", it: "Plastica", en: "Plastic", de: "Kunststoff", fr: "Plastique", es: "Plástico" },
+  organicoVetro: { icona: "foglia", colore: "#2f7d55", it: "Umido organico e vetro", en: "Organic waste and glass", de: "Biomüll und Glas", fr: "Déchets organiques et verre", es: "Orgánico y vidrio" }
 };
 const RIFIUTI_CALENDARIO = ["organico", "indiff", "carta", "organico", "plastica", "organicoVetro", null];
 
@@ -195,14 +195,14 @@ const RIFIUTI_CALENDARIO = ["organico", "indiff", "carta", "organico", "plastica
    Speciali: tipo "wifi", "chiavi", "rifiuti", "silenzio" (disegnati da app.js). */
 const GUIDA = [
   {
-    id: "arrivo", icona: "🔑",
+    id: "arrivo", colore: "#3a6db0", icona: "chiave",
     titolo: { it: "Accesso e arrivo", en: "Access & arrival", de: "Zugang & Ankunft", fr: "Accès et arrivée", es: "Acceso y llegada" },
     voci: [
-      { id: "wifi", icona: "📶", tipo: "wifi",
+      { id: "wifi", icona: "wifi", tipo: "wifi",
         titolo: { it: "WiFi e contatti", en: "WiFi & contacts", de: "WLAN & Kontakte", fr: "WiFi et contacts", es: "WiFi y contactos" } },
-      { id: "chiavi", icona: "🔑", tipo: "chiavi", foto: ["Chiavi.jpg"],
+      { id: "chiavi", icona: "chiave", tipo: "chiavi", foto: ["Chiavi.jpg"],
         titolo: { it: "Chiavi", en: "Keys", de: "Schlüssel", fr: "Clés", es: "Llaves" } },
-      { id: "imposta", icona: "🧾", foto: ["Imposta-di-soggiorno.jpg"],
+      { id: "imposta", icona: "ricevuta", foto: ["Imposta-di-soggiorno.jpg"],
         titolo: { it: "Imposta di soggiorno", en: "Tourist tax", de: "Kurtaxe", fr: "Taxe de séjour", es: "Tasa turística" },
         corpo: {
           it: `<p>L'imposta di soggiorno è pari a <strong>€ 1 al giorno per ciascun ospite</strong> ed è applicata per un massimo di <strong>5 giorni consecutivi</strong>.</p><p class="evid">I bambini di età inferiore ai <strong>13 anni</strong> sono esenti.</p><p>Prima della partenza vi sarà rilasciata <strong>regolare ricevuta</strong> dell'importo versato.</p><p class="piccolo">Regolamento: Atto N. 62 del 26 giugno 2023</p>`,
@@ -211,7 +211,7 @@ const GUIDA = [
           fr: `<p>La taxe de séjour est de <strong>1 € par jour et par personne</strong>, appliquée au maximum pendant <strong>5 jours consécutifs</strong>.</p><p class="evid">Les enfants de moins de <strong>13 ans</strong> sont exonérés.</p><p>Avant votre départ, un <strong>reçu officiel</strong> du montant versé vous sera remis.</p><p class="piccolo">Règlement : Acte n° 62 du 26 juin 2023</p>`,
           es: `<p>La tasa turística es de <strong>1 € por huésped y día</strong>, aplicada como máximo durante <strong>5 días consecutivos</strong>.</p><p class="evid">Los niños menores de <strong>13 años</strong> están exentos.</p><p>Antes de la salida recibiréis el <strong>recibo oficial</strong> del importe pagado.</p><p class="piccolo">Reglamento: Acta n.º 62 del 26 de junio de 2023</p>`
         } },
-      { id: "parcheggio", icona: "🅿️", foto: ["Parcheggio.jpg"],
+      { id: "parcheggio", icona: "parcheggio", foto: ["Parcheggio.jpg"],
         titolo: { it: "Parcheggio a pagamento", en: "Paid parking", de: "Gebührenpflichtiges Parken", fr: "Stationnement payant", es: "Aparcamiento de pago" },
         corpo: {
           it: `<p>Le <strong>strisce blu</strong> si pagano al parcometro: monete o contactless (VISA, Mastercard, Apple Pay, Google Pay, Samsung Pay).</p><div class="tab"><div><span>A pagamento</span><strong>8:30–13:30 · 15:30–20:30</strong></div><div><span>Gratuito</span><strong>13:30–15:30 · 20:30–8:30</strong></div></div><p class="piccolo">Tutti i giorni. Inserite la targa nel display, poi pagate con monete nella fessura o con la carta sul simbolo blu a onde.</p>`,
@@ -220,7 +220,7 @@ const GUIDA = [
           fr: `<p>Les <strong>places bleues</strong> se paient à l'horodateur : pièces ou sans contact (VISA, Mastercard, Apple Pay, Google Pay, Samsung Pay).</p><div class="tab"><div><span>Payant</span><strong>8:30–13:30 · 15:30–20:30</strong></div><div><span>Gratuit</span><strong>13:30–15:30 · 20:30–8:30</strong></div></div><p class="piccolo">Tous les jours. Saisissez votre plaque sur l'écran, puis payez avec des pièces dans la fente ou avec la carte sur le symbole bleu à ondes.</p>`,
           es: `<p>Las <strong>líneas azules</strong> se pagan en el parquímetro: monedas o contactless (VISA, Mastercard, Apple Pay, Google Pay, Samsung Pay).</p><div class="tab"><div><span>De pago</span><strong>8:30–13:30 · 15:30–20:30</strong></div><div><span>Gratis</span><strong>13:30–15:30 · 20:30–8:30</strong></div></div><p class="piccolo">Todos los días. Introducid la matrícula en la pantalla y pagad con monedas en la ranura o con la tarjeta sobre el símbolo azul de ondas.</p>`
         } },
-      { id: "ev", icona: "🔌", foto: ["Stazione1.webp"], luogo: "enelx",
+      { id: "ev", icona: "presa", foto: ["Stazione1.webp"], luogo: "enelx",
         titolo: { it: "Ricarica auto elettriche", en: "EV charging", de: "E-Auto laden", fr: "Recharge véhicules électriques", es: "Carga de coches eléctricos" },
         corpo: {
           it: `<p>La stazione di ricarica <strong>Enel X</strong> più vicina è in <strong>Via XX Settembre</strong>, a circa 200 metri dall'appartamento.</p>`,
@@ -232,10 +232,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "clima", icona: "🌡️",
+    id: "clima", colore: "#1f8a9e", icona: "termometro",
     titolo: { it: "Clima e comfort", en: "Climate & comfort", de: "Klima & Komfort", fr: "Climat et confort", es: "Clima y confort" },
     voci: [
-      { id: "termostato", icona: "🌡️", simulatore: true, foto: ["Cronotermostato.jpg"],
+      { id: "termostato", icona: "termometro", simulatore: true, foto: ["Cronotermostato.jpg"],
         titolo: { it: "Termostato riscaldamento", en: "Heating thermostat", de: "Heizungsthermostat", fr: "Thermostat du chauffage", es: "Termostato de la calefacción" },
         corpo: {
           it: `<p>Si trova <strong>a destra della porta d'ingresso della cucina</strong>.</p><p>Il simulatore interattivo vi mostra passo per passo come usarlo.</p>`,
@@ -244,7 +244,7 @@ const GUIDA = [
           fr: `<p>Il se trouve <strong>à droite de la porte de la cuisine</strong>.</p><p>Le simulateur interactif vous montre pas à pas comment l'utiliser.</p>`,
           es: `<p>Está <strong>a la derecha de la puerta de la cocina</strong>.</p><p>El simulador interactivo os muestra paso a paso cómo usarlo.</p>`
         } },
-      { id: "clima", icona: "❄️",
+      { id: "clima", icona: "fiocco",
         titolo: { it: "Climatizzatori", en: "Air conditioning", de: "Klimaanlagen", fr: "Climatisation", es: "Aire acondicionado" },
         corpo: {
           it: `<p class="evid">Regolate la temperatura sui <strong>24–26 °C</strong>: è il comfort ideale. Temperature più basse fanno male alla salute e consumano molta energia.</p><p>Tenete <strong>porte e finestre chiuse</strong> mentre sono accesi e <strong>spegneteli quando uscite</strong>.</p>`,
@@ -253,7 +253,7 @@ const GUIDA = [
           fr: `<p class="evid">Réglez la température sur <strong>24–26 °C</strong> pour un confort idéal. Des températures plus basses nuisent à la santé et consomment beaucoup d'énergie.</p><p>Gardez <strong>portes et fenêtres fermées</strong> pendant l'utilisation et <strong>éteignez-les quand vous sortez</strong>.</p>`,
           es: `<p class="evid">Poned la temperatura a <strong>24–26 °C</strong>: es el confort ideal. Temperaturas más bajas perjudican la salud y gastan mucha energía.</p><p>Mantened <strong>puertas y ventanas cerradas</strong> mientras funcionan y <strong>apagadlos al salir</strong>.</p>`
         } },
-      { id: "infissi", icona: "🪟", foto: ["Infissi-1.jpg"],
+      { id: "infissi", icona: "finestra", foto: ["Infissi-1.jpg"],
         titolo: { it: "Avvolgibili e porta a vetri", en: "Shutters & glass door", de: "Rollläden & Glastür", fr: "Volets et porte vitrée", es: "Persianas y puerta de cristal" },
         corpo: {
           it: `<p>Gli <strong>avvolgibili</strong> si alzano e si abbassano con i pulsanti indicati nella foto.</p><p>La <strong>porta a vetri</strong> scorre con il maniglione verso il basso; si blocca alla chiusura con il maniglione verso l'alto.</p>`,
@@ -262,7 +262,7 @@ const GUIDA = [
           fr: `<p>Les <strong>volets roulants</strong> se lèvent et s'abaissent avec les boutons indiqués sur la photo.</p><p>La <strong>porte vitrée</strong> coulisse avec la poignée vers le bas ; elle se verrouille à la fermeture avec la poignée vers le haut.</p>`,
           es: `<p>Las <strong>persianas</strong> suben y bajan con los botones de la foto.</p><p>La <strong>puerta de cristal</strong> se desliza con la manilla hacia abajo; se bloquea al cerrar con la manilla hacia arriba.</p>`
         } },
-      { id: "tenda", icona: "🌙", foto: ["IMG_20221209_113612.jpg"],
+      { id: "tenda", icona: "luna", foto: ["IMG_20221209_113612.jpg"],
         titolo: { it: "Tenda oscurante cameretta", en: "Blackout blind (small bedroom)", de: "Verdunkelungsrollo (kleines Zimmer)", fr: "Store occultant (petite chambre)", es: "Estor opaco (habitación pequeña)" },
         corpo: {
           it: `<p>Nella <strong>prima camera a sinistra</strong> la tenda oscurante si aziona con il <strong>telecomando bianco</strong>.</p>`,
@@ -271,7 +271,7 @@ const GUIDA = [
           fr: `<p>Dans la <strong>première chambre à gauche</strong>, le store occultant s'actionne avec la <strong>télécommande blanche</strong>.</p>`,
           es: `<p>En la <strong>primera habitación a la izquierda</strong> el estor opaco se acciona con el <strong>mando blanco</strong>.</p>`
         } },
-      { id: "acqua", icona: "🚿", foto: ["Interruttore-Acqua-calda.jpg"],
+      { id: "acqua", icona: "doccia", foto: ["Interruttore-Acqua-calda.jpg"],
         titolo: { it: "Se l'acqua non è calda", en: "No hot water?", de: "Kein warmes Wasser?", fr: "Pas d'eau chaude ?", es: "¿No sale agua caliente?" },
         corpo: {
           it: `<p>Può capitare di spegnere per sbaglio l'interruttore dell'acqua calda. Basta <strong>riaccenderlo</strong>: si trova nel <strong>bagno di sinistra</strong>.</p>`,
@@ -283,10 +283,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "cucina", icona: "🍳",
+    id: "cucina", colore: "#c0573e", icona: "fiamma",
     titolo: { it: "Cucina", en: "Kitchen", de: "Küche", fr: "Cuisine", es: "Cocina" },
     voci: [
-      { id: "interruttore", icona: "⚡", foto: ["Forno-1.jpg"],
+      { id: "interruttore", icona: "fulmine", foto: ["Forno-1.jpg"],
         titolo: { it: "Interruttore piano cottura e forno", en: "Hob & oven switch", de: "Schalter Kochfeld & Ofen", fr: "Interrupteur plaque et four", es: "Interruptor de placa y horno" },
         corpo: {
           it: `<p>Questo interruttore accende e spegne l'alimentazione del <strong>forno</strong> e del <strong>piano cottura</strong>. Se non funzionano, controllate prima qui.</p>`,
@@ -295,7 +295,7 @@ const GUIDA = [
           fr: `<p>Cet interrupteur allume et coupe l'alimentation du <strong>four</strong> et de la <strong>plaque de cuisson</strong>. S'ils ne fonctionnent pas, vérifiez d'abord ici.</p>`,
           es: `<p>Este interruptor enciende y apaga la corriente del <strong>horno</strong> y de la <strong>placa</strong>. Si no funcionan, revisad primero aquí.</p>`
         } },
-      { id: "forno", icona: "🔥",
+      { id: "forno", icona: "fiamma",
         titolo: { it: "Forno elettrico", en: "Electric oven", de: "Elektroofen", fr: "Four électrique", es: "Horno eléctrico" },
         corpo: {
           it: `<ol class="passi"><li>Premete il tasto <strong>ON</strong></li><li>Nell'area programmi scegliete il simbolo desiderato</li><li>Regolate la temperatura nell'area impostazioni</li><li>Controllate che la spia del programma sia accesa e premete <strong>Start</strong></li><li>Alla fine riportate il selettore su <strong>0</strong> o premete ON</li></ol><p class="avviso"><strong>Sicurezza:</strong> solo teglie adatte, niente plastica o carta. Il forno diventa molto caldo.</p>`,
@@ -304,7 +304,7 @@ const GUIDA = [
           fr: `<ol class="passi"><li>Appuyez sur <strong>ON</strong></li><li>Dans la zone des programmes, choisissez le symbole voulu</li><li>Réglez la température dans la zone des réglages</li><li>Vérifiez que le voyant du programme est allumé et appuyez sur <strong>Start</strong></li><li>À la fin, remettez le sélecteur sur <strong>0</strong> ou appuyez sur ON</li></ol><p class="avviso"><strong>Sécurité :</strong> uniquement des plats adaptés, ni plastique ni papier. Le four devient très chaud.</p>`,
           es: `<ol class="passi"><li>Pulsad <strong>ON</strong></li><li>En la zona de programas elegid el símbolo deseado</li><li>Ajustad la temperatura en la zona de ajustes</li><li>Comprobad que el piloto del programa esté encendido y pulsad <strong>Start</strong></li><li>Al terminar, volved el selector a <strong>0</strong> o pulsad ON</li></ol><p class="avviso"><strong>Seguridad:</strong> solo bandejas adecuadas, nada de plástico ni papel. El horno se calienta mucho.</p>`
         } },
-      { id: "lavastoviglie", icona: "🍽️",
+      { id: "lavastoviglie", icona: "lavastoviglie",
         titolo: { it: "Lavastoviglie", en: "Dishwasher", de: "Geschirrspüler", fr: "Lave-vaisselle", es: "Lavavajillas" },
         corpo: {
           it: `<p class="piccolo">Electrolux ESL5205LO — comandi sul bordo superiore della porta.</p><ol class="passi"><li>Aprite la porta e caricate le stoviglie</li><li>Mettete la pastiglia nel vano sullo sportello interno</li><li>Chiudete la porta</li><li>Premete <strong>ON/OFF</strong> (a sinistra)</li><li>Premete <strong>Program</strong> più volte per scegliere il programma (si accende la spia)</li><li>Il lavaggio parte da solo dopo pochi secondi</li></ol><div class="tab"><div><span>ECO 50°</span><strong>Uso quotidiano, risparmio</strong></div><div><span>Normal 65°</span><strong>Sporco normale</strong></div><div><span>Intensive 70°</span><strong>Pentole e sporco ostinato</strong></div><div><span>Quick Plus 60°</span><strong>Rapido, circa 30 min</strong></div><div><span>Rinse &amp; Hold</span><strong>Solo risciacquo, senza detersivo</strong></div></div><p class="evid"><strong>Consiglio:</strong> per tutti i giorni il programma ideale è <strong>ECO 50°</strong>. Con <strong>3h Delay</strong> il lavaggio parte dopo 3 ore.</p><p class="avviso"><strong>Reset:</strong> tenete premuto <strong>Program</strong> per 3 secondi.</p>`,
@@ -316,10 +316,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "elettricita", icona: "💡",
+    id: "elettricita", colore: "#c79a1e", icona: "lampadina",
     titolo: { it: "Elettricità e tecnologia", en: "Power & technology", de: "Strom & Technik", fr: "Électricité et technologie", es: "Electricidad y tecnología" },
     voci: [
-      { id: "corrente", icona: "⚡", foto: ["ContatoreLuce.jpg"],
+      { id: "corrente", icona: "fulmine", foto: ["ContatoreLuce.jpg"],
         titolo: { it: "Se manca la corrente", en: "Power cut", de: "Stromausfall", fr: "Coupure de courant", es: "Si se va la luz" },
         corpo: {
           it: `<ol class="passi"><li>Scendete al <strong>piano terra</strong>, a destra dell'ascensore</li><li>Aprite lo <strong>sportello scorrevole destro</strong> dell'armadio</li><li>Riattivate il contatore indicato dalla freccia con scritto <strong>«Russo»</strong></li></ol>`,
@@ -328,7 +328,7 @@ const GUIDA = [
           fr: `<ol class="passi"><li>Descendez au <strong>rez-de-chaussée</strong>, à droite de l'ascenseur</li><li>Ouvrez la <strong>porte coulissante de droite</strong> de l'armoire</li><li>Réenclenchez le compteur indiqué par la flèche portant le nom <strong>« Russo »</strong></li></ol>`,
           es: `<ol class="passi"><li>Bajad a la <strong>planta baja</strong>, a la derecha del ascensor</li><li>Abrid la <strong>puerta corredera derecha</strong> del armario</li><li>Reactivad el contador señalado con la flecha y el nombre <strong>«Russo»</strong></li></ol>`
         } },
-      { id: "luceveranda", icona: "💡",
+      { id: "luceveranda", icona: "lampadina",
         titolo: { it: "Luce balcone-veranda", en: "Balcony-veranda light", de: "Licht Balkon-Veranda", fr: "Lumière balcon-véranda", es: "Luz del balcón-veranda" },
         corpo: {
           it: `<p>Due interruttori:</p><img class="foto-in" src="images/Luce-Veranda1.jpg" alt="" loading="lazy"><p class="evid"><strong>Cucina</strong> — accanto al frigorifero</p><img class="foto-in" src="images/Luci-Veranda2.jpg" alt="" loading="lazy"><p class="evid"><strong>Bagno di sinistra</strong> — accanto all'interruttore dell'acqua calda</p>`,
@@ -337,7 +337,7 @@ const GUIDA = [
           fr: `<p>Deux interrupteurs :</p><img class="foto-in" src="images/Luce-Veranda1.jpg" alt="" loading="lazy"><p class="evid"><strong>Cuisine</strong> — à côté du réfrigérateur</p><img class="foto-in" src="images/Luci-Veranda2.jpg" alt="" loading="lazy"><p class="evid"><strong>Salle de bain de gauche</strong> — à côté de l'interrupteur d'eau chaude</p>`,
           es: `<p>Dos interruptores:</p><img class="foto-in" src="images/Luce-Veranda1.jpg" alt="" loading="lazy"><p class="evid"><strong>Cocina</strong> — junto a la nevera</p><img class="foto-in" src="images/Luci-Veranda2.jpg" alt="" loading="lazy"><p class="evid"><strong>Baño izquierdo</strong> — junto al interruptor del agua caliente</p>`
         } },
-      { id: "usb", icona: "🔋", foto: ["Stazione-di-ricarica.jpg"],
+      { id: "usb", icona: "batteria", foto: ["Stazione-di-ricarica.jpg"],
         titolo: { it: "Stazione di ricarica USB", en: "USB charging station", de: "USB-Ladestation", fr: "Station de recharge USB", es: "Estación de carga USB" },
         corpo: {
           it: `<p>Sul mobile del salone: <strong>6 porte USB 3.0</strong> per ricaricare insieme fino a sei dispositivi.</p>`,
@@ -346,7 +346,7 @@ const GUIDA = [
           fr: `<p>Sur le meuble du salon : <strong>6 ports USB 3.0</strong> pour recharger jusqu'à six appareils à la fois.</p>`,
           es: `<p>En el mueble del salón: <strong>6 puertos USB 3.0</strong> para cargar hasta seis dispositivos a la vez.</p>`
         } },
-      { id: "proiettore", icona: "🎬",
+      { id: "proiettore", icona: "proiettore",
         titolo: { it: "Videoproiettore", en: "Projector", de: "Beamer", fr: "Vidéoprojecteur", es: "Proyector" },
         corpo: {
           it: `<img class="foto-in" src="images/IMG_20230113_084239-1.jpg" alt="" loading="lazy"><p>L'interruttore è <strong>a sinistra della porta d'ingresso della sala</strong>.</p><img class="foto-in" src="images/Telecomandi.jpg" alt="" loading="lazy"><div class="tab"><div><span>Telecomando 1</span><strong>per muoversi nello schermo</strong></div><div><span>Telecomando 2</span><strong>accensione e spegnimento (tasto rosso)</strong></div></div>`,
@@ -358,10 +358,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "pulizie", icona: "🧺",
+    id: "pulizie", colore: "#6b5bb5", icona: "bidone",
     titolo: { it: "Pulizie e rifiuti", en: "Cleaning & waste", de: "Reinigung & Müll", fr: "Ménage et déchets", es: "Limpieza y basura" },
     voci: [
-      { id: "rifiuti", icona: "♻️", tipo: "rifiuti", importante: true,
+      { id: "rifiuti", icona: "bidone", tipo: "rifiuti", importante: true,
         titolo: { it: "Raccolta differenziata", en: "Recycling & waste", de: "Mülltrennung", fr: "Tri des déchets", es: "Reciclaje y basura" },
         corpo: {
           it: `<img class="foto-in" src="images/Cassonetti.jpg" alt="" loading="lazy"><p>Le pattumiere per la differenziata sono nel <strong>balcone-veranda</strong>, dentro l'appartamento.</p><img class="foto-in" src="images/Rifiuti%20Garage.jpg" alt="" loading="lazy"><p class="evid">Depositate i rifiuti <strong>dalle ore 20:00</strong> nel cassonetto <strong>a sinistra dell'ingresso del garage</strong>.</p><p class="avviso"><strong>Importante:</strong> se alla partenza restano rifiuti destinati ai giorni successivi, potete lasciarli nell'appartamento: ci pensiamo noi. Vi chiediamo però la massima attenzione nel separarli, perché la Polizia Municipale fa controlli e può multare chi sbaglia.</p>`,
@@ -370,7 +370,7 @@ const GUIDA = [
           fr: `<img class="foto-in" src="images/Cassonetti.jpg" alt="" loading="lazy"><p>Les poubelles de tri sont sur le <strong>balcon-véranda</strong>, à l'intérieur de l'appartement.</p><img class="foto-in" src="images/Rifiuti%20Garage.jpg" alt="" loading="lazy"><p class="evid">Déposez les déchets <strong>à partir de 20 h</strong> dans le conteneur <strong>à gauche de l'entrée du garage</strong>.</p><p class="avviso"><strong>Important :</strong> si au départ il reste des déchets prévus pour les jours suivants, vous pouvez les laisser dans l'appartement : nous nous en occupons. Merci toutefois de bien les trier, car la Police municipale effectue des contrôles et peut infliger des amendes.</p>`,
           es: `<img class="foto-in" src="images/Cassonetti.jpg" alt="" loading="lazy"><p>Los cubos para reciclar están en el <strong>balcón-veranda</strong>, dentro del apartamento.</p><img class="foto-in" src="images/Rifiuti%20Garage.jpg" alt="" loading="lazy"><p class="evid">Sacad la basura <strong>desde las 20:00</strong> al contenedor <strong>a la izquierda de la entrada del garaje</strong>.</p><p class="avviso"><strong>Importante:</strong> si al marcharos queda basura de los días siguientes, podéis dejarla en el apartamento: nos encargamos nosotros. Os pedimos, eso sí, máxima atención al separarla, porque la Policía Municipal hace controles y puede multar.</p>`
         } },
-      { id: "biancheria", icona: "🛏️", foto: ["Cambio-Biancheria.jpg", "Cassetto.jpg"],
+      { id: "biancheria", icona: "letto", foto: ["Cambio-Biancheria.jpg", "Cassetto.jpg"],
         titolo: { it: "Biancheria e pulizie", en: "Linen & cleaning", de: "Wäsche & Reinigung", fr: "Linge et ménage", es: "Ropa de cama y limpieza" },
         corpo: {
           it: `<p>La biancheria pulita è nel <strong>cassetto centrale</strong> indicato dalla freccia. Per soggiorni oltre una settimana trovate i ricambi nello stesso cassetto.</p><p>La biancheria usata va messa in un sacco davanti alla porta <strong>entro le 8:00</strong>, avvisandoci per il ritiro.</p><p class="evid">Servizio di pulizia professionale: <strong>€ 70 a intervento</strong>, con giorno e orario da concordare.</p>`,
@@ -379,7 +379,7 @@ const GUIDA = [
           fr: `<p>Le linge propre est dans le <strong>tiroir central</strong> indiqué par la flèche. Pour les séjours de plus d'une semaine, les rechanges sont dans le même tiroir.</p><p>Le linge sale se met dans un sac devant la porte <strong>avant 8 h</strong>, en nous prévenant pour le ramassage.</p><p class="evid">Service de ménage professionnel : <strong>70 € par intervention</strong>, jour et heure à convenir.</p>`,
           es: `<p>La ropa de cama limpia está en el <strong>cajón central</strong> señalado con la flecha. Para estancias de más de una semana, los recambios están en el mismo cajón.</p><p>La ropa usada se deja en una bolsa delante de la puerta <strong>antes de las 8:00</strong>, avisándonos para recogerla.</p><p class="evid">Servicio de limpieza profesional: <strong>70 € por servicio</strong>, día y hora a convenir.</p>`
         } },
-      { id: "stendino", icona: "👕", video: "https://www.youtube.com/embed/T43_-8SmuWs",
+      { id: "stendino", icona: "maglietta", video: "https://www.youtube.com/embed/T43_-8SmuWs",
         titolo: { it: "Stendibiancheria", en: "Clothes airer", de: "Wäscheständer", fr: "Étendoir à linge", es: "Tendedero" },
         corpo: {
           it: `<p>Il video mostra come aprire e chiudere lo stendibiancheria Gulliver (Foppapedretti).</p>`,
@@ -391,10 +391,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "veranda", icona: "🌿",
+    id: "veranda", colore: "#3f8f4f", icona: "pianta",
     titolo: { it: "Veranda e piante", en: "Veranda & plants", de: "Veranda & Pflanzen", fr: "Véranda et plantes", es: "Veranda y plantas" },
     voci: [
-      { id: "pioggia", icona: "🌧️", importante: true,
+      { id: "pioggia", icona: "pioggia", importante: true,
         titolo: { it: "Pioggia", en: "Rain", de: "Regen", fr: "Pluie", es: "Lluvia" },
         corpo: {
           it: `<p class="avviso"><strong>Attenzione:</strong> chiudete le finestre della veranda quando uscite o in caso di forti piogge e temporali. Se restano aperte, c'è rischio di allagamento.</p>`,
@@ -403,7 +403,7 @@ const GUIDA = [
           fr: `<p class="avviso"><strong>Attention :</strong> fermez les fenêtres de la véranda quand vous sortez ou en cas de fortes pluies et d'orages. Si elles restent ouvertes, il y a un risque d'inondation.</p>`,
           es: `<p class="avviso"><strong>Atención:</strong> cerrad las ventanas de la veranda al salir o en caso de lluvia fuerte y tormentas. Si quedan abiertas, hay riesgo de inundación.</p>`
         } },
-      { id: "piante", icona: "🪴", importante: true,
+      { id: "piante", icona: "pianta", importante: true,
         titolo: { it: "Annaffiare le piante", en: "Watering the plants", de: "Pflanzen gießen", fr: "Arroser les plantes", es: "Regar las plantas" },
         corpo: {
           it: `<p>Quasi tutte le piante hanno un <strong>sistema idroponico automatico</strong> e non richiedono cure.</p><p class="evid">Solo le <strong>due grandi piante rotonde</strong> vanno annaffiate almeno <strong>ogni due giorni d'estate</strong>: un annaffiatoio nel vaso più piccolo, due in quello più grande.</p><p>L'annaffiatoio verde è in veranda.</p>`,
@@ -415,16 +415,16 @@ const GUIDA = [
     ]
   },
   {
-    id: "sicurezza", icona: "🛡️",
+    id: "sicurezza", colore: "#b3382c", icona: "soccorso",
     titolo: { it: "Sicurezza", en: "Safety", de: "Sicherheit", fr: "Sécurité", es: "Seguridad" },
     voci: [
-      { id: "estintore", icona: "🧯", foto: ["Estintore.jpg"],
+      { id: "estintore", icona: "estintore", foto: ["Estintore.jpg"],
         titolo: { it: "Estintore", en: "Fire extinguisher", de: "Feuerlöscher", fr: "Extincteur", es: "Extintor" },
         corpo: { it: `<p>Si trova nel <strong>balcone-veranda</strong>.</p>`, en: `<p>It is on the <strong>balcony-veranda</strong>.</p>`, de: `<p>Er befindet sich auf dem <strong>Balkon-Veranda</strong>.</p>`, fr: `<p>Il se trouve sur le <strong>balcon-véranda</strong>.</p>`, es: `<p>Está en el <strong>balcón-veranda</strong>.</p>` } },
-      { id: "soccorso", icona: "🩹", foto: ["Medicine.jpeg"],
+      { id: "soccorso", icona: "soccorso", foto: ["Medicine.jpeg"],
         titolo: { it: "Kit di pronto soccorso", en: "First aid kit", de: "Erste-Hilfe-Kasten", fr: "Trousse de secours", es: "Botiquín" },
         corpo: { it: `<p>L'armadietto è nel <strong>balcone-veranda</strong>.</p>`, en: `<p>The cabinet is on the <strong>balcony-veranda</strong>.</p>`, de: `<p>Der Schrank befindet sich auf dem <strong>Balkon-Veranda</strong>.</p>`, fr: `<p>L'armoire est sur le <strong>balcon-véranda</strong>.</p>`, es: `<p>El armario está en el <strong>balcón-veranda</strong>.</p>` } },
-      { id: "rilevatori", icona: "🚨",
+      { id: "rilevatori", icona: "allarme",
         titolo: { it: "Dispositivi di sicurezza", en: "Safety devices", de: "Sicherheitseinrichtungen", fr: "Dispositifs de sécurité", es: "Dispositivos de seguridad" },
         corpo: {
           it: `<p>L'appartamento è dotato di:</p><ul class="lista"><li>Rilevatore di fumo</li><li>Rilevatore di monossido di carbonio</li><li>Rilevatore di gas combustibili</li><li>Elettrovalvola automatica di sicurezza del gas</li></ul><p>Tutti i dispositivi sono <strong>controllati regolarmente</strong>.</p><p class="avviso"><strong>Se sentite un allarme, avvisateci subito.</strong> La vostra sicurezza è la nostra priorità.</p>`,
@@ -436,10 +436,10 @@ const GUIDA = [
     ]
   },
   {
-    id: "convivenza", icona: "🤫",
+    id: "convivenza", colore: "#14233c", icona: "luna",
     titolo: { it: "Convivenza", en: "Good neighbours", de: "Rücksicht", fr: "Bon voisinage", es: "Convivencia" },
     voci: [
-      { id: "silenzio", icona: "🌙", tipo: "silenzio", importante: true,
+      { id: "silenzio", icona: "luna", tipo: "silenzio", importante: true,
         titolo: { it: "Ore di riposo", en: "Quiet hours", de: "Ruhezeiten", fr: "Heures de repos", es: "Horas de descanso" },
         corpo: {
           it: `<p>Per il riposo di tutti, ospiti e vicini, vi chiediamo silenzio in queste fasce:</p>`,
@@ -473,71 +473,71 @@ const CHIAVI = [
    foto = solo fotografie vere (le vecchie schermate dei percorsi non si usano più);
    colore della categoria = colore dei segnaposto sulla mappa. */
 const DINTORNI = [
-  { id: "mangiare", colore: "#b8893a", icona: "🍝",
+  { id: "mangiare", colore: "#b8893a", icona: "posate",
     cat: { it: "Ristoranti e bar", en: "Restaurants & bars", de: "Restaurants & Bars", fr: "Restaurants et bars", es: "Restaurantes y bares" },
     luoghi: [
-      { nome: "Trattoria La Campagnola", icona: "🍕", pos: [38.2237046, 15.2422404], tel: ["+393476651893", "+390909284944"],
+      { nome: "Trattoria La Campagnola", icona: "pizza", pos: [38.2237046, 15.2422404], tel: ["+393476651893", "+390909284944"],
         dest: "Trattoria La Campagnola, Via Riccardo D'Amico 16, Milazzo",
         desc: { it: "Ristorante e pizzeria", en: "Restaurant & pizzeria", de: "Restaurant & Pizzeria", fr: "Restaurant et pizzeria", es: "Restaurante y pizzería" } },
-      { nome: "Ristorante Adagio-Adagio", icona: "🍝", pos: [38.2241686, 15.2404715], tel: ["+393881670166", "+393889886437"], telNomi: ["Silvia", "Salvo"],
+      { nome: "Ristorante Adagio-Adagio", icona: "posate", pos: [38.2241686, 15.2404715], tel: ["+393881670166", "+393889886437"], telNomi: ["Silvia", "Salvo"],
         dest: "Osteria Adagio Adagio, Via Umberto I, Milazzo",
         desc: { it: "Ristorante", en: "Restaurant", de: "Restaurant", fr: "Restaurant", es: "Restaurante" } },
-      { nome: "Ristorante Macchianera", icona: "🐟", pos: [38.2288407, 15.2457632], tel: ["+393407099053", "+390909223249"],
+      { nome: "Ristorante Macchianera", icona: "pesce", pos: [38.2288407, 15.2457632], tel: ["+393407099053", "+390909223249"],
         dest: "Macchianera Ristorante, Via Marina Garibaldi 275, Milazzo",
         desc: { it: "Ristorante sul lungomare", en: "Seafront restaurant", de: "Restaurant an der Uferpromenade", fr: "Restaurant en bord de mer", es: "Restaurante en el paseo marítimo" } },
-      { nome: "Chantilly", icona: "🥐", pos: [38.2227944, 15.2416194],
+      { nome: "Chantilly", icona: "dolce", pos: [38.2227944, 15.2416194],
         dest: "Chantilly Café Bar Pasticceria, Via Cumbo Borgia 59, Milazzo",
         desc: { it: "Bar pasticceria, il più vicino", en: "Café & pastry shop, the closest", de: "Café & Konditorei, das nächste", fr: "Café-pâtisserie, le plus proche", es: "Cafetería y pastelería, la más cercana" } },
-      { nome: "English Bar", icona: "☕", pos: [38.2246791, 15.2405168],
+      { nome: "English Bar", icona: "tazza", pos: [38.2246791, 15.2405168],
         dest: "English Bar di Milazzo, Via Umberto I 243, Milazzo",
         desc: { it: "Bar", en: "Café", de: "Café", fr: "Café", es: "Cafetería" } }
     ] },
-  { id: "servizi", colore: "#2f6fae", icona: "🛒",
+  { id: "servizi", colore: "#2f6fae", icona: "carrello",
     cat: { it: "Servizi", en: "Services", de: "Dienste", fr: "Services", es: "Servicios" },
     luoghi: [
-      { nome: "Supermercato Conad", icona: "🛒", foto: "Immagine-supermercato-Conad.jpg", pos: [38.224355, 15.239758],
+      { nome: "Supermercato Conad", icona: "carrello", foto: "Immagine-supermercato-Conad.jpg", pos: [38.224355, 15.239758],
         dest: "CONAD, Via XX Settembre 184, Milazzo",
         desc: { it: "Supermercato", en: "Supermarket", de: "Supermarkt", fr: "Supermarché", es: "Supermercado" } },
-      { nome: "Farmacia Alioto", icona: "💊", pos: [38.2212742, 15.2414543], turni: true,
+      { nome: "Farmacia Alioto", icona: "farmacia", pos: [38.2212742, 15.2414543], turni: true,
         dest: "Antica Farmacia Alioto, Piano Baele 5, Milazzo",
         desc: { it: "La farmacia più vicina", en: "The nearest pharmacy", de: "Die nächste Apotheke", fr: "La pharmacie la plus proche", es: "La farmacia más cercana" } },
-      { id: "guardiamedica", nome: "Guardia Medica", icona: "⚕️", pos: [38.2267527, 15.2411425], tel: ["+390909281158"],
+      { id: "guardiamedica", nome: "Guardia Medica", icona: "medico", pos: [38.2267527, 15.2411425], tel: ["+390909281158"],
         dest: "Guardia Medica, Via Impallomeni 45, Milazzo",
         desc: { it: "Via Impallomeni 45 · Feriali 20:00–8:00 · Festivi dalle 10:00 del prefestivo alle 8:00 del primo giorno feriale",
                 en: "Via Impallomeni 45 · Weekdays 8 pm–8 am · Holidays from 10 am the day before until 8 am the next working day",
                 de: "Via Impallomeni 45 · Werktags 20–8 Uhr · Feiertage von 10 Uhr am Vortag bis 8 Uhr am nächsten Werktag",
                 fr: "Via Impallomeni 45 · Semaine 20 h–8 h · Jours fériés de 10 h la veille jusqu'à 8 h le jour ouvrable suivant",
                 es: "Via Impallomeni 45 · Laborables 20:00–8:00 · Festivos desde las 10:00 de la víspera hasta las 8:00 del siguiente día laborable" } },
-      { id: "enelx", nome: "Enel X", icona: "🔌", foto: "Stazione-ricarica-EV.jpg", pos: [38.2250161, 15.2396324],
+      { id: "enelx", nome: "Enel X", icona: "presa", foto: "Stazione-ricarica-EV.jpg", pos: [38.2250161, 15.2396324],
         dest: "Enel X Charging Station, Via XX Settembre, Milazzo",
         desc: { it: "Ricarica auto elettriche, Via XX Settembre", en: "EV charging, Via XX Settembre", de: "E-Auto-Ladestation, Via XX Settembre", fr: "Recharge électrique, Via XX Settembre", es: "Carga de coches eléctricos, Via XX Settembre" } },
-      { nome: { it: "Isola pedonale", en: "Pedestrian area", de: "Fußgängerzone", fr: "Zone piétonne", es: "Zona peatonal" }, icona: "🛍️", pos: [38.222246, 15.2426516],
+      { nome: { it: "Isola pedonale", en: "Pedestrian area", de: "Fußgängerzone", fr: "Zone piétonne", es: "Zona peatonal" }, icona: "borsa", pos: [38.222246, 15.2426516],
         dest: "Via Giacomo Medici, Milazzo",
         desc: { it: "Via Giacomo Medici: passeggio e negozi", en: "Via Giacomo Medici: strolling and shops", de: "Via Giacomo Medici: Bummeln und Geschäfte", fr: "Via Giacomo Medici : promenade et boutiques", es: "Via Giacomo Medici: paseo y tiendas" } }
     ] },
-  { id: "mare", colore: "#1f8a9e", icona: "🏖️",
+  { id: "mare", colore: "#1f8a9e", icona: "ombrellone",
     cat: { it: "Spiagge e mare", en: "Beaches & sea", de: "Strände & Meer", fr: "Plages et mer", es: "Playas y mar" },
     luoghi: [
-      { nome: "Lido La Fenice", icona: "⛱️", pos: [38.2197856, 15.2329491],
+      { nome: "Lido La Fenice", icona: "ombrellone", pos: [38.2197856, 15.2329491],
         dest: "Lido La Fenice, Via Spiaggia di Ponente 2, Milazzo",
         desc: { it: "Stabilimento moderno sul lungomare di ponente: ombrelloni, lettini, bar e ristorante", en: "Modern beach club on the western seafront: umbrellas, sunbeds, bar and restaurant", de: "Modernes Strandbad an der Weststrandpromenade: Schirme, Liegen, Bar und Restaurant", fr: "Plage privée moderne sur le front de mer ouest : parasols, transats, bar et restaurant", es: "Balneario moderno en el paseo de poniente: sombrillas, tumbonas, bar y restaurante" } },
-      { nome: { it: "Spiaggia di Ponente", en: "Ponente Beach", de: "Ponente-Strand", fr: "Plage de Ponente", es: "Playa de Ponente" }, icona: "🏖️", pos: [38.2265317, 15.2362766],
+      { nome: { it: "Spiaggia di Ponente", en: "Ponente Beach", de: "Ponente-Strand", fr: "Plage de Ponente", es: "Playa de Ponente" }, icona: "ombrellone", pos: [38.2265317, 15.2362766],
         dest: "38.2265317,15.2362766",
         desc: { it: "Spiaggia libera", en: "Public beach", de: "Öffentlicher Strand", fr: "Plage publique", es: "Playa libre" } },
-      { nome: { it: "Spiaggia Croce di Mare", en: "Croce di Mare Beach", de: "Strand Croce di Mare", fr: "Plage Croce di Mare", es: "Playa Croce di Mare" }, icona: "🌊", pos: [38.2309134, 15.2487663],
+      { nome: { it: "Spiaggia Croce di Mare", en: "Croce di Mare Beach", de: "Strand Croce di Mare", fr: "Plage Croce di Mare", es: "Playa Croce di Mare" }, icona: "onde", pos: [38.2309134, 15.2487663],
         dest: "Spiaggia Croce di Mare, Milazzo",
         desc: { it: "Spiaggia sul lato di levante", en: "Beach on the eastern side", de: "Strand auf der Ostseite", fr: "Plage du côté est", es: "Playa en el lado de levante" } },
-      { nome: { it: "Imbarco per le Isole Eolie", en: "Ferries to the Aeolian Islands", de: "Fähren zu den Äolischen Inseln", fr: "Embarquement pour les îles Éoliennes", es: "Embarque a las Islas Eolias" }, icona: "⛴️", pos: [38.2112301, 15.2481661],
+      { nome: { it: "Imbarco per le Isole Eolie", en: "Ferries to the Aeolian Islands", de: "Fähren zu den Äolischen Inseln", fr: "Embarquement pour les îles Éoliennes", es: "Embarque a las Islas Eolias" }, icona: "nave", pos: [38.2112301, 15.2481661],
         dest: "Terminal traghetti isole eolie, Via Tindaro La Rosa 90, Milazzo",
         desc: { it: "Partenze dal porto di Milazzo", en: "Departures from the port of Milazzo", de: "Abfahrten vom Hafen Milazzo", fr: "Départs du port de Milazzo", es: "Salidas desde el puerto de Milazzo" } }
     ] },
-  { id: "vedere", colore: "#8a3b5b", icona: "🏰",
+  { id: "vedere", colore: "#8a3b5b", icona: "castello",
     cat: { it: "Da vedere", en: "Sights", de: "Sehenswertes", fr: "À voir", es: "Qué ver" },
     luoghi: [
-      { nome: { it: "Castello di Milazzo", en: "Milazzo Castle", de: "Burg von Milazzo", fr: "Château de Milazzo", es: "Castillo de Milazzo" }, icona: "🏰", foto: "Castello.webp", pos: [38.2299432, 15.2428924], tour: true,
+      { nome: { it: "Castello di Milazzo", en: "Milazzo Castle", de: "Burg von Milazzo", fr: "Château de Milazzo", es: "Castillo de Milazzo" }, icona: "castello", foto: "Castello.webp", pos: [38.2299432, 15.2428924], tour: true,
         dest: "Salita Castello, Milazzo",
         desc: { it: "Il complesso monumentale che vedete dalla veranda", en: "The monumental complex you see from the veranda", de: "Die Burganlage, die Sie von der Veranda sehen", fr: "L'ensemble monumental que vous voyez depuis la véranda", es: "El conjunto monumental que veis desde la veranda" } },
-      { nome: { it: "Piscina di Venere", en: "Venus Pool", de: "Venus-Pool", fr: "Piscine de Vénus", es: "Piscina de Venus" }, icona: "🏞️", foto: "Piscina-di-Venere.jpg", pos: [38.2691768, 15.2246913], auto: true,
+      { nome: { it: "Piscina di Venere", en: "Venus Pool", de: "Venus-Pool", fr: "Piscine de Vénus", es: "Piscina de Venus" }, icona: "maresole", foto: "Piscina-di-Venere.jpg", pos: [38.2691768, 15.2246913], auto: true,
         dest: "Piscina di Venere, Capo Milazzo",
         desc: { it: "Piscina naturale a Capo Milazzo, nell'area marina protetta", en: "Natural rock pool at Capo Milazzo, in the marine reserve", de: "Natürliches Felsbecken am Capo Milazzo, im Meeresschutzgebiet", fr: "Piscine naturelle au Capo Milazzo, dans l'aire marine protégée", es: "Piscina natural en Capo Milazzo, en la reserva marina" } }
     ] }
@@ -545,18 +545,18 @@ const DINTORNI = [
 
 /* Cose da fare: link esterni */
 const ESPERIENZE = [
-  { icona: "✨", url: "https://www.airbnb.it/metropolitan-city-of-messina-italy/things-to-do", it: "Esperienze nei dintorni", en: "Experiences nearby", de: "Erlebnisse in der Nähe", fr: "Expériences à proximité", es: "Experiencias cercanas" },
-  { icona: "⛵", url: "https://viamarmilazzo.it/", it: "Giro in barca alle Isole Eolie", en: "Boat trip to the Aeolian Islands", de: "Bootsausflug zu den Äolischen Inseln", fr: "Excursion en bateau aux îles Éoliennes", es: "Paseo en barco a las Islas Eolias" },
-  { icona: "🚢", url: "https://www.minicrociere.tarnav.it/minicrociere/", it: "Minicrociere — Tarnav", en: "Mini cruises — Tarnav", de: "Minikreuzfahrten — Tarnav", fr: "Mini-croisières — Tarnav", es: "Minicruceros — Tarnav" },
-  { icona: "🚢", url: "https://navisal.com/", it: "Minicrociere — Navisal", en: "Mini cruises — Navisal", de: "Minikreuzfahrten — Navisal", fr: "Mini-croisières — Navisal", es: "Minicruceros — Navisal" },
-  { icona: "🧳", url: "https://clarissaviaggi.com/", it: "Clarissa Viaggi", en: "Clarissa Viaggi", de: "Clarissa Viaggi", fr: "Clarissa Viaggi", es: "Clarissa Viaggi" },
-  { icona: "🚲", url: "https://www.inshare.it/noleggio/", it: "Noleggio biciclette", en: "Bike rental", de: "Fahrradverleih", fr: "Location de vélos", es: "Alquiler de bicicletas" },
-  { icona: "🏛️", url: "https://www.sicilianticamilazzo.it/", it: "Sicilia Antica Milazzo", en: "Sicilia Antica Milazzo", de: "Sicilia Antica Milazzo", fr: "Sicilia Antica Milazzo", es: "Sicilia Antica Milazzo" },
-  { icona: "📍", url: "https://www.milazzoforyou.it/home", it: "MilazzoForYou", en: "MilazzoForYou", de: "MilazzoForYou", fr: "MilazzoForYou", es: "MilazzoForYou" },
-  { icona: "🏰", url: "https://www.innovame.it/castellomilazzo/", it: "Tour virtuale del Castello", en: "Virtual tour of the Castle", de: "Virtueller Rundgang durch die Burg", fr: "Visite virtuelle du Château", es: "Visita virtual del Castillo" },
-  { icona: "⭐", url: "https://www.tripadvisor.it/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html", it: "Milazzo su Tripadvisor", en: "Milazzo on Tripadvisor", de: "Milazzo auf Tripadvisor", fr: "Milazzo sur Tripadvisor", es: "Milazzo en Tripadvisor" },
-  { icona: "🗺️", url: "https://www.sicilia.info/mappa-sicilia/", it: "Mappa della Sicilia", en: "Map of Sicily", de: "Karte Siziliens", fr: "Carte de la Sicile", es: "Mapa de Sicilia" },
-  { icona: "🗺️", url: "https://dotsonmaps.com/italy", it: "Mappa dell'Italia", en: "Map of Italy", de: "Karte Italiens", fr: "Carte de l'Italie", es: "Mapa de Italia" }
+  { url: "https://www.airbnb.it/metropolitan-city-of-messina-italy/things-to-do", it: "Esperienze nei dintorni", en: "Experiences nearby", de: "Erlebnisse in der Nähe", fr: "Expériences à proximité", es: "Experiencias cercanas" },
+  { url: "https://viamarmilazzo.it/", it: "Giro in barca alle Isole Eolie", en: "Boat trip to the Aeolian Islands", de: "Bootsausflug zu den Äolischen Inseln", fr: "Excursion en bateau aux îles Éoliennes", es: "Paseo en barco a las Islas Eolias" },
+  { url: "https://www.minicrociere.tarnav.it/minicrociere/", it: "Minicrociere — Tarnav", en: "Mini cruises — Tarnav", de: "Minikreuzfahrten — Tarnav", fr: "Mini-croisières — Tarnav", es: "Minicruceros — Tarnav" },
+  { url: "https://navisal.com/", it: "Minicrociere — Navisal", en: "Mini cruises — Navisal", de: "Minikreuzfahrten — Navisal", fr: "Mini-croisières — Navisal", es: "Minicruceros — Navisal" },
+  { url: "https://clarissaviaggi.com/", it: "Clarissa Viaggi", en: "Clarissa Viaggi", de: "Clarissa Viaggi", fr: "Clarissa Viaggi", es: "Clarissa Viaggi" },
+  { url: "https://www.inshare.it/noleggio/", it: "Noleggio biciclette", en: "Bike rental", de: "Fahrradverleih", fr: "Location de vélos", es: "Alquiler de bicicletas" },
+  { url: "https://www.sicilianticamilazzo.it/", it: "Sicilia Antica Milazzo", en: "Sicilia Antica Milazzo", de: "Sicilia Antica Milazzo", fr: "Sicilia Antica Milazzo", es: "Sicilia Antica Milazzo" },
+  { url: "https://www.milazzoforyou.it/home", it: "MilazzoForYou", en: "MilazzoForYou", de: "MilazzoForYou", fr: "MilazzoForYou", es: "MilazzoForYou" },
+  { url: "https://www.innovame.it/castellomilazzo/", it: "Tour virtuale del Castello", en: "Virtual tour of the Castle", de: "Virtueller Rundgang durch die Burg", fr: "Visite virtuelle du Château", es: "Visita virtual del Castillo" },
+  { url: "https://www.tripadvisor.it/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html", it: "Milazzo su Tripadvisor", en: "Milazzo on Tripadvisor", de: "Milazzo auf Tripadvisor", fr: "Milazzo sur Tripadvisor", es: "Milazzo en Tripadvisor" },
+  { url: "https://www.sicilia.info/mappa-sicilia/", it: "Mappa della Sicilia", en: "Map of Sicily", de: "Karte Siziliens", fr: "Carte de la Sicile", es: "Mapa de Sicilia" },
+  { url: "https://dotsonmaps.com/italy", it: "Mappa dell'Italia", en: "Map of Italy", de: "Karte Italiens", fr: "Carte de l'Italie", es: "Mapa de Italia" }
 ];
 
 /* ---------------- Numeri utili ---------------- */
