@@ -188,9 +188,9 @@ strong, b { font-weight: 600; }
 .tabbar button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--tenue); position: relative; }
 .tabbar span { font-size: 22px; filter: grayscale(1); opacity: .7; transition: .2s; }
 .tabbar b { font-size: 12.5px; font-weight: 600; }
-.tabbar .tab-svg { width: 28px; height: 34px; display: grid; place-items: center; opacity: 1; color: #6b7280; }
-.tabbar .tab-svg svg { width: 28px; height: 28px; }
-.tabbar button.attiva .tab-svg { color: var(--blu); }
+.tabbar .tab-svg { width: 32px; height: 34px; display: grid; place-items: center; filter: none; opacity: .8; }
+.tabbar .tab-svg svg { width: 32px; height: 26px; }
+.tabbar button.attiva .tab-svg { opacity: 1; }
 .tabbar button.attiva { color: var(--blu); }
 .tabbar button.attiva span { filter: none; opacity: 1; transform: translateY(-1px); }
 .tabbar button.attiva::before { content: ""; position: absolute; top: 0; width: 32px; height: 3px; border-radius: 0 0 3px 3px; background: var(--oro); }
