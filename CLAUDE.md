@@ -20,6 +20,7 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - 4 schede in basso: Home · La casa · Dintorni · Aiuto; i dettagli si aprono in una "scheda" che sale dal basso.
 - Home: meteo dal vivo (Open-Meteo, senza chiave), riquadro "Oggi" (rifiuti di stasera + fascia di silenzio calcolati dall'ora), pulsanti rapidi, regole della casa, contatti.
 - Lingua automatica dal telefono, ricordata; ricerca nella guida; lettura ad alta voce; copia password WiFi.
+- Aiuto: accanto a ogni numero utile c'è la cornetta 📞 (`.numero__tel`, 2026-10-06).
 - Pulsante rapido "Mangiare" (`#btnMangiare`): scheda con SOLO ristoranti e bar (prima categoria di DINTORNI).
 
 ## Dati aggiornati

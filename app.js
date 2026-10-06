@@ -218,7 +218,7 @@
     $("#numeri").innerHTML = NUMERI.map(g =>
       '<section class="gruppo' + (g.urgente ? " gruppo--urgente" : "") + '"><h2>' + esc(tr(g.gruppo)) + '</h2><div class="lista-voci">' +
       g.voci.map(v => '<a class="numero" href="tel:' + v.n + '"><span class="numero__nome">' + esc(tr(v)) +
-        (v.alt ? '<span class="numero__alt">' + fmtNum(v.alt) + "</span>" : "") + '</span><span class="numero__num">' + fmtNum(v.n) + "</span></a>").join("") +
+        (v.alt ? '<span class="numero__alt">' + fmtNum(v.alt) + "</span>" : "") + '</span><span class="numero__num"><span class="numero__tel" aria-hidden="true">📞</span>' + fmtNum(v.n) + "</span></a>").join("") +
       "</div></section>").join("");
   }
 
