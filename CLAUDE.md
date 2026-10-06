@@ -38,6 +38,10 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Ogni luogo ha `pos: [lat, lng]`; distanza/tempo a piedi stimati (linea d'aria × 1,3, ~4,5 km/h). Dintorni: mappa generale con filtri; scheda di ogni luogo: mappa piccola casa→luogo + pulsante Google Maps.
 - Foto dei luoghi solo se vere (Conad, colonnina EV, Castello, Piscina di Venere): le vecchie schermate di percorsi Google non si usano.
 
+## Isole Eolie (2026-10-06)
+- Nella scheda "Imbarco per le Isole Eolie" (luogo con `eolie: true`) c'è la cartina illustrata e animata copiata dal sito www.atticopanoramico.it (`cartinaEolie()` in app.js, dati `ISOLE` ed `EOLIE` in testi.js, stili `.eolie`/`.eo-*`); scritte ingrandite per il telefono, didascalia tolta.
+- Imbarco VERIFICATO su internet: aliscafi Liberty Lines terminal Via Amm. Luigi Rizzo (38.2184, 15.2408) ≈ 13 min/950 m; traghetti Siremar biglietteria Via dei Mille 26. Il vecchio segnaposto (Via Tindaro La Rosa 90) era sbagliato.
+
 ## Solo telefono
 - Foto sempre a tutta larghezza, una sotto l'altra, mai tagliate (`.foto-in`, `object-fit: contain`); niente gallerie a scorrimento laterale.
 - Dove una scheda ha più foto, ognuna sta DENTRO il testo (in `corpo`, 5 lingue) sopra la frase che descrive: rifiuti, luce veranda, videoproiettore.

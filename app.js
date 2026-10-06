@@ -203,6 +203,61 @@
     return '<div class="mini-mappa" id="miniMappa"></div><p class="mini-mappa__nota"><span>' + ico("casa", "ico--mini") + esc(u("appartamento")) + "</span><b>" + distHTML(l) + "</b></p>" +
       '<div class="bottoni"><a class="btn btn--oro" href="' + urlPercorso(l) + '" target="_blank" rel="noopener">' + ico("navigazione") + '<b>' + esc(u("indicazioni")) + " · " + esc(l.auto ? u("in_auto") : u("a_piedi")) + "</b></a></div>";
   }
+  /* Cartina illustrata delle Isole Eolie (stessa del sito www.atticopanoramico.it, posizioni reali).
+     Scritte più grandi perché sul telefono la cartina è larga circa la metà. */
+  function cartinaEolie() {
+    const P = (lat, lon) => [20 + (lon - 14.30) * 600, 20 + (38.84 - lat) * 766.7];
+    const PX_KM = 766.7 / 111.2, f = n => n.toFixed(1);
+    const liscia = p => {
+      let d = "M" + f(p[0][0]) + "," + f(p[0][1]);
+      for (let i = 0; i < p.length - 1; i++) {
+        const p0 = p[i - 1] || p[i], p1 = p[i], p2 = p[i + 1], p3 = p[i + 2] || p2;
+        d += " C" + f(p1[0] + (p2[0] - p0[0]) / 6) + "," + f(p1[1] + (p2[1] - p0[1]) / 6) + " " + f(p2[0] - (p3[0] - p1[0]) / 6) + "," + f(p2[1] - (p3[1] - p1[1]) / 6) + " " + f(p2[0]) + "," + f(p2[1]);
+      }
+      return d;
+    };
+    // costa tirrenica della Sicilia, da Capo d'Orlando a Spadafora, con la penisola di Milazzo
+    const costa = [[38.080, 14.560], [38.125, 14.700], [38.163, 14.745], [38.150, 14.800], [38.152, 14.835], [38.170, 14.900], [38.177, 14.925],
+      [38.163, 14.948], [38.148, 14.975], [38.145, 15.020], [38.150, 15.048], [38.135, 15.065], [38.140, 15.110], [38.160, 15.180], [38.192, 15.222],
+      [38.212, 15.236], [38.240, 15.226], [38.258, 15.228], [38.271, 15.233], [38.262, 15.244], [38.243, 15.249], [38.222, 15.247], [38.214, 15.270],
+      [38.220, 15.330], [38.226, 15.380], [38.236, 15.430]].map(p => P(p[0], p[1]));
+    const porto = P(38.221, 15.246);
+    let rotte = "", isole = "", bottoni = "";
+    ISOLE.forEach(is => {
+      const c = P(is.lat, is.lon), r = Math.sqrt(is.kmq / Math.PI) * PX_KM;
+      const dx = c[0] - porto[0], dy = c[1] - porto[1], len = Math.hypot(dx, dy);
+      const mx = (porto[0] + c[0]) / 2 + dy * 0.16, my = (porto[1] + c[1]) / 2 - dx * 0.16;
+      rotte += '<path class="rotta" data-n="' + is.nome + '" d="M' + f(porto[0]) + "," + f(porto[1]) + " Q" + f(mx) + "," + f(my) + " " + f(c[0]) + "," + f(c[1]) + '"/>';
+      const sx = is.nome === "Stromboli";   // Stromboli è sul bordo destro: nome a sinistra
+      isole += '<g class="isola" data-n="' + is.nome + '"><circle cx="' + f(c[0]) + '" cy="' + f(c[1]) + '" r="' + f(r) + '"/>' +
+        (sx ? '<path class="pennacchio" d="M' + f(c[0]) + "," + f(c[1] - r - 3) + ' c-6,-8 6,-12 0,-20 c-5,-7 5,-11 1,-18"/>' : "") +
+        '<text x="' + f(sx ? c[0] - r - 10 : c[0] + r + 10) + '" y="' + f(c[1] + 9) + '" text-anchor="' + (sx ? "end" : "start") + '">' + is.nome + "</text></g>";
+      bottoni += '<button type="button" data-n="' + is.nome + '">' + is.nome + "</button>";
+    });
+    const casa = P(CONTATTI.casa.lat, CONTATTI.casa.lng);
+    const svg = '<svg viewBox="0 0 680 590" role="img" aria-label="' + esc(tr(EOLIE.didascalia)) + '"><defs>' +
+      '<radialGradient id="eoMare" cx="70%" cy="85%" r="95%"><stop offset="0" stop-color="#25506a"/><stop offset="1" stop-color="#0f2030"/></radialGradient>' +
+      '<pattern id="eoGriglia" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(216,183,122,.07)" stroke-width="1"/></pattern></defs>' +
+      '<rect width="680" height="590" fill="url(#eoMare)"/><rect width="680" height="590" fill="url(#eoGriglia)"/>' +
+      '<text x="40" y="96" class="eo-mare">' + esc(tr(EOLIE.mare)) + "</text>" + rotte +
+      '<path class="eo-terra" d="' + liscia(costa) + " L700,620 L0,620 L0," + f(costa[0][1]) + ' Z"/>' +
+      '<text x="380" y="578" class="eo-sicilia">' + esc(tr(EOLIE.sicilia)) + "</text>" + isole +
+      '<circle class="eo-pulsa" cx="' + f(casa[0]) + '" cy="' + f(casa[1]) + '" r="8"/><circle class="eo-casa" cx="' + f(casa[0]) + '" cy="' + f(casa[1]) + '" r="8"/>' +
+      '<text class="eo-milazzo" x="' + f(casa[0] - 20) + '" y="' + f(casa[1] + 4) + '" text-anchor="end">Milazzo</text>' +
+      '<g class="eo-bussola" transform="translate(70 455)"><circle r="26"/><path d="M0-20 L6 0 L0 20 L-6 0 Z"/><path d="M0-20 L6 0 L-6 0 Z" class="eo-nord"/><text y="-33" text-anchor="middle">N</text></g></svg>';
+    return '<div class="eolie"><figure class="eolie__map">' + svg + "</figure>" +
+      '<div class="eolie__testo"><h3>' + esc(tr(EOLIE.titolo)) + "</h3><p>" + tr(EOLIE.testo) + '</p><div class="eolie__isole">' + bottoni + "</div></div></div>";
+  }
+  // Toccando un'isola (sulla cartina o nel pulsante) si accende lei e la sua rotta
+  function attivaEolie() {
+    const box = $("#schedaCorpo .eolie"); if (!box) return;
+    let fissa = null;
+    const accendi = n => $$("[data-n]", box).forEach(x => x.classList.toggle("acceso", !!n && x.getAttribute("data-n") === n));
+    $$(".isola, .eolie__isole button", box).forEach(x => x.addEventListener("click", () => {
+      const n = x.getAttribute("data-n"); fissa = fissa === n ? null : n; accendi(fissa);
+    }));
+  }
+
   // Pulsante "Mangiare": solo la prima categoria (ristoranti e bar)
   function apriMangiare() {
     const c = DINTORNI[0];
@@ -327,12 +382,14 @@
   function apriLuogo(id) {
     const l = LUOGHI[id]; if (!l) return;
     let h = l.foto ? fotoHTML([l.foto]) : "";
+    if (l.eolie) h += cartinaEolie();
     h += "<p>" + esc(tr(l.desc)) + "</p>" + bloccoLuogo(l);
     if (l.tel) h += '<div class="bottoni">' + l.tel.map((t, i) => '<a class="btn btn--chiaro" href="tel:' + t + '">' + ico("telefono") + '<b>' + (l.telNomi ? esc(l.telNomi[i]) + " · " : "") + fmtNum(t.replace(/^\+39/, "")) + "</b></a>").join("") + "</div>";
     if (l.turni) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" rel="noopener">' + ico("farmacia") + '<b>' + esc(u("farmacie_turno")) + "</b></a></div>";
     if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://www.innovame.it/castellomilazzo/" target="_blank" rel="noopener">' + ico("castello") + '<b>' + esc(u("tour_virtuale")) + "</b></a></div>";
     apriScheda(tessera(l.icona || l._cat.icona, l._cat.colore), tr(l.nome), h);
     mappaPiccola(l);
+    if (l.eolie) attivaEolie();
   }
   function apriLingue() {
     apriScheda(tessera("globo", "#14233c"), u("lingua"), '<div class="lingue">' + LINGUE.map(l =>

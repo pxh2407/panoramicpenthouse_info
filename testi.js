@@ -527,9 +527,14 @@ const DINTORNI = [
       { nome: { it: "Spiaggia Croce di Mare", en: "Croce di Mare Beach", de: "Strand Croce di Mare", fr: "Plage Croce di Mare", es: "Playa Croce di Mare" }, icona: "onde", pos: [38.2309134, 15.2487663],
         dest: "Spiaggia Croce di Mare, Milazzo",
         desc: { it: "Spiaggia sul lato di levante", en: "Beach on the eastern side", de: "Strand auf der Ostseite", fr: "Plage du côté est", es: "Playa en el lado de levante" } },
-      { nome: { it: "Imbarco per le Isole Eolie", en: "Ferries to the Aeolian Islands", de: "Fähren zu den Äolischen Inseln", fr: "Embarquement pour les îles Éoliennes", es: "Embarque a las Islas Eolias" }, icona: "nave", pos: [38.2112301, 15.2481661],
-        dest: "Terminal traghetti isole eolie, Via Tindaro La Rosa 90, Milazzo",
-        desc: { it: "Partenze dal porto di Milazzo", en: "Departures from the port of Milazzo", de: "Abfahrten vom Hafen Milazzo", fr: "Départs du port de Milazzo", es: "Salidas desde el puerto de Milazzo" } }
+      { nome: { it: "Imbarco per le Isole Eolie", en: "Ferries to the Aeolian Islands", de: "Fähren zu den Äolischen Inseln", fr: "Embarquement pour les îles Éoliennes", es: "Embarque a las Islas Eolias" }, icona: "nave", pos: [38.2184129, 15.2408152], eolie: true,
+        // verificato il 2026-10-06: aliscafi Liberty Lines in Via Amm. Luigi Rizzo; traghetti Siremar, biglietteria Via dei Mille 26 (banchine in Via dei Mille)
+        dest: "Liberty Lines, Via Ammiraglio Luigi Rizzo, Milazzo",
+        desc: { it: "Aliscafi Liberty Lines: terminal in Via Ammiraglio Luigi Rizzo. Traghetti Siremar: biglietteria in Via dei Mille 26, a pochi passi.",
+                en: "Liberty Lines hydrofoils: terminal in Via Ammiraglio Luigi Rizzo. Siremar ferries: ticket office in Via dei Mille 26, a few steps away.",
+                de: "Tragflügelboote Liberty Lines: Terminal in der Via Ammiraglio Luigi Rizzo. Fähren Siremar: Fahrkartenschalter in der Via dei Mille 26, wenige Schritte entfernt.",
+                fr: "Hydroglisseurs Liberty Lines : terminal Via Ammiraglio Luigi Rizzo. Ferries Siremar : billetterie Via dei Mille 26, à deux pas.",
+                es: "Hidroplanos Liberty Lines: terminal en la Via Ammiraglio Luigi Rizzo. Ferris Siremar: taquilla en la Via dei Mille 26, a pocos pasos." } }
     ] },
   { id: "vedere", colore: "#8a3b5b", icona: "castello",
     cat: { it: "Da vedere", en: "Sights", de: "Sehenswertes", fr: "À voir", es: "Qué ver" },
@@ -542,6 +547,31 @@ const DINTORNI = [
         desc: { it: "Piscina naturale a Capo Milazzo, nell'area marina protetta", en: "Natural rock pool at Capo Milazzo, in the marine reserve", de: "Natürliches Felsbecken am Capo Milazzo, im Meeresschutzgebiet", fr: "Piscine naturelle au Capo Milazzo, dans l'aire marine protégée", es: "Piscina natural en Capo Milazzo, en la reserva marina" } }
     ] }
 ];
+
+/* ---------------- Isole Eolie: cartina illustrata (copiata dal sito www.atticopanoramico.it) ----------------
+   Posizioni geografiche reali; kmq = superficie, decide la grandezza del cerchio. */
+const ISOLE = [
+  { nome: "Stromboli", lat: 38.793, lon: 15.213, kmq: 12.6 },
+  { nome: "Panarea",   lat: 38.637, lon: 15.073, kmq: 3.4 },
+  { nome: "Salina",    lat: 38.560, lon: 14.840, kmq: 26.8 },
+  { nome: "Lipari",    lat: 38.480, lon: 14.945, kmq: 37.6 },
+  { nome: "Vulcano",   lat: 38.395, lon: 14.965, kmq: 21.0 },
+  { nome: "Filicudi",  lat: 38.570, lon: 14.565, kmq: 9.5 },
+  { nome: "Alicudi",   lat: 38.543, lon: 14.353, kmq: 5.2 }
+];
+const EOLIE = {
+  titolo: { it: "Isole Eolie", en: "Aeolian Islands", de: "Äolische Inseln", fr: "Îles Éoliennes", es: "Islas Eolias" },
+  testo: {
+    it: "Il porto dista <strong>15 minuti a piedi</strong>. Aliscafi e traghetti collegano tutte e 7 le isole: Lipari, Vulcano, Salina, Stromboli, Panarea, Filicudi e Alicudi. Ideale per escursioni giornaliere.",
+    en: "The port is <strong>15 minutes on foot</strong>. Hydrofoils and ferries connect all 7 islands: Lipari, Vulcano, Salina, Stromboli, Panarea, Filicudi and Alicudi. Perfect for day trips.",
+    de: "Der Hafen ist <strong>15 Gehminuten</strong> entfernt. Tragflügelboote und Fähren verbinden alle 7 Inseln: Lipari, Vulcano, Salina, Stromboli, Panarea, Filicudi und Alicudi. Ideal für Tagesausflüge.",
+    fr: "Le port est à <strong>15 minutes à pied</strong>. Hydroglisseurs et ferries relient les 7 îles : Lipari, Vulcano, Salina, Stromboli, Panarea, Filicudi et Alicudi. Idéal pour des excursions à la journée.",
+    es: "El puerto está a <strong>15 minutos a pie</strong>. Hidroplanos y ferris conectan las 7 islas: Lipari, Vulcano, Salina, Stromboli, Panarea, Filicudi y Alicudi. Ideal para excursiones de un día."
+  },
+  didascalia: { it: "Le sette isole, dal porto di Milazzo", en: "The seven islands, from the port of Milazzo", de: "Die sieben Inseln, vom Hafen Milazzo aus", fr: "Les sept îles, depuis le port de Milazzo", es: "Las siete islas, desde el puerto de Milazzo" },
+  mare: { it: "Mar Tirreno", en: "Tyrrhenian Sea", de: "Tyrrhenisches Meer", fr: "Mer Tyrrhénienne", es: "Mar Tirreno" },
+  sicilia: { it: "Sicilia", en: "Sicily", de: "Sizilien", fr: "Sicile", es: "Sicilia" }
+};
 
 /* Cose da fare: link esterni */
 const ESPERIENZE = [

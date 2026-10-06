@@ -304,3 +304,35 @@ strong, b { font-weight: 600; }
 .tondo .ico { width: 21px; height: 21px; color: var(--blu); }
 .tondo.on .ico { color: #fff; }
 .categoria h2 .pallino { width: 12px; height: 12px; border-radius: 50%; background: var(--c); flex: none; }
+/* ===== Cartina illustrata delle Isole Eolie (copiata dal sito, scritte ingrandite per il telefono) ===== */
+.eolie { background: var(--blu); color: #f7f2ea; border-radius: 18px; overflow: hidden; margin: 0 0 16px; box-shadow: 0 12px 28px -12px rgba(20,35,60,.55); }
+.eolie__map { position: relative; margin: 0; }
+.eolie__map svg { display: block; width: 100%; height: auto; }
+.eolie__map figcaption { position: absolute; left: 14px; top: 12px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--oro-chiaro); opacity: .9; }
+.eolie__testo { padding: 18px 18px 20px; }
+.eolie__testo h3 { margin: 0 0 6px; font: 600 24px var(--serif); color: #fff; }
+.eolie__testo p { margin: 0 0 14px; color: rgba(247,242,234,.85); font-size: 16px; }
+.eolie__testo strong { color: #fff; }
+.eolie__isole { display: flex; flex-wrap: wrap; gap: 8px; }
+.eolie__isole button { border: 1px solid rgba(220,192,140,.45); border-radius: 999px; padding: 8px 15px; min-height: 42px; font-size: 15px; font-weight: 600; color: #f7f2ea; transition: .25s; }
+.eolie__isole button.acceso { background: var(--oro-chiaro); border-color: var(--oro-chiaro); color: var(--blu); }
+.eo-terra { fill: #e8dcc6; stroke: var(--oro); stroke-width: 1.2; }
+.eo-mare { font-family: var(--serif); font-style: italic; font-size: 30px; letter-spacing: .25em; fill: rgba(220,192,140,.5); }
+.eo-sicilia { font-family: var(--serif); font-style: italic; font-size: 32px; letter-spacing: .3em; fill: #2c3e55; }
+.rotta { fill: none; stroke: var(--oro-chiaro); stroke-width: 2; stroke-dasharray: 5 10; opacity: .5; animation: eoVela 2.4s linear infinite; transition: opacity .3s, stroke-width .3s; }
+@keyframes eoVela { to { stroke-dashoffset: -30; } }
+.rotta.acceso { opacity: 1; stroke-width: 3.2; }
+.isola { cursor: pointer; }
+.isola circle { fill: #e8dcc6; stroke: var(--oro-chiaro); stroke-width: 1.6; transition: fill .3s, transform .4s; transform-box: fill-box; transform-origin: center; }
+.isola text { font-family: var(--sans); font-size: 26px; font-weight: 600; fill: rgba(247,242,234,.92); transition: fill .3s; }
+.isola.acceso circle { fill: var(--oro); transform: scale(1.2); }
+.isola.acceso text { fill: var(--oro-chiaro); }
+.pennacchio { fill: none; stroke: rgba(247,242,234,.55); stroke-width: 2; stroke-linecap: round; }
+.eo-casa { fill: var(--oro); stroke: #fff; stroke-width: 2.5; }
+.eo-pulsa { fill: none; stroke: var(--oro-chiaro); stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: eoPulsa 2.6s ease-out infinite; }
+@keyframes eoPulsa { from { transform: scale(.6); opacity: 1; } to { transform: scale(3); opacity: 0; } }
+.eo-milazzo { font-family: var(--serif); font-size: 30px; font-weight: 600; font-style: italic; fill: #fff; }
+.eo-bussola circle { fill: none; stroke: rgba(220,192,140,.45); stroke-width: 1.5; }
+.eo-bussola path { fill: rgba(247,242,234,.25); }
+.eo-bussola .eo-nord { fill: var(--oro-chiaro); }
+.eo-bussola text { font-family: var(--sans); font-size: 17px; font-weight: 700; fill: var(--oro-chiaro); }
