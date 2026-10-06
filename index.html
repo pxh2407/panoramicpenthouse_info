@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -160,10 +160,22 @@
 
 <!-- Barra di navigazione in basso -->
 <nav class="tabbar" aria-label="Navigazione">
-  <button data-vai="home" class="attiva"><span>🏠</span><b data-t="tab_home">Home</b></button>
-  <button data-vai="guida"><span class="tab-svg" aria-hidden="true"><svg viewBox="0 0 32 26"><rect x="5" y="3" width="22" height="12" rx="3.5" fill="#b8893a"/><rect x="1" y="9" width="7.5" height="11" rx="3.5" fill="#94692a"/><rect x="23.5" y="9" width="7.5" height="11" rx="3.5" fill="#94692a"/><rect x="7.5" y="12.5" width="8.3" height="6" rx="2" fill="#f0d79c"/><rect x="16.2" y="12.5" width="8.3" height="6" rx="2" fill="#f0d79c"/><rect x="3" y="18" width="26" height="3.6" rx="1.8" fill="#94692a"/><rect x="5" y="21" width="2.4" height="3.5" rx="1" fill="#4a3415"/><rect x="24.6" y="21" width="2.4" height="3.5" rx="1" fill="#4a3415"/></svg></span><b data-t="tab_guida">La casa</b></button>
-  <button data-vai="dintorni"><span>🧭</span><b data-t="tab_dintorni">Dintorni</b></button>
-  <button data-vai="aiuto"><span>🆘</span><b data-t="tab_aiuto">Aiuto</b></button>
+  <button data-vai="home" class="attiva">
+    <span class="tab-ico tab-ico--home" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg></span>
+    <b data-t="tab_home">Home</b>
+  </button>
+  <button data-vai="guida">
+    <span class="tab-ico tab-ico--casa" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"/><path d="M3 12.5a2 2 0 0 1 4 0V14h10v-1.5a2 2 0 0 1 4 0V17a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M6 18v2M18 18v2"/></svg></span>
+    <b data-t="tab_guida">La casa</b>
+  </button>
+  <button data-vai="dintorni">
+    <span class="tab-ico tab-ico--dintorni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.4"/></svg></span>
+    <b data-t="tab_dintorni">Dintorni</b>
+  </button>
+  <button data-vai="aiuto">
+    <span class="tab-ico tab-ico--aiuto" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.8"/><path d="M6 6l3.3 3.3M18 6l-3.3 3.3M6 18l3.3-3.3M18 18l-3.3-3.3"/></svg></span>
+    <b data-t="tab_aiuto">Aiuto</b>
+  </button>
 </nav>
 
 <!-- Scheda di dettaglio (si apre dal basso) -->
@@ -182,7 +194,7 @@
 <div class="avviso-copia" id="toast" hidden></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="testi.js?v=18"></script>
-<script src="app.js?v=18"></script>
+<script src="testi.js?v=19"></script>
+<script src="app.js?v=19"></script>
 </body>
 </html>

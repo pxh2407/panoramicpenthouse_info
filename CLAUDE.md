@@ -20,7 +20,7 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - 4 schede in basso: Home · La casa · Dintorni · Aiuto; i dettagli si aprono in una "scheda" che sale dal basso.
 - Home: meteo dal vivo (Open-Meteo, senza chiave), riquadro "Oggi" (rifiuti di stasera + fascia di silenzio calcolati dall'ora), pulsanti rapidi, regole della casa, contatti.
 - Lingua automatica dal telefono, ricordata; ricerca nella guida; lettura ad alta voce; copia password WiFi.
-- Barra in basso, "La casa": divano disegnato in SVG a COLORI (`.tab-svg`: nocciola, cuscini crema, piedini scuri; sempre colorato) perché l'emoji 🛋️ in grigio non si capiva; il libretto 📖 e un divano a sole linee provati e scartati dall'utente (2026-10-06).
+- Barra in basso (2026-10-06, su richiesta "belli e grandi"): 4 riquadri arrotondati con sfumatura (Home blu, La casa oro, Dintorni verde mare, Aiuto rosso) e disegno bianco (casetta, divano, segnaposto, salvagente); classi `.tab-ico--*`; barra alta 92px (`--tab-h`); pulsante attivo con cornice dorata. Prima provati e scartati: emoji 🛋️, libretto 📖, divano a linee, divano colorato.
 - Aiuto: accanto a ogni numero utile c'è la cornetta 📞 (`.numero__tel`, 2026-10-06).
 - Pulsante rapido "Mangiare" (`#btnMangiare`): scheda con SOLO ristoranti e bar (prima categoria di DINTORNI).
 
