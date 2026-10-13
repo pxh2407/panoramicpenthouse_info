@@ -56,6 +56,9 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Niente emoji: i disegni sono in `icone.js` (`ico(nome)` = disegno a linee, `tessera(nome, colore)` = disegno bianco in riquadro colorato). In testi.js `icona:` contiene il NOME del disegno; ogni categoria della guida ha un `colore`. In index.html i segnaposto `<span data-ico="nome">` vengono riempiti all'avvio. Uniche emoji rimaste: bandierine delle lingue.
 - Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima delle icone 2026-10-06` + tag `prima-delle-icone-2026-10-06`.
 
+## Testata (2026-10-13)
+- La foto in alto nella Home è `images/Castello-aereo.webp` (veduta aerea del Castello, dallo screenshot fornito dall'utente, presa da great-sicily.com; tolte scritta e freccia). Posizione `47% 55%` in `.hero__img`. La vecchia `Castello.webp` resta in images/ (la usa ancora la copertina del link).
+
 ## Tolto su richiesta (non rimettere)
 - Recensioni, lettera di benvenuto, sezione "Tornate a trovarci / Disponibilità" (2026-10-05).
 - Numeri utili: gruppo "Uffici pubblici" (Comune, URP, INPS, ecc.) tolto il 2026-10-06. Restano Emergenze, Salute, Sicurezza e strada.
