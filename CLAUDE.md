@@ -57,8 +57,8 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima delle icone 2026-10-06` + tag `prima-delle-icone-2026-10-06`.
 
 ## Testata (2026-10-14)
-- La foto in alto nella Home è `images/Castello-aereo-2.webp` (1600×893, veduta aerea del Castello col mare e le Eolie, fornita dall'utente il 2026-10-14). Posizione `38% 50%` in `.hero__img` (castello al centro sul telefono).
-- Precedenti, rimaste in images/: `Castello-aereo.webp` (testata dal 2026-10-13 al 14, da great-sicily.com) e `Castello.webp` (la usa ancora la copertina del link).
+- La foto in alto nella Home è `images/Castello-aereo-3.webp` (1600×1074, veduta aerea del Castello con la spiaggia di Ponente e il Capo, fornita dall'utente il 2026-10-14, seconda della giornata). Posizione `45% 55%` in `.hero__img` (castello al centro sul telefono).
+- Precedenti, rimaste in images/: `Castello-aereo-2.webp` (prima foto del 2026-10-14), `Castello-aereo.webp` (testata dal 2026-10-13 al 14, da great-sicily.com) e `Castello.webp` (la usa ancora la copertina del link).
 
 ## Tolto su richiesta (non rimettere)
 - Recensioni, lettera di benvenuto, sezione "Tornate a trovarci / Disponibilità" (2026-10-05).
