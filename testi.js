@@ -544,7 +544,7 @@ const DINTORNI = [
         dest: "Salita Castello, Milazzo",
         desc: { it: "Il complesso monumentale che vedete dalla veranda", en: "The monumental complex you see from the veranda", de: "Die Burganlage, die Sie von der Veranda sehen", fr: "L'ensemble monumental que vous voyez depuis la véranda", es: "El conjunto monumental que veis desde la veranda" } },
       { nome: { it: "MuMa – Museo del Mare", en: "MuMa – Sea Museum", de: "MuMa – Meeresmuseum", fr: "MuMa – Musée de la Mer", es: "MuMa – Museo del Mar" }, icona: "pesce", pos: [38.2301404, 15.2420108],
-        tour: { url: { it: "https://www.mumamilazzo.com/tour-3d-del-museo/", en: "https://my.matterport.com/show/?m=vLiSfTfMBqh&play=1" }, testo: "tour_museo", icona: "pesce" },
+        tour: { url: { it: "https://my.matterport.com/show/?m=uHNcCxWxhFx&play=1", en: "https://my.matterport.com/show/?m=vLiSfTfMBqh&play=1" }, testo: "tour_museo", icona: "pesce" },
         dest: "38.2301404,15.2420108",
         desc: { it: "Nel Castello: il museo del mare, con lo scheletro del capodoglio Siso", en: "In the Castle: the sea museum, with the skeleton of Siso the sperm whale", de: "In der Burg: das Meeresmuseum mit dem Skelett des Pottwals Siso", fr: "Dans le Château : le musée de la mer, avec le squelette du cachalot Siso", es: "En el Castillo: el museo del mar, con el esqueleto del cachalote Siso" } },
       { nome: { it: "Piscina di Venere", en: "Venus Pool", de: "Venus-Pool", fr: "Piscine de Vénus", es: "Piscina de Venus" }, icona: "maresole", foto: "Piscina-di-Venere.jpg", pos: [38.2691768, 15.2246913], auto: true,
