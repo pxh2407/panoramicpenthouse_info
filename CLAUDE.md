@@ -56,6 +56,12 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Niente emoji: i disegni sono in `icone.js` (`ico(nome)` = disegno a linee, `tessera(nome, colore)` = disegno bianco in riquadro colorato). In testi.js `icona:` contiene il NOME del disegno; ogni categoria della guida ha un `colore`. In index.html i segnaposto `<span data-ico="nome">` vengono riempiti all'avvio. Uniche emoji rimaste: bandierine delle lingue.
 - Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima delle icone 2026-10-06` + tag `prima-delle-icone-2026-10-06`.
 
+## Tour virtuali (2026-10-22)
+- In un luogo di DINTORNI, `tour: { url, testo, icona }` aggiunge nella scheda un pulsante verso il tour (nuova scheda del browser); `testo` = chiave UI in 5 lingue.
+- Castello: `innovame.it/castellomilazzo/` (panorami 360°, verificato). MuMa – Museo del Mare (in "Da vedere", nel Castello, pos da OpenStreetMap, senza foto: non ne abbiamo una vera): tour 3D Matterport `mumamilazzo.com/tour-3d-del-museo/` (verificato).
+- Eolie: `eoliesicilia.it` SCARTATO (certificato HTTPS non valido, il telefono mostra un avviso); nessuna alternativa affidabile trovata, quindi nessun pulsante.
+- Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima dei tour virtuali 2026-10-22` + tag `prima-dei-tour-virtuali-2026-10-22`.
+
 ## Testata (2026-10-14)
 - La foto in alto nella Home è `images/Castello-aereo-3.webp` (1600×1074, veduta aerea del Castello con la spiaggia di Ponente e il Capo, fornita dall'utente il 2026-10-14, seconda della giornata). Posizione `45% 55%` in `.hero__img` (castello al centro sul telefono).
 - Precedenti, rimaste in images/: `Castello-aereo-2.webp` (prima foto del 2026-10-14), `Castello-aereo.webp` (testata dal 2026-10-13 al 14, da great-sicily.com) e `Castello.webp` (la usa ancora la copertina del link).

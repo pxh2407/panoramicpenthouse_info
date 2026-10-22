@@ -51,7 +51,7 @@ const UI = {
     host_breve: "I vostri host",
     ascolta: "Ascolta", ferma: "Ferma", copia: "Copia", copiato: "Copiato!", chiudi: "Chiudi",
     lingua: "Lingua", apri_simulatore: "Apri il simulatore del termostato",
-    farmacie_turno: "Farmacie di turno a Milazzo", tour_virtuale: "Tour virtuale del Castello",
+    farmacie_turno: "Farmacie di turno a Milazzo", tour_virtuale: "Tour virtuale del Castello", tour_museo: "Visita il museo virtuale",
     video: "Guarda il video",
     rete: "Reti WiFi", password: "Password", notebook: "Nome del notebook", telefono: "Telefono",
     installa: "Aggiungi alla schermata Home per averla sempre a portata di mano."
@@ -81,7 +81,7 @@ const UI = {
     host_breve: "Your hosts",
     ascolta: "Listen", ferma: "Stop", copia: "Copy", copiato: "Copied!", chiudi: "Close",
     lingua: "Language", apri_simulatore: "Open the thermostat simulator",
-    farmacie_turno: "Pharmacies on duty in Milazzo", tour_virtuale: "Virtual tour of the Castle",
+    farmacie_turno: "Pharmacies on duty in Milazzo", tour_virtuale: "Virtual tour of the Castle", tour_museo: "Explore the virtual museum",
     video: "Watch the video",
     rete: "WiFi networks", password: "Password", notebook: "Notebook name", telefono: "Phone",
     installa: "Add it to your Home screen to keep it at hand."
@@ -111,7 +111,7 @@ const UI = {
     host_breve: "Ihre Gastgeber",
     ascolta: "Vorlesen", ferma: "Stopp", copia: "Kopieren", copiato: "Kopiert!", chiudi: "Schließen",
     lingua: "Sprache", apri_simulatore: "Thermostat-Simulator öffnen",
-    farmacie_turno: "Apotheken im Notdienst in Milazzo", tour_virtuale: "Virtueller Rundgang durch die Burg",
+    farmacie_turno: "Apotheken im Notdienst in Milazzo", tour_virtuale: "Virtueller Rundgang durch die Burg", tour_museo: "Besuchen Sie das virtuelle Museum",
     video: "Video ansehen",
     rete: "WLAN-Netze", password: "Passwort", notebook: "Name des Notebooks", telefono: "Telefon",
     installa: "Zum Startbildschirm hinzufügen, um sie immer griffbereit zu haben."
@@ -141,7 +141,7 @@ const UI = {
     host_breve: "Vos hôtes",
     ascolta: "Écouter", ferma: "Arrêter", copia: "Copier", copiato: "Copié !", chiudi: "Fermer",
     lingua: "Langue", apri_simulatore: "Ouvrir le simulateur du thermostat",
-    farmacie_turno: "Pharmacies de garde à Milazzo", tour_virtuale: "Visite virtuelle du Château",
+    farmacie_turno: "Pharmacies de garde à Milazzo", tour_virtuale: "Visite virtuelle du Château", tour_museo: "Visitez le musée virtuel",
     video: "Voir la vidéo",
     rete: "Réseaux WiFi", password: "Mot de passe", notebook: "Nom du notebook", telefono: "Téléphone",
     installa: "Ajoutez-la à l'écran d'accueil pour l'avoir toujours sous la main."
@@ -171,7 +171,7 @@ const UI = {
     host_breve: "Vuestros anfitriones",
     ascolta: "Escuchar", ferma: "Parar", copia: "Copiar", copiato: "¡Copiado!", chiudi: "Cerrar",
     lingua: "Idioma", apri_simulatore: "Abrir el simulador del termostato",
-    farmacie_turno: "Farmacias de guardia en Milazzo", tour_virtuale: "Visita virtual del Castillo",
+    farmacie_turno: "Farmacias de guardia en Milazzo", tour_virtuale: "Visita virtual del Castillo", tour_museo: "Visita el museo virtual",
     video: "Ver el vídeo",
     rete: "Redes WiFi", password: "Contraseña", notebook: "Nombre del portátil", telefono: "Teléfono",
     installa: "Añádela a la pantalla de inicio para tenerla siempre a mano."
@@ -539,9 +539,14 @@ const DINTORNI = [
   { id: "vedere", colore: "#8a3b5b", icona: "castello",
     cat: { it: "Da vedere", en: "Sights", de: "Sehenswertes", fr: "À voir", es: "Qué ver" },
     luoghi: [
-      { nome: { it: "Castello di Milazzo", en: "Milazzo Castle", de: "Burg von Milazzo", fr: "Château de Milazzo", es: "Castillo de Milazzo" }, icona: "castello", foto: "Castello.webp", pos: [38.2299432, 15.2428924], tour: true,
+      { nome: { it: "Castello di Milazzo", en: "Milazzo Castle", de: "Burg von Milazzo", fr: "Château de Milazzo", es: "Castillo de Milazzo" }, icona: "castello", foto: "Castello.webp", pos: [38.2299432, 15.2428924],
+        tour: { url: "https://www.innovame.it/castellomilazzo/", testo: "tour_virtuale", icona: "castello" },
         dest: "Salita Castello, Milazzo",
         desc: { it: "Il complesso monumentale che vedete dalla veranda", en: "The monumental complex you see from the veranda", de: "Die Burganlage, die Sie von der Veranda sehen", fr: "L'ensemble monumental que vous voyez depuis la véranda", es: "El conjunto monumental que veis desde la veranda" } },
+      { nome: { it: "MuMa – Museo del Mare", en: "MuMa – Sea Museum", de: "MuMa – Meeresmuseum", fr: "MuMa – Musée de la Mer", es: "MuMa – Museo del Mar" }, icona: "pesce", pos: [38.2301404, 15.2420108],
+        tour: { url: "https://www.mumamilazzo.com/tour-3d-del-museo/", testo: "tour_museo", icona: "pesce" },
+        dest: "38.2301404,15.2420108",
+        desc: { it: "Nel Castello: il museo del mare, con lo scheletro del capodoglio Siso", en: "In the Castle: the sea museum, with the skeleton of Siso the sperm whale", de: "In der Burg: das Meeresmuseum mit dem Skelett des Pottwals Siso", fr: "Dans le Château : le musée de la mer, avec le squelette du cachalot Siso", es: "En el Castillo: el museo del mar, con el esqueleto del cachalote Siso" } },
       { nome: { it: "Piscina di Venere", en: "Venus Pool", de: "Venus-Pool", fr: "Piscine de Vénus", es: "Piscina de Venus" }, icona: "maresole", foto: "Piscina-di-Venere.jpg", pos: [38.2691768, 15.2246913], auto: true,
         dest: "Piscina di Venere, Capo Milazzo",
         desc: { it: "Piscina naturale a Capo Milazzo, nell'area marina protetta", en: "Natural rock pool at Capo Milazzo, in the marine reserve", de: "Natürliches Felsbecken am Capo Milazzo, im Meeresschutzgebiet", fr: "Piscine naturelle au Capo Milazzo, dans l'aire marine protégée", es: "Piscina natural en Capo Milazzo, en la reserva marina" } }
