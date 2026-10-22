@@ -540,7 +540,7 @@ const DINTORNI = [
     cat: { it: "Da vedere", en: "Sights", de: "Sehenswertes", fr: "À voir", es: "Qué ver" },
     luoghi: [
       { nome: { it: "Castello di Milazzo", en: "Milazzo Castle", de: "Burg von Milazzo", fr: "Château de Milazzo", es: "Castillo de Milazzo" }, icona: "castello", foto: "Castello.webp", pos: [38.2299432, 15.2428924],
-        tour: { url: "https://www.innovame.it/castellomilazzo/", testo: "tour_virtuale", icona: "castello" },
+        tour: { url: { it: "https://tourmake.net/it/tour/a0d252477faa651f99075e4b607538c6", en: "https://tourmake.net/en/tour/a0d252477faa651f99075e4b607538c6" }, testo: "tour_virtuale", icona: "castello" },
         dest: "Salita Castello, Milazzo",
         desc: { it: "Il complesso monumentale che vedete dalla veranda", en: "The monumental complex you see from the veranda", de: "Die Burganlage, die Sie von der Veranda sehen", fr: "L'ensemble monumental que vous voyez depuis la véranda", es: "El conjunto monumental que veis desde la veranda" } },
       { nome: { it: "MuMa – Museo del Mare", en: "MuMa – Sea Museum", de: "MuMa – Meeresmuseum", fr: "MuMa – Musée de la Mer", es: "MuMa – Museo del Mar" }, icona: "pesce", pos: [38.2301404, 15.2420108],
@@ -578,19 +578,27 @@ const EOLIE = {
   sicilia: { it: "Sicilia", en: "Sicily", de: "Sizilien", fr: "Sicile", es: "Sicilia" }
 };
 
-/* Cose da fare: link esterni */
+/* Cose da fare: link esterni.
+   url può essere { it, en, de, fr, es }: si apre la versione del sito nella lingua dell'ospite;
+   una lingua che manca usa en (versioni verificate il 2026-10-22). */
 const ESPERIENZE = [
-  { url: "https://www.airbnb.it/metropolitan-city-of-messina-italy/things-to-do", it: "Esperienze nei dintorni", en: "Experiences nearby", de: "Erlebnisse in der Nähe", fr: "Expériences à proximité", es: "Experiencias cercanas" },
-  { url: "https://viamarmilazzo.it/", it: "Giro in barca alle Isole Eolie", en: "Boat trip to the Aeolian Islands", de: "Bootsausflug zu den Äolischen Inseln", fr: "Excursion en bateau aux îles Éoliennes", es: "Paseo en barco a las Islas Eolias" },
+  { url: { it: "https://www.airbnb.it/metropolitan-city-of-messina-italy/things-to-do", en: "https://www.airbnb.com/metropolitan-city-of-messina-italy/things-to-do",
+           de: "https://www.airbnb.de/metropolitan-city-of-messina-italy/things-to-do", fr: "https://www.airbnb.fr/metropolitan-city-of-messina-italy/things-to-do",
+           es: "https://www.airbnb.es/metropolitan-city-of-messina-italy/things-to-do" }, it: "Esperienze nei dintorni", en: "Experiences nearby", de: "Erlebnisse in der Nähe", fr: "Expériences à proximité", es: "Experiencias cercanas" },
+  { url: { it: "https://viamarmilazzo.it/", en: "https://viamarmilazzo.it/en/", fr: "https://viamarmilazzo.it/fr/" }, it: "Giro in barca alle Isole Eolie", en: "Boat trip to the Aeolian Islands", de: "Bootsausflug zu den Äolischen Inseln", fr: "Excursion en bateau aux îles Éoliennes", es: "Paseo en barco a las Islas Eolias" },
   { url: "https://www.minicrociere.tarnav.it/minicrociere/", it: "Minicrociere — Tarnav", en: "Mini cruises — Tarnav", de: "Minikreuzfahrten — Tarnav", fr: "Mini-croisières — Tarnav", es: "Minicruceros — Tarnav" },
-  { url: "https://navisal.com/", it: "Minicrociere — Navisal", en: "Mini cruises — Navisal", de: "Minikreuzfahrten — Navisal", fr: "Mini-croisières — Navisal", es: "Minicruceros — Navisal" },
-  { url: "https://clarissaviaggi.com/", it: "Clarissa Viaggi", en: "Clarissa Viaggi", de: "Clarissa Viaggi", fr: "Clarissa Viaggi", es: "Clarissa Viaggi" },
+  { url: { it: "https://navisal.com/", en: "https://navisal.com/EN/default.aspx", de: "https://navisal.com/DE/default.aspx",
+           fr: "https://navisal.com/FR/default.aspx", es: "https://navisal.com/ES/default.aspx" }, it: "Minicrociere — Navisal", en: "Mini cruises — Navisal", de: "Minikreuzfahrten — Navisal", fr: "Mini-croisières — Navisal", es: "Minicruceros — Navisal" },
+  { url: { it: "https://clarissaviaggi.com/", en: "https://clarissaviaggi.com/en/", fr: "https://clarissaviaggi.com/fr/", es: "https://clarissaviaggi.com/es/" }, it: "Clarissa Viaggi", en: "Clarissa Viaggi", de: "Clarissa Viaggi", fr: "Clarissa Viaggi", es: "Clarissa Viaggi" },
   { url: "https://www.inshare.it/noleggio/", it: "Noleggio biciclette", en: "Bike rental", de: "Fahrradverleih", fr: "Location de vélos", es: "Alquiler de bicicletas" },
-  { url: "https://www.sicilianticamilazzo.it/", it: "Sicilia Antica Milazzo", en: "Sicilia Antica Milazzo", de: "Sicilia Antica Milazzo", fr: "Sicilia Antica Milazzo", es: "Sicilia Antica Milazzo" },
-  { url: "https://www.milazzoforyou.it/home", it: "MilazzoForYou", en: "MilazzoForYou", de: "MilazzoForYou", fr: "MilazzoForYou", es: "MilazzoForYou" },
-  { url: "https://www.innovame.it/castellomilazzo/", it: "Tour virtuale del Castello", en: "Virtual tour of the Castle", de: "Virtueller Rundgang durch die Burg", fr: "Visite virtuelle du Château", es: "Visita virtual del Castillo" },
-  { url: "https://www.tripadvisor.it/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html", it: "Milazzo su Tripadvisor", en: "Milazzo on Tripadvisor", de: "Milazzo auf Tripadvisor", fr: "Milazzo sur Tripadvisor", es: "Milazzo en Tripadvisor" },
-  { url: "https://www.sicilia.info/mappa-sicilia/", it: "Mappa della Sicilia", en: "Map of Sicily", de: "Karte Siziliens", fr: "Carte de la Sicile", es: "Mapa de Sicilia" },
+  // le pagine de/es di questo sito hanno in realtà i testi in francese: lì si usa en
+  { url: { it: "https://www.sicilianticamilazzo.it/", en: "https://www.sicilianticamilazzo.it/en/home/", fr: "https://www.sicilianticamilazzo.it/fr/accueil/" }, it: "Sicilia Antica Milazzo", en: "Sicilia Antica Milazzo", de: "Sicilia Antica Milazzo", fr: "Sicilia Antica Milazzo", es: "Sicilia Antica Milazzo" },
+  { url: { it: "https://www.milazzoforyou.it/home", en: "https://milazzoforyou.it/en/" }, it: "MilazzoForYou", en: "MilazzoForYou", de: "MilazzoForYou", fr: "MilazzoForYou", es: "MilazzoForYou" },
+  { url: { it: "https://tourmake.net/it/tour/a0d252477faa651f99075e4b607538c6", en: "https://tourmake.net/en/tour/a0d252477faa651f99075e4b607538c6" }, it: "Tour virtuale del Castello", en: "Virtual tour of the Castle", de: "Virtueller Rundgang durch die Burg", fr: "Visite virtuelle du Château", es: "Visita virtual del Castillo" },
+  { url: { it: "https://www.tripadvisor.it/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html", en: "https://www.tripadvisor.com/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html",
+           de: "https://www.tripadvisor.de/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html", fr: "https://www.tripadvisor.fr/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html",
+           es: "https://www.tripadvisor.es/Attractions-g194824-Activities-Milazzo_Province_of_Messina_Sicily.html" }, it: "Milazzo su Tripadvisor", en: "Milazzo on Tripadvisor", de: "Milazzo auf Tripadvisor", fr: "Milazzo sur Tripadvisor", es: "Milazzo en Tripadvisor" },
+  { url: { it: "https://www.sicilia.info/mappa-sicilia/", en: "https://www.sicilia.info/en/map-sicily/", fr: "https://www.sicilia.info/fr/plan-sicile/", es: "https://www.sicilia.info/es/mapa-sicilia/" }, it: "Mappa della Sicilia", en: "Map of Sicily", de: "Karte Siziliens", fr: "Carte de la Sicile", es: "Mapa de Sicilia" },
   { url: "https://dotsonmaps.com/italy", it: "Mappa dell'Italia", en: "Map of Italy", de: "Karte Italiens", fr: "Carte de l'Italie", es: "Mapa de Italia" }
 ];
 

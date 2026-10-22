@@ -247,7 +247,7 @@
   function dintorni() {
     $("#dintorni").innerHTML = DINTORNI.map(c =>
       '<section class="categoria"><h2><i class="pallino" style="--c:' + c.colore + '"></i>' + esc(tr(c.cat)) + "</h2>" + schedeLuoghi(c) + "</section>").join("");
-    $("#esperienze").innerHTML = ESPERIENZE.map(e => '<a class="esperienza" href="' + e.url + '" target="_blank" rel="noopener"><span>' + esc(tr(e)) + "</span>" + ico("esterno", "ico--mini") + "</a>").join("");
+    $("#esperienze").innerHTML = ESPERIENZE.map(e => '<a class="esperienza" href="' + esc(urlLingua(e.url)) + '" target="_blank" rel="noopener"><span>' + esc(tr(e)) + "</span>" + ico("esterno", "ico--mini") + "</a>").join("");
   }
 
   /* ---------- Numeri ---------- */
@@ -357,8 +357,10 @@
   }
   function urlPercorso(l) {
     return "https://www.google.com/maps/dir/?api=1&origin=" + CONTATTI.casa.lat + "," + CONTATTI.casa.lng +
-      "&destination=" + encodeURIComponent(l.dest) + "&travelmode=" + (l.auto ? "driving" : "walking");
+      "&destination=" + encodeURIComponent(l.dest) + "&travelmode=" + (l.auto ? "driving" : "walking") + "&hl=" + L;
   }
+  // link esterno: una stringa, oppure { it, en, de, fr, es } con la versione del sito in ogni lingua (manca → en)
+  function urlLingua(url) { return typeof url === "string" ? url : url[L] || url.en || url.it; }
   function apriLuogo(id) {
     const l = LUOGHI[id]; if (!l) return;
     let h = l.foto ? fotoHTML([l.foto]) : "";
@@ -366,9 +368,8 @@
     h += "<p>" + esc(tr(l.desc)) + "</p>" + bloccoLuogo(l);
     if (l.tel) h += '<div class="bottoni">' + l.tel.map((t, i) => '<a class="btn btn--chiaro" href="tel:' + t + '">' + ico("telefono") + '<b>' + (l.telNomi ? esc(l.telNomi[i]) + " · " : "") + fmtNum(t.replace(/^\+39/, "")) + "</b></a>").join("") + "</div>";
     if (l.turni) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" rel="noopener">' + ico("farmacia") + '<b>' + esc(u("farmacie_turno")) + "</b></a></div>";
-    // tour virtuale esterno: tour = { url, testo (chiave UI), icona }; url può essere { it, en }: le altre lingue usano en
-    const urlTour = l.tour && (typeof l.tour.url === "string" ? l.tour.url : l.tour.url[L] || l.tour.url.en);
-    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="' + esc(urlTour) + '" target="_blank" rel="noopener">' + ico(l.tour.icona) + '<b>' + esc(u(l.tour.testo)) + "</b></a></div>";
+    // tour virtuale esterno: tour = { url, testo (chiave UI), icona }
+    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="' + esc(urlLingua(l.tour.url)) + '" target="_blank" rel="noopener">' + ico(l.tour.icona) + '<b>' + esc(u(l.tour.testo)) + "</b></a></div>";
     apriScheda(tessera(l.icona || l._cat.icona, l._cat.colore), tr(l.nome), h);
     mappaPiccola(l);
     if (l.eolie) attivaEolie();
