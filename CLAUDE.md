@@ -59,7 +59,7 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 
 ## Tour virtuali (2026-10-22)
 - In un luogo di DINTORNI, `tour: { url, testo, icona }` aggiunge nella scheda un pulsante verso il tour (nuova scheda del browser); `testo` = chiave UI in 5 lingue.
-- Castello: `innovame.it/castellomilazzo/` (panorami 360°, verificato). MuMa – Museo del Mare (in "Da vedere", nel Castello, pos da OpenStreetMap, senza foto: non ne abbiamo una vera): tour 3D Matterport `mumamilazzo.com/tour-3d-del-museo/` (verificato).
+- Castello: `innovame.it/castellomilazzo/` (panorami 360°, verificato). MuMa – Museo del Mare (in "Da vedere", nel Castello, pos da OpenStreetMap, senza foto: non ne abbiamo una vera): tour 3D Matterport `mumamilazzo.com/tour-3d-del-museo/` (verificato). Dal 2026-10-22 in en/de/fr/es il pulsante apre DIRETTAMENTE il tour inglese `my.matterport.com/show/?m=vLiSfTfMBqh&play=1` ("MuMa Milazzo Sea Museum - ENG", preso dalla pagina inglese del museo; si evita il banner cookie in italiano). Per questo `tour.url` può essere `{ it, en }`.
 - Eolie: `eoliesicilia.it` SCARTATO (certificato HTTPS non valido, il telefono mostra un avviso); nessuna alternativa affidabile trovata, quindi nessun pulsante.
 - Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima dei tour virtuali 2026-10-22` + tag `prima-dei-tour-virtuali-2026-10-22`.
 

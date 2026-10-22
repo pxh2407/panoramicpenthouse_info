@@ -366,8 +366,9 @@
     h += "<p>" + esc(tr(l.desc)) + "</p>" + bloccoLuogo(l);
     if (l.tel) h += '<div class="bottoni">' + l.tel.map((t, i) => '<a class="btn btn--chiaro" href="tel:' + t + '">' + ico("telefono") + '<b>' + (l.telNomi ? esc(l.telNomi[i]) + " · " : "") + fmtNum(t.replace(/^\+39/, "")) + "</b></a>").join("") + "</div>";
     if (l.turni) h += '<div class="bottoni"><a class="btn btn--chiaro" href="https://milazzo.comune.digital/farmacie-di-turno/c/0" target="_blank" rel="noopener">' + ico("farmacia") + '<b>' + esc(u("farmacie_turno")) + "</b></a></div>";
-    // tour virtuale esterno: tour = { url, testo (chiave UI), icona }
-    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="' + l.tour.url + '" target="_blank" rel="noopener">' + ico(l.tour.icona) + '<b>' + esc(u(l.tour.testo)) + "</b></a></div>";
+    // tour virtuale esterno: tour = { url, testo (chiave UI), icona }; url può essere { it, en }: le altre lingue usano en
+    const urlTour = l.tour && (typeof l.tour.url === "string" ? l.tour.url : l.tour.url[L] || l.tour.url.en);
+    if (l.tour) h += '<div class="bottoni"><a class="btn btn--chiaro" href="' + esc(urlTour) + '" target="_blank" rel="noopener">' + ico(l.tour.icona) + '<b>' + esc(u(l.tour.testo)) + "</b></a></div>";
     apriScheda(tessera(l.icona || l._cat.icona, l._cat.colore), tr(l.nome), h);
     mappaPiccola(l);
     if (l.eolie) attivaEolie();
