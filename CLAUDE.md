@@ -35,7 +35,8 @@ App web statica per gli ospiti dell'Attico Panoramico di Milazzo, consultata **s
 - Leaflet 1.9.4 da cdnjs + tessere **OpenStreetMap standard**. ⚠️ CARTO ora chiede una API key: non usarlo.
 - Aprendo index.html con doppio clic dal PC le mappe NON si vedono (OSM vuole un sito di provenienza): normale, online funzionano.
 - In `app.js` la variabile `L` è la LINGUA: Leaflet si usa come `LF = window.L`.
-- Ogni luogo ha `pos: [lat, lng]`; distanza/tempo a piedi stimati (linea d'aria × 1,3, ~4,5 km/h). Dintorni: mappa generale con filtri; scheda di ogni luogo: mappa piccola casa→luogo + pulsante Google Maps.
+- Ogni luogo ha `pos: [lat, lng]`; distanza/tempo a piedi stimati (linea d'aria × 1,3, ~4,5 km/h). Scheda di ogni luogo: mappa piccola casa→luogo + pulsante Google Maps.
+- Dintorni comincia SUBITO con l'elenco dei luoghi. La mappa generale con i filtri per categoria è stata TOLTA il 2026-10-22 su richiesta (sul telefono riempiva lo schermo e non si capiva che sotto c'era altro): non rimetterla. Copia prima del cambio: cartella `ATTICO PER INTERNO - BACKUP prima di togliere la mappa 2026-10-22` + tag `prima-di-togliere-la-mappa-2026-10-22`.
 - Foto dei luoghi solo se vere (Conad, colonnina EV, Castello, Piscina di Venere): le vecchie schermate di percorsi Google non si usano.
 
 ## Isole Eolie (2026-10-06)

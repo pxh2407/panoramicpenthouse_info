@@ -158,7 +158,7 @@
     return LF.divIcon({ className: "", iconSize: [38, 46], iconAnchor: [19, 44],
       html: '<span class="pin' + (casa ? " pin--casa" : "") + '" style="--c:' + colore + '"><span>' + ico(nome) + "</span></span>" });
   }
-  // Sul telefono la mappa grande non "cattura" il dito: si sposta con due dita, così la pagina scorre normalmente
+  // trascinabile = false: sul telefono la mappa non "cattura" il dito (si sposta con due dita) e la pagina scorre normalmente
   function nuovaMappa(el, trascinabile) {
     const touch = "ontouchstart" in window;
     const m = LF.map(el, { zoomControl: true, dragging: !touch || trascinabile, scrollWheelZoom: false, tap: false });
@@ -168,25 +168,6 @@
     }).addTo(m);
     LF.marker(CASA, { icon: iconaPin("casa", "#14233c", true), zIndexOffset: 1000, title: u("appartamento") }).addTo(m);
     return m;
-  }
-  // Mappa generale della pagina Dintorni, con i filtri per categoria
-  let mappaG = null, strato = null, filtro = "tutti";
-  function disegnaMappaGrande() {
-    if (!LF) { $("#mappaGrande").hidden = true; $("#filtriMappa").hidden = true; return; }
-    if (!mappaG) { mappaG = nuovaMappa($("#mappaGrande"), false); strato = LF.layerGroup().addTo(mappaG); }
-    strato.clearLayers();
-    const punti = [CASA];
-    DINTORNI.filter(c => filtro === "tutti" || c.id === filtro).forEach(c => c.luoghi.forEach(l => {
-      LF.marker(l.pos, { icon: iconaPin(l.icona || c.icona, c.colore), title: tr(l.nome) })
-        .on("click", () => apriLuogo(l._id)).addTo(strato);
-      if (!l.auto || filtro !== "tutti") punti.push(l.pos);   // la Piscina di Venere (lontana) non allarga la vista generale
-    }));
-    mappaG.invalidateSize();
-    mappaG.fitBounds(punti, { padding: [30, 30], maxZoom: 17 });
-  }
-  function filtriMappa() {
-    $("#filtriMappa").innerHTML = '<button class="chip' + (filtro === "tutti" ? " chip--on" : "") + '" data-filtro="tutti">' + esc(u("tutti")) + "</button>" +
-      DINTORNI.map(c => '<button class="chip' + (filtro === c.id ? " chip--on" : "") + '" data-filtro="' + c.id + '" style="--c:' + c.colore + '"><i></i>' + esc(tr(c.cat)) + "</button>").join("");
   }
   // Mappa piccola dentro la scheda di un luogo: casa + destinazione
   let mappaP = null;
@@ -267,7 +248,6 @@
     $("#dintorni").innerHTML = DINTORNI.map(c =>
       '<section class="categoria"><h2><i class="pallino" style="--c:' + c.colore + '"></i>' + esc(tr(c.cat)) + "</h2>" + schedeLuoghi(c) + "</section>").join("");
     $("#esperienze").innerHTML = ESPERIENZE.map(e => '<a class="esperienza" href="' + e.url + '" target="_blank" rel="noopener"><span>' + esc(tr(e)) + "</span>" + ico("esterno", "ico--mini") + "</a>").join("");
-    filtriMappa();
   }
 
   /* ---------- Numeri ---------- */
@@ -431,7 +411,6 @@
     if (location.hash.slice(1) !== nome) history.replaceState(history.state, "", "#" + nome);
     if (scorri) window.scrollTo(0, 0);
     aggiornaBarra();
-    if (nome === "dintorni") disegnaMappaGrande();   // la mappa va disegnata quando la pagina è visibile
   }
   function aggiornaBarra() {
     const home = !$("#v-home").hidden;
@@ -440,14 +419,12 @@
 
   function disegnaTutto() {
     applicaUI(); aggiornaOggi(); guida(); dintorni(); numeri(); mostraMeteo();
-    if (mappaG && !$("#v-dintorni").hidden) disegnaMappaGrande();
   }
 
   /* ---------- Eventi ---------- */
   document.addEventListener("click", e => {
-    const t = e.target.closest("[data-apri],[data-vai],[data-luogo],[data-cat],[data-copia],[data-lingua],[data-filtro]");
+    const t = e.target.closest("[data-apri],[data-vai],[data-luogo],[data-cat],[data-copia],[data-lingua]");
     if (!t) return;
-    if (t.dataset.filtro) { filtro = t.dataset.filtro; filtriMappa(); disegnaMappaGrande(); return; }
     if (t.dataset.vai) { e.preventDefault(); vai(t.dataset.vai); }
     else if (t.dataset.apri) apriVoce(t.dataset.apri);
     else if (t.dataset.luogo) apriLuogo(t.dataset.luogo);
